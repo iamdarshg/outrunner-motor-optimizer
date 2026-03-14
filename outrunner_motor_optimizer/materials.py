@@ -1,1 +1,554 @@
-IiIiClRlbXBlcmF0dXJlLWRlcGVuZGVudCBtYXRlcmlhbCBwcm9wZXJ0eSBkYXRhYmFzZSBmb3IgZWxlY3RyaWMgbW90b3IgZGVzaWduLgoKU3VwcG9ydHMgdXNlci1zZWxlY3RhYmxlIG1hZ25ldCB0eXBlcyAoTmRGZUIsIFNtQ28sIEZlcnJpdGUsIGN1c3RvbSkgYW5kCmZ1bGx5IGN1c3RvbSBtYXRlcmlhbCBpbmplY3Rpb24gZm9yIGFsbCBjb21wb25lbnRzLiAgRGVmYXVsdCBzdHJ1Y3R1cmFsCm1hdGVyaWFsIGlzIDYwNjEtVDYgYWx1bWludW0gdGhyb3VnaG91dC4KCk1hdGVyaWFsIG1vZGVscyBiYXNlZCBvbjoKLSBCZXJ0b3R0aSdzIGlyb24gbG9zcyBzZXBhcmF0aW9uIG1vZGVsIChHLiBCZXJ0b3R0aSwgIkdlbmVyYWwgUHJvcGVydGllcwogIG9mIFBvd2VyIExvc3NlcyBpbiBTb2Z0IEZlcnJvbWFnbmV0aWMgTWF0ZXJpYWxzLCIgSUVFRSBUcmFuc2FjdGlvbnMgb24KICBNYWduZXRpY3MsIHZvbC4gMjQsIG5vLiAxLCAxOTg4LikKLSBOZEZlQiBkZW1hZ25ldGl6YXRpb24gY3VydmVzIGZyb20gQXJub2xkIE1hZ25ldGljIFRlY2hub2xvZ2llcyBkYXRhc2hlZXRzCiAgYW5kIEsmSiBNYWduZXRpY3MgQkggY3VydmUgZGF0YS4KLSBTbUNvIGRhdGEgZnJvbSBFbGVjdHJvbiBFbmVyZ3kgQ29ycG9yYXRpb24gZGF0YXNoZWV0cyAoRUVDIDItMTcgc2VyaWVzKS4KLSBGZXJyaXRlIGRhdGEgZnJvbSBUREsgRkIgU2VyaWVzIGRhdGFzaGVldHMuCi0gVGVtcGVyYXR1cmUgY29lZmZpY2llbnRzIGZyb20gSUVDIDYwNDA0IGFuZCBtYW51ZmFjdHVyZXIgZGF0YXNoZWV0cy4KLSBDb3BwZXIgcmVzaXN0aXZpdHkgbW9kZWw6IElFQyA2MDIyOCBzdGFuZGFyZC4KLSA2MDYxLVQ2IGFsdW1pbml1bSBwcm9wZXJ0aWVzOiBBU00gQWVyb3NwYWNlIFNwZWNpZmljYXRpb24gTWV0YWxzIEluYy4KLSBBSVNJIDQxNDAgc2hhZnQgc3RlZWw6IE1hdFdlYiAvIEFTTSBkYXRhLgoKUmVmZXJlbmNlczoKICBbMV0gRy4gQmVydG90dGksICJIeXN0ZXJlc2lzIGluIE1hZ25ldGlzbSwiIEFjYWRlbWljIFByZXNzLCAxOTk4LgogIFsyXSBKLiBQeXJob25lbiwgVC4gSm9raW5lbiwgVi4gSHJhYm92Y292YSwgIkRlc2lnbiBvZiBSb3RhdGluZwogICAgICBFbGVjdHJpY2FsIE1hY2hpbmVzLCIgV2lsZXksIDJuZCBlZC4sIDIwMTQuIChDaC4gMykKICBbM10gQXJub2xkIE1hZ25ldGljIFRlY2hub2xvZ2llcywgIk40MlNIIERhdGFzaGVldCwiIDIwMjMuCiAgWzRdIFMuIFJ1b2hvIGV0IGFsLiwgIlRlbXBlcmF0dXJlIERlcGVuZGVuY2Ugb2YgUmVzaXN0aXZpdHkgb2YgU2ludGVyZWQKICAgICAgUmFyZS1FYXJ0aCBQZXJtYW5lbnQgTWFnbmV0cywiIElFRUUgVHJhbnMuIE1hZ24uLCAyMDEwLgogIFs1XSBFbGVjdHJvbiBFbmVyZ3kgQ29ycC4sICIyOjE3IFNtQ28gTWFnbmV0cyBEYXRhc2hlZXQsIiAyMDIyLgogIFs2XSBUREsgQ29ycG9yYXRpb24sICJGZXJyaXRlIE1hZ25ldHMgRkIgU2VyaWVzIERhdGFzaGVldCwiIDIwMjEuCiAgWzddIEFTTSBBZXJvc3BhY2UgU3BlY2lmaWNhdGlvbiBNZXRhbHMsICJBbHVtaW51bSA2MDYxLVQ2LCIgMjAyMy4KIiIiCgpmcm9tIF9fZnV0dXJlX18gaW1wb3J0IGFubm90YXRpb25zCmZyb20gZGF0YWNsYXNzZXMgaW1wb3J0IGRhdGFjbGFzcywgZmllbGQKZnJvbSB0eXBpbmcgaW1wb3J0IE9wdGlvbmFsLCBEaWN0LCBBbnksIENhbGxhYmxlCmZyb20gZW51bSBpbXBvcnQgRW51bQppbXBvcnQgbnVtcHkgYXMgbnAKaW1wb3J0IGNvcHkKCgojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQojIEdlbmVyaWMgc3RydWN0dXJhbCBtYXRlcmlhbAojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpAZGF0YWNsYXNzCmNsYXNzIFN0cnVjdHVyYWxNYXRlcmlhbDoKICAgICIiIgogICAgR2VuZXJpYyBpc290cm9waWMgc3RydWN0dXJhbCBtYXRlcmlhbCB3aXRoIG1lY2hhbmljYWwgKyB0aGVybWFsIHByb3BzLgogICAgRGVmYXVsdDogNjA2MS1UNiBhbHVtaW5pdW0gKEFTTSBBZXJvc3BhY2UgU3BlY2lmaWNhdGlvbiBNZXRhbHMpLgogICAgIiIiCiAgICBuYW1lOiBzdHIgPSAiNjA2MS1UNiBBbHVtaW5pdW0iCiAgICBkZW5zaXR5OiBmbG9hdCA9IDI3MTAuMCAgICAgICAgICAgICAgIyBba2cvbcKzXQogICAgdGhlcm1hbF9jb25kdWN0aXZpdHk6IGZsb2F0ID0gMTY3LjAgICMgW1cvKG3Ct0spXQogICAgc3BlY2lmaWNfaGVhdDogZmxvYXQgPSA4OTYuMCAgICAgICAgICMgW0ovKGtnwrdLKV0KICAgIHJlc2lzdGl2aXR5OiBmbG9hdCA9IDMuOTllLTggICAgICAgICAjIFtPaG3Ct21dCiAgICB5aWVsZF9zdHJlbmd0aDogZmxvYXQgPSAyNzZlNiAgICAgICAgIyBbUGFdCiAgICB1bHRpbWF0ZV9zdHJlbmd0aDogZmxvYXQgPSAzMTBlNiAgICAgIyBbUGFdCiAgICB5b3VuZ3NfbW9kdWx1czogZmxvYXQgPSA2OC45ZTkgICAgICAgIyBbUGFdCiAgICBwb2lzc29uc19yYXRpbzogZmxvYXQgPSAwLjMzCiAgICB0aGVybWFsX2V4cGFuc2lvbjogZmxvYXQgPSAyMy42ZS02ICAgIyBbMS/CsENdCiAgICBmYXRpZ3VlX3N0cmVuZ3RoOiBmbG9hdCA9IDk2LjVlNiAgICAgIyBbUGFdIGF0IDVlOCBjeWNsZXMgKEFsdW1pbnVtKQogICAgc2hlYXJfbW9kdWx1czogZmxvYXQgPSAyNi4wZTkgICAgICAgICMgW1BhXQogICAgc2hlYXJfc3RyZW5ndGg6IGZsb2F0ID0gMjA3ZTYgICAgICAgICMgW1BhXQogICAgbWF4X3NlcnZpY2VfdGVtcDogZmxvYXQgPSAxNzAuMCAgICAgICMgW8KwQ10KCiAgICBkZWYgeWllbGRfYXRfdGVtcChzZWxmLCBUOiBmbG9hdCkgLT4gZmxvYXQ6CiAgICAgICAgIiIiWWllbGQgc3RyZW5ndGggZGVyYXRlZCB3aXRoIHRlbXBlcmF0dXJlIChlbXBpcmljYWwgZm9yIDYwNjEtVDYpLiIiIgogICAgICAgIGlmIFQgPD0gMTAwLjA6CiAgICAgICAgICAgIHJldHVybiBzZWxmLnlpZWxkX3N0cmVuZ3RoCiAgICAgICAgIyBMaW5lYXIgZGUtcmF0ZTogfjIwICUgZHJvcCBmcm9tIDEwMCDCsEMgdG8gMjAwIMKwQwogICAgICAgIGZhY3RvciA9IG1heCgxLjAgLSAwLjAwMiAqIChUIC0gMTAwLjApLCAwLjMpCiAgICAgICAgcmV0dXJuIHNlbGYueWllbGRfc3RyZW5ndGggKiBmYWN0b3IKCgojIFByZS1idWlsdCBzdHJ1Y3R1cmFsIG1hdGVyaWFsIGNhdGFsb2d1ZQpTVFJVQ1RVUkFMX0NBVEFMT0c6IERpY3Rbc3RyLCBTdHJ1Y3R1cmFsTWF0ZXJpYWxdID0gewogICAgIjYwNjEtVDYiOiBTdHJ1Y3R1cmFsTWF0ZXJpYWwoKSwgICMgZGVmYXVsdAogICAgIjcwNzUtVDYiOiBTdHJ1Y3R1cmFsTWF0ZXJpYWwoCiAgICAgICAgbmFtZT0iNzA3NS1UNiBBbHVtaW5pdW0iLCBkZW5zaXR5PTI4MTAuMCwKICAgICAgICB0aGVybWFsX2NvbmR1Y3Rpdml0eT0xMzAuMCwgc3BlY2lmaWNfaGVhdD05NjAuMCwKICAgICAgICByZXNpc3Rpdml0eT01LjE1ZS04LCB5aWVsZF9zdHJlbmd0aD01MDNlNiwKICAgICAgICB1bHRpbWF0ZV9zdHJlbmd0aD01NzJlNiwgeW91bmdzX21vZHVsdXM9NzEuN2U5LAogICAgICAgIHBvaXNzb25zX3JhdGlvPTAuMzMsIHRoZXJtYWxfZXhwYW5zaW9uPTIzLjRlLTYsCiAgICAgICAgZmF0aWd1ZV9zdHJlbmd0aD0xNTllNiwgc2hlYXJfbW9kdWx1cz0yNi45ZTksCiAgICAgICAgc2hlYXJfc3RyZW5ndGg9MzMxZTYsIG1heF9zZXJ2aWNlX3RlbXA9MTMwLjAsCiAgICApLAogICAgIkFJU0kgNDE0MCI6IFN0cnVjdHVyYWxNYXRlcmlhbCgKICAgICAgICBuYW1lPSJBSVNJIDQxNDAgU3RlZWwiLCBkZW5zaXR5PTc4NTAuMCwKICAgICAgICB0aGVybWFsX2NvbmR1Y3Rpdml0eT00Mi4wLCBzcGVjaWZpY19oZWF0PTQ3My4wLAogICAgICAgIHJlc2lzdGl2aXR5PTIuMmUtNywgeWllbGRfc3RyZW5ndGg9NjU1ZTYsCiAgICAgICAgdWx0aW1hdGVfc3RyZW5ndGg9MTAyMGU2LCB5b3VuZ3NfbW9kdWx1cz0yMDVlOSwKICAgICAgICBwb2lzc29uc19yYXRpbz0wLjI5LCB0aGVybWFsX2V4cGFuc2lvbj0xMi4zZS02LAogICAgICAgIGZhdGlndWVfc3RyZW5ndGg9NDIwZTYsIHNoZWFyX21vZHVsdXM9ODAuMGU5LAogICAgICAgIHNoZWFyX3N0cmVuZ3RoPTY1NWU2LCBtYXhfc2VydmljZV90ZW1wPTQwMC4wLAogICAgKSwKICAgICJUaS02QWwtNFYiOiBTdHJ1Y3R1cmFsTWF0ZXJpYWwoCiAgICAgICAgbmFtZT0iVGktNkFsLTRWIFRpdGFuaXVtIiwgZGVuc2l0eT00NDMwLjAsCiAgICAgICAgdGhlcm1hbF9jb25kdWN0aXZpdHk9Ni43LCBzcGVjaWZpY19oZWF0PTUyNi4wLAogICAgICAgIHJlc2lzdGl2aXR5PTEuNzhlLTYsIHlpZWxkX3N0cmVuZ3RoPTg4MGU2LAogICAgICAgIHVsdGltYXRlX3N0cmVuZ3RoPTk1MGU2LCB5b3VuZ3NfbW9kdWx1cz0xMTMuOGU5LAogICAgICAgIHBvaXNzb25zX3JhdGlvPTAuMzQyLCB0aGVybWFsX2V4cGFuc2lvbj04LjZlLTYsCiAgICAgICAgZmF0aWd1ZV9zdHJlbmd0aD01MTBlNiwgc2hlYXJfbW9kdWx1cz00NC4wZTksCiAgICAgICAgc2hlYXJfc3RyZW5ndGg9NTUwZTYsIG1heF9zZXJ2aWNlX3RlbXA9MzAwLjAsCiAgICApLAp9CgoKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyBDb3BwZXIgd2luZGluZwojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpAZGF0YWNsYXNzCmNsYXNzIENvcHBlclByb3BlcnRpZXM6CiAgICAiIiIKICAgIENvcHBlciB3aW5kaW5nIG1hdGVyaWFsIHdpdGggdGVtcGVyYXR1cmUtZGVwZW5kZW50IHJlc2lzdGl2aXR5LgogICAgTW9kZWw6IHJobyhUKSA9IHJob18yMCAqICgxICsgYWxwaGEqKFQgLSAyMCkpCiAgICBQZXIgSUVDIDYwMjI4OiBhbHBoYV9DdSB+IDAuMDAzOTMgL8KwQyBmb3IgYW5uZWFsZWQgY29wcGVyLgogICAgIiIiCiAgICByaG9fMjA6IGZsb2F0ID0gMS43MjRlLTgKICAgIGFscGhhOiBmbG9hdCA9IDAuMDAzOTMKICAgIGRlbnNpdHk6IGZsb2F0ID0gODk2MC4wCiAgICB0aGVybWFsX2NvbmR1Y3Rpdml0eTogZmxvYXQgPSA0MDEuMAogICAgc3BlY2lmaWNfaGVhdDogZmxvYXQgPSAzODUuMAogICAgbWF4X3RlbXA6IGZsb2F0ID0gMTgwLjAgICAgICAgICMgQ2xhc3MgSCBpbnN1bGF0aW9uIGxpbWl0CiAgICBmaWxsX2ZhY3RvcjogZmxvYXQgPSAwLjQ1CgogICAgZGVmIHJlc2lzdGl2aXR5KHNlbGYsIFQ6IGZsb2F0KSAtPiBmbG9hdDoKICAgICAgICByZXR1cm4gc2VsZi5yaG9fMjAgKiAoMS4wICsgc2VsZi5hbHBoYSAqIChUIC0gMjAuMCkpCgogICAgZGVmIGNvbmR1Y3Rpdml0eShzZWxmLCBUOiBmbG9hdCkgLT4gZmxvYXQ6CiAgICAgICAgcmV0dXJuIDEuMCAvIHNlbGYucmVzaXN0aXZpdHkoVCkKCiAgICBkZWYgdGhlcm1hbF9jb25kX2F0X3RlbXAoc2VsZiwgVDogZmxvYXQpIC0+IGZsb2F0OgogICAgICAgIHJldHVybiBzZWxmLnRoZXJtYWxfY29uZHVjdGl2aXR5ICogKDEuMCAtIDAuMDAwMyAqIChUIC0gMjAuMCkpCgoKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyBTdGVlbCBsYW1pbmF0aW9uCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCkBkYXRhY2xhc3MKY2xhc3MgU3RlZWxMYW1pbmF0aW9uUHJvcGVydGllczoKICAgICIiIgogICAgU2lsaWNvbiBzdGVlbCBsYW1pbmF0aW9uIChlLmcuIE0yNTAtMzVBIC8gTTE5LTI5R2EpLgogICAgSXJvbiBsb3NzIHZpYSBCZXJ0b3R0aSdzIHNlcGFyYXRpb24gbW9kZWwgKDE5ODgpLgogICAgIiIiCiAgICBuYW1lOiBzdHIgPSAiTTI1MC0zNUEiCiAgICBkZW5zaXR5OiBmbG9hdCA9IDc2NTAuMAogICAgc2F0dXJhdGlvbl9mbHV4OiBmbG9hdCA9IDEuOAogICAgcmVsYXRpdmVfcGVybWVhYmlsaXR5OiBmbG9hdCA9IDUwMDAuMAogICAgbGFtaW5hdGlvbl90aGlja25lc3M6IGZsb2F0ID0gMC4zNWUtMwogICAgc3RhY2tpbmdfZmFjdG9yOiBmbG9hdCA9IDAuOTcKICAgIGtfaDogZmxvYXQgPSAwLjAyCiAgICBhbHBoYV9zdGVpbm1ldHo6IGZsb2F0ID0gMS44CiAgICBrX2U6IGZsb2F0ID0gNS4wZS01CiAgICBrX2V4OiBmbG9hdCA9IDEuMGUtNAogICAgdGhlcm1hbF9jb25kdWN0aXZpdHlfcmFkaWFsOiBmbG9hdCA9IDI4LjAKICAgIHRoZXJtYWxfY29uZHVjdGl2aXR5X2F4aWFsOiBmbG9hdCA9IDEuNQogICAgc3BlY2lmaWNfaGVhdDogZmxvYXQgPSA0NjAuMAogICAgbWF4X3RlbXA6IGZsb2F0ID0gMjAwLjAKCiAgICBkZWYgYmhfY3VydmUoc2VsZiwgSDogbnAubmRhcnJheSkgLT4gbnAubmRhcnJheToKICAgICAgICBtdV8wID0gNCAqIG5wLnBpICogMWUtNwogICAgICAgIGEgPSBtdV8wICogc2VsZi5yZWxhdGl2ZV9wZXJtZWFiaWxpdHkgLyAobnAucGkgLyAyICogc2VsZi5zYXR1cmF0aW9uX2ZsdXgpCiAgICAgICAgcmV0dXJuICgyICogc2VsZi5zYXR1cmF0aW9uX2ZsdXggLyBucC5waSkgKiBucC5hcmN0YW4oYSAqIEgpCgogICAgZGVmIGlyb25fbG9zc19kZW5zaXR5KHNlbGYsIGY6IGZsb2F0LCBCX3BlYWs6IGZsb2F0LCBUOiBmbG9hdCA9IDIwLjApIC0+IGZsb2F0OgogICAgICAgIEJfcGVhayA9IGFicyhCX3BlYWspCiAgICAgICAgZiA9IGFicyhmKQogICAgICAgIGlmIEJfcGVhayA8IDFlLTEyIG9yIGYgPCAxZS02OgogICAgICAgICAgICByZXR1cm4gMC4wCiAgICAgICAgdGZfaCA9IDEuMCAtIDAuMDAwMyAqIChUIC0gMjAuMCkKICAgICAgICB0Zl9lID0gMS4wICsgMC4wMDAxICogKFQgLSAyMC4wKQogICAgICAgIFBfaCA9IHNlbGYua19oICogZiAqIEJfcGVhayAqKiBzZWxmLmFscGhhX3N0ZWlubWV0eiAqIHRmX2gKICAgICAgICBQX2UgPSBzZWxmLmtfZSAqIChmICogQl9wZWFrKSAqKiAyICogdGZfZQogICAgICAgIFBfZXggPSBzZWxmLmtfZXggKiAoZiAqIEJfcGVhaykgKiogMS41CiAgICAgICAgcmVzdWx0ID0gUF9oICsgUF9lICsgUF9leAogICAgICAgIGlmIG5wLmlzbmFuKHJlc3VsdCkgb3IgbnAuaXNpbmYocmVzdWx0KToKICAgICAgICAgICAgcmV0dXJuIDAuMAogICAgICAgIHJldHVybiBtYXgocmVzdWx0LCAwLjApCgoKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyBNYWduZXQgdHlwZSBlbnVtZXJhdGlvbiAmIGdlbmVyaWMgbWFnbmV0IGRhdGFjbGFzcwojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpjbGFzcyBNYWduZXRUeXBlKEVudW0pOgogICAgTmRGZUIgPSAiTmRGZUIiCiAgICBTbUNvID0gIlNtQ28iCiAgICBGZXJyaXRlID0gIkZlcnJpdGUiCiAgICBDdXN0b20gPSAiQ3VzdG9tIgoKCkBkYXRhY2xhc3MKY2xhc3MgTWFnbmV0UHJvcGVydGllczoKICAgICIiIgogICAgR2VuZXJpYyBwZXJtYW5lbnQtbWFnbmV0IG1hdGVyaWFsLgoKICAgIFdvcmtzIGZvciBOZEZlQiwgU21DbywgRmVycml0ZSwgb3IgYW55IHVzZXItc3VwcGxpZWQgbWFnbmV0LgogICAgVGVtcGVyYXR1cmUtZGVwZW5kZW50IEJyIGFuZCBIY2ogbW9kZWxzOgogICAgICAgIEJyKFQpID0gQnJfMjAgKiAoMSArIGFscGhhX0JyICogKFQgLSAyMCkpCiAgICAgICAgSGNqKFQpID0gSGNqXzIwICogKDEgKyBhbHBoYV9IY2ogKiAoVCAtIDIwKSkKCiAgICBSZWZlcmVuY2VzIChieSBtYWduZXQgZmFtaWx5KToKICAgICAgTmRGZUIg4oCUIEFybm9sZCBNYWduZXRpYyBUZWNobm9sb2dpZXMgZGF0YXNoZWV0czsgSyZKIE1hZ25ldGljcyBCSCBkYXRhLgogICAgICBTbUNvICDigJQgRWxlY3Ryb24gRW5lcmd5IENvcnAuIEVFQyAyLTE3IHNlcmllcy4KICAgICAgRmVycml0ZSDigJQgVERLIEZCLXNlcmllcyBkYXRhc2hlZXRzLgogICAgIiIiCiAgICBtYWduZXRfdHlwZTogTWFnbmV0VHlwZSA9IE1hZ25ldFR5cGUuTmRGZUIKICAgIGdyYWRlOiBzdHIgPSAiTjQyU0giCgogICAgIyBNYWduZXRpYyBwcm9wZXJ0aWVzIGF0IDIwIMKwQwogICAgQnJfMjA6IGZsb2F0ID0gMS4zMCAgICAgICAgICAgICMgUmVtYW5lbmNlIFtUXQogICAgSGNqXzIwOiBmbG9hdCA9IDE1OTBlMyAgICAgICAgICMgSW50cmluc2ljIGNvZXJjaXZpdHkgW0EvbV0KICAgIEhjYl8yMDogZmxvYXQgPSA5OTVlMyAgICAgICAgICAjIE5vcm1hbCBjb2VyY2l2aXR5IFtBL21dCiAgICBCSG1heF8yMDogZmxvYXQgPSAzMzRlMyAgICAgICAgIyBNYXggZW5lcmd5IHByb2R1Y3QgW0ovbcKzXQogICAgbXVfcmVjOiBmbG9hdCA9IDEuMDUgICAgICAgICAgICMgUmVjb2lsIHBlcm1lYWJpbGl0eQoKICAgICMgVGVtcGVyYXR1cmUgY29lZmZpY2llbnRzCiAgICBhbHBoYV9CcjogZmxvYXQgPSAtMC4wMDExICAgICAgIyBbMS/CsENdCiAgICBhbHBoYV9IY2o6IGZsb2F0ID0gLTAuMDA2ICAgICAgIyBbMS/CsENdCiAgICBhbHBoYV9IY2I6IGZsb2F0ID0gLTAuMDA1ICAgICAgIyBbMS/CsENdCgogICAgIyBQaHlzaWNhbCAvIHRoZXJtYWwKICAgIGRlbnNpdHk6IGZsb2F0ID0gNzUwMC4wCiAgICByZXNpc3Rpdml0eTogZmxvYXQgPSAxLjZlLTYKICAgIHRoZXJtYWxfY29uZHVjdGl2aXR5OiBmbG9hdCA9IDguMAogICAgc3BlY2lmaWNfaGVhdDogZmxvYXQgPSA0NDAuMAogICAgbWF4X3RlbXA6IGZsb2F0ID0gMTUwLjAKICAgIGN1cmllX3RlbXA6IGZsb2F0ID0gMzQwLjAKCiAgICAjIEdlb21ldHJ5IChzZXQgZHVyaW5nIGRlc2lnbikKICAgIHRoaWNrbmVzczogZmxvYXQgPSAwLjAwMwogICAgYXJjX2ZyYWN0aW9uOiBmbG9hdCA9IDAuODUKICAgIGxlbmd0aDogZmxvYXQgPSAwLjAzMAoKICAgICMgLS0tIGRlcml2ZWQgaGVscGVycyAtLS0KICAgIGRlZiBCcihzZWxmLCBUOiBmbG9hdCkgLT4gZmxvYXQ6CiAgICAgICAgcmV0dXJuIHNlbGYuQnJfMjAgKiAoMS4wICsgc2VsZi5hbHBoYV9CciAqIChUIC0gMjAuMCkpCgogICAgZGVmIEhjaihzZWxmLCBUOiBmbG9hdCkgLT4gZmxvYXQ6CiAgICAgICAgcmV0dXJuIHNlbGYuSGNqXzIwICogKDEuMCArIHNlbGYuYWxwaGFfSGNqICogKFQgLSAyMC4wKSkKCiAgICBkZWYgSGNiKHNlbGYsIFQ6IGZsb2F0KSAtPiBmbG9hdDoKICAgICAgICByZXR1cm4gc2VsZi5IY2JfMjAgKiAoMS4wICsgc2VsZi5hbHBoYV9IY2IgKiAoVCAtIDIwLjApKQoKICAgIGRlZiBjaGVja19kZW1hZ25ldGl6YXRpb24oc2VsZiwgSF9kZW1hZzogZmxvYXQsIFQ6IGZsb2F0KSAtPiBib29sOgogICAgICAgICIiIlRydWUgaWYgU0FGRSAob3BlcmF0aW5nIHBvaW50IGFib3ZlIHRoZSBrbmVlKS4iIiIKICAgICAgICByZXR1cm4gYWJzKEhfZGVtYWcpIDwgMC44ICogYWJzKHNlbGYuSGNqKFQpKQoKICAgIGRlZiBlZGR5X2N1cnJlbnRfbG9zc19kZW5zaXR5KHNlbGYsIGY6IGZsb2F0LCBCX3BlYWs6IGZsb2F0LCBUX3RlbXA6IGZsb2F0ID0gMjAuMCkgLT4gZmxvYXQ6CiAgICAgICAgcmhvX1QgPSBzZWxmLnJlc2lzdGl2aXR5ICogKDEuMCArIDAuMDAxICogKFRfdGVtcCAtIDIwLjApKQogICAgICAgIGlmIHJob19UIDw9IDAgb3IgYWJzKGYpIDwgMWUtNjoKICAgICAgICAgICAgcmV0dXJuIDAuMAogICAgICAgIHJlc3VsdCA9IChucC5waSAqIHNlbGYudGhpY2tuZXNzICogZiAqIEJfcGVhaykgKiogMiAvICg2LjAgKiByaG9fVCkKICAgICAgICByZXR1cm4gMC4wIGlmIChucC5pc25hbihyZXN1bHQpIG9yIG5wLmlzaW5mKHJlc3VsdCkpIGVsc2UgbWF4KHJlc3VsdCwgMC4wKQoKCiMgUHJlLWJ1aWx0IG1hZ25ldCBjYXRhbG9ndWUgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZGVmIF9uZGZlYl9ncmFkZShncmFkZTogc3RyID0gIk40MlNIIikgLT4gTWFnbmV0UHJvcGVydGllczoKICAgICIiIlJldHVybiBOZEZlQiBtYWduZXQgcHJvcGVydGllcyBmb3IgY29tbW9uIGdyYWRlcy4iIiIKICAgIGJhc2UgPSBNYWduZXRQcm9wZXJ0aWVzKG1hZ25ldF90eXBlPU1hZ25ldFR5cGUuTmRGZUIpCiAgICBncmFkZXMgPSB7CiAgICAgICAgIk4zNSI6ICAgZGljdChCcl8yMD0xLjE3LCBIY2pfMjA9OTU1ZTMsICBCSG1heF8yMD0yNjNlMywgbWF4X3RlbXA9ODAsICBncmFkZT0iTjM1IiksCiAgICAgICAgIk40MiI6ICAgZGljdChCcl8yMD0xLjMwLCBIY2pfMjA9OTU1ZTMsICBCSG1heF8yMD0zMzRlMywgbWF4X3RlbXA9ODAsICBncmFkZT0iTjQyIiksCiAgICAgICAgIk40MkgiOiAgZGljdChCcl8yMD0xLjMwLCBIY2pfMjA9MTM1M2UzLCBCSG1heF8yMD0zMzRlMywgbWF4X3RlbXA9MTIwLCBncmFkZT0iTjQySCIpLAogICAgICAgICJONDJTSCI6IGRpY3QoQnJfMjA9MS4zMCwgSGNqXzIwPTE1OTJlMywgQkhtYXhfMjA9MzM0ZTMsIG1heF90ZW1wPTE1MCwgZ3JhZGU9Ik40MlNIIiksCiAgICAgICAgIk40MFVIIjogZGljdChCcl8yMD0xLjI2LCBIY2pfMjA9MTk5MGUzLCBCSG1heF8yMD0zMThlMywgbWF4X3RlbXA9MTgwLCBncmFkZT0iTjQwVUgiKSwKICAgICAgICAiTjM4RUgiOiBkaWN0KEJyXzIwPTEuMjIsIEhjal8yMD0yMzg4ZTMsIEJIbWF4XzIwPTI5NGUzLCBtYXhfdGVtcD0yMDAsIGdyYWRlPSJOMzhFSCIpLAogICAgICAgICJONTIiOiAgIGRpY3QoQnJfMjA9MS40NCwgSGNqXzIwPTg3NmUzLCAgQkhtYXhfMjA9NDIyZTMsIG1heF90ZW1wPTYwLCAgZ3JhZGU9Ik41MiIpLAogICAgfQogICAgaWYgZ3JhZGUgaW4gZ3JhZGVzOgogICAgICAgIGZvciBrLCB2IGluIGdyYWRlc1tncmFkZV0uaXRlbXMoKToKICAgICAgICAgICAgc2V0YXR0cihiYXNlLCBrLCB2KQogICAgZWxzZToKICAgICAgICAjIGZhbGwgYmFjayB0byBONDJTSAogICAgICAgIGZvciBrLCB2IGluIGdyYWRlc1siTjQyU0giXS5pdGVtcygpOgogICAgICAgICAgICBzZXRhdHRyKGJhc2UsIGssIHYpCiAgICByZXR1cm4gYmFzZQoKCmRlZiBfc21jb19ncmFkZShncmFkZTogc3RyID0gIlNtQ28gMjoxNyIpIC0+IE1hZ25ldFByb3BlcnRpZXM6CiAgICAiIiJTYW1hcml1bSBDb2JhbHQgKFNtMkNvMTcpIOKAlCBoaWdoLXRlbXBlcmF0dXJlLCBsb3dlciBCciB0aGFuIE5kRmVCLiIiIgogICAgcmV0dXJuIE1hZ25ldFByb3BlcnRpZXMoCiAgICAgICAgbWFnbmV0X3R5cGU9TWFnbmV0VHlwZS5TbUNvLCBncmFkZT1ncmFkZSwKICAgICAgICBCcl8yMD0xLjA4LCBIY2pfMjA9MjAwMGUzLCBIY2JfMjA9ODIwZTMsIEJIbWF4XzIwPTIzMGUzLAogICAgICAgIG11X3JlYz0xLjA1LAogICAgICAgIGFscGhhX0JyPS0wLjAwMDMsIGFscGhhX0hjaj0tMC4wMDIsIGFscGhhX0hjYj0tMC4wMDIsCiAgICAgICAgZGVuc2l0eT04NDAwLjAsIHJlc2lzdGl2aXR5PTguNmUtNywKICAgICAgICB0aGVybWFsX2NvbmR1Y3Rpdml0eT0xMi4wLCBzcGVjaWZpY19oZWF0PTM3MC4wLAogICAgICAgIG1heF90ZW1wPTMwMC4wLCBjdXJpZV90ZW1wPTgwMC4wLAogICAgKQoKCmRlZiBfZmVycml0ZV9ncmFkZShncmFkZTogc3RyID0gIlkzMEJIIikgLT4gTWFnbmV0UHJvcGVydGllczoKICAgICIiIkhhcmQgZmVycml0ZSAoY2VyYW1pYykg4oCUIGNoZWFwLCBsb3cgQnIsIGdvb2QgdGVtcGVyYXR1cmUgc3RhYmlsaXR5LiIiIgogICAgcmV0dXJuIE1hZ25ldFByb3BlcnRpZXMoCiAgICAgICAgbWFnbmV0X3R5cGU9TWFnbmV0VHlwZS5GZXJyaXRlLCBncmFkZT1ncmFkZSwKICAgICAgICBCcl8yMD0wLjM5LCBIY2pfMjA9MjQwZTMsIEhjYl8yMD0yMzBlMywgQkhtYXhfMjA9MzBlMywKICAgICAgICBtdV9yZWM9MS4xLAogICAgICAgIGFscGhhX0JyPS0wLjAwMiwgYWxwaGFfSGNqPTAuMDA0LCAgIyBOb3RlOiBwb3NpdGl2ZSBmb3IgZmVycml0ZQogICAgICAgIGFscGhhX0hjYj0wLjAwMywKICAgICAgICBkZW5zaXR5PTQ5MDAuMCwgcmVzaXN0aXZpdHk9MWU0LCAgIyBlZmZlY3RpdmVseSBpbnN1bGF0b3IKICAgICAgICB0aGVybWFsX2NvbmR1Y3Rpdml0eT00LjAsIHNwZWNpZmljX2hlYXQ9ODAwLjAsCiAgICAgICAgbWF4X3RlbXA9MjUwLjAsIGN1cmllX3RlbXA9NDUwLjAsCiAgICApCgoKTUFHTkVUX0NBVEFMT0c6IERpY3Rbc3RyLCBDYWxsYWJsZVsuLi4sIE1hZ25ldFByb3BlcnRpZXNdXSA9IHsKICAgICJOZEZlQiI6IF9uZGZlYl9ncmFkZSwKICAgICJTbUNvIjogIF9zbWNvX2dyYWRlLAogICAgIkZlcnJpdGUiOiBfZmVycml0ZV9ncmFkZSwKfQoKCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMgQmVhcmluZwojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpAZGF0YWNsYXNzCmNsYXNzIEJlYXJpbmdQcm9wZXJ0aWVzOgogICAgIiIiCiAgICBEZWVwLWdyb292ZSBiYWxsIGJlYXJpbmcg4oCUIElTTyAyODE6MjAwNyBMMTAgbGlmZSBtb2RlbC4KICAgICIiIgogICAgdHlwZTogc3RyID0gImRlZXBfZ3Jvb3ZlX2JhbGwiCiAgICBib3JlX2RpYW1ldGVyOiBmbG9hdCA9IDAuMDEwCiAgICBvdXRlcl9kaWFtZXRlcjogZmxvYXQgPSAwLjAyNgogICAgd2lkdGg6IGZsb2F0ID0gMC4wMDgKICAgIGR5bmFtaWNfbG9hZF9yYXRpbmc6IGZsb2F0ID0gNDYyMC4wICAgICMgQyBbTl0KICAgIHN0YXRpY19sb2FkX3JhdGluZzogZmxvYXQgPSAxOTYwLjAgICAgICMgQzAgW05dCiAgICBtYXhfc3BlZWQ6IGZsb2F0ID0gNDAwMDAuMCAgICAgICAgICAgICAgIyBbUlBNXQogICAgbGlmZV9leHBvbmVudDogZmxvYXQgPSAzLjAKICAgIGZyaWN0aW9uX2NvZWZmaWNpZW50OiBmbG9hdCA9IDAuMDAxNQogICAgZ3JlYXNlX3RlbXBfbGltaXQ6IGZsb2F0ID0gMTIwLjAKICAgICMgU3RpZmZuZXNzIGZvciB2aWJyYXRpb24gYW5hbHlzaXMgKHJhZGlhbCwgTi9tKQogICAgcmFkaWFsX3N0aWZmbmVzczogZmxvYXQgPSA1LjBlNwoKICAgIGRlZiBsMTBfbGlmZV9ob3VycyhzZWxmLCBsb2FkX046IGZsb2F0LCBycG06IGZsb2F0KSAtPiBmbG9hdDoKICAgICAgICBpZiBsb2FkX04gPD0gMCBvciBycG0gPD0gMDoKICAgICAgICAgICAgcmV0dXJuIGZsb2F0KCJpbmYiKQogICAgICAgIEwxMF9yZXYgPSAoc2VsZi5keW5hbWljX2xvYWRfcmF0aW5nIC8gbG9hZF9OKSAqKiBzZWxmLmxpZmVfZXhwb25lbnQKICAgICAgICByZXR1cm4gTDEwX3JldiAqIDFlNiAvICg2MC4wICogcnBtKQoKICAgIGRlZiBmcmljdGlvbl90b3JxdWUoc2VsZiwgbG9hZF9OOiBmbG9hdCkgLT4gZmxvYXQ6CiAgICAgICAgcmV0dXJuIHNlbGYuZnJpY3Rpb25fY29lZmZpY2llbnQgKiBsb2FkX04gKiBzZWxmLmJvcmVfZGlhbWV0ZXIgLyAyLjAKCiAgICBkZWYgZnJpY3Rpb25fbG9zcyhzZWxmLCBsb2FkX046IGZsb2F0LCBycG06IGZsb2F0KSAtPiBmbG9hdDoKICAgICAgICByZXR1cm4gc2VsZi5mcmljdGlvbl90b3JxdWUobG9hZF9OKSAqIHJwbSAqIDIgKiBucC5waSAvIDYwLjAKCgojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQojIE1vdW50aW5nIGdlb21ldHJ5CiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCkBkYXRhY2xhc3MKY2xhc3MgTW91bnRpbmdDb25maWc6CiAgICAiIiIKICAgIE1vdG9yIG1vdW50aW5nIC8gaW50ZXJmYWNlIGdlb21ldHJ5LgoKICAgIFN1cHBvcnRzIGZvdXIgY29tbW9uIGFycmFuZ2VtZW50czoKICAgICAgLSBmYWNlX21vdW50ICAgOiBCb2x0ZWQgZmxhbmdlIG9uIGRyaXZlLWVuZCBmYWNlIChlLmcuIGRyb25lIGFybSBjbGFtcCkKICAgICAgLSBmb290X21vdW50ICAgOiBGZWV0IHVuZGVyIHN0YXRvciBob3VzaW5nIChJRUMgQjMtc3R5bGUpCiAgICAgIC0gc2hhZnRfY2xhbXAgIDogU2hhZnQgY2xhbXBlZCBpbnRvIGV4dGVybmFsIHN0cnVjdHVyZQogICAgICAtIGN1c3RvbSAgICAgICA6IFVzZXItZGVmaW5lZCBib2x0IGNpcmNsZSwgdGhpY2tuZXNzLCBldGMuCgogICAgQWxsIHN0cnVjdHVyYWwgcGFydHMgZGVmYXVsdCB0byA2MDYxLVQ2LgogICAgIiIiCiAgICBzdHlsZTogc3RyID0gImZhY2VfbW91bnQiCgogICAgIyBCb2x0IGNpcmNsZQogICAgbnVtX2JvbHRzOiBpbnQgPSA0CiAgICBib2x0X2NpcmNsZV9kaWFtZXRlcjogZmxvYXQgPSAwLjA0MCAgICMgW21dCiAgICBib2x0X2RpYW1ldGVyOiBmbG9hdCA9IDAuMDAzICAgICAgICAgICMgTTMgIFttXQogICAgYm9sdF9ncmFkZTogZmxvYXQgPSA4LjggICAgICAgICAgICAgICMgSVNPIGdyYWRlIOKGkiB0ZW5zaWxlIH4gODAwIE1QYQoKICAgICMgRmxhbmdlIC8gZm9vdCBwbGF0ZQogICAgZmxhbmdlX3RoaWNrbmVzczogZmxvYXQgPSAwLjAwMyAgICAgICAjIFttXQogICAgZmxhbmdlX291dGVyX2RpYW1ldGVyOiBmbG9hdCA9IDAuMDUwICAjIFttXQoKICAgICMgTWF0ZXJpYWwgZm9yIG1vdW50aW5nIGhhcmR3YXJlIChkZWZhdWx0IDYwNjEtVDYpCiAgICBtYXRlcmlhbDogU3RydWN0dXJhbE1hdGVyaWFsID0gZmllbGQoZGVmYXVsdF9mYWN0b3J5PVN0cnVjdHVyYWxNYXRlcmlhbCkKCiAgICAjIExvYWRlZCBkaXJlY3Rpb25zIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIGF4aWFsX2xvYWQ6IGZsb2F0ID0gMC4wICAgICAgICAgICAgICAgIyBbTl0gYWxvbmcgc2hhZnQgYXhpcwogICAgcmFkaWFsX2xvYWQ6IGZsb2F0ID0gMC4wICAgICAgICAgICAgICAjIFtOXSBwZXJwZW5kaWN1bGFyIHRvIHNoYWZ0CiAgICBiZW5kaW5nX21vbWVudDogZmxvYXQgPSAwLjAgICAgICAgICAgICMgW07Ct21dCgogICAgIyBGb3IgdmlicmF0aW9uIGlzb2xhdGlvbgogICAgaXNvbGF0b3Jfc3RpZmZuZXNzOiBmbG9hdCA9IDAuMCAgICAgICAjIFtOL21dLCAwID0gcmlnaWQgbW91bnQKICAgIGlzb2xhdG9yX2RhbXBpbmc6IGZsb2F0ID0gMC4wICAgICAgICAgIyBbTsK3cy9tXQoKCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMgQ2VudHJhbCBtYXRlcmlhbCBkYXRhYmFzZQojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpAZGF0YWNsYXNzCmNsYXNzIE1hdGVyaWFsRGF0YWJhc2U6CiAgICAiIiIKICAgIENlbnRyYWwgbWF0ZXJpYWwgcmVnaXN0cnkgZm9yIHRoZSBtb3RvciBvcHRpbWlzZXIuCgogICAgRXZlcnkgc3RydWN0dXJhbCBjb21wb25lbnQgZGVmYXVsdHMgdG8gNjA2MS1UNi4gIFVzZXJzIG1heSBvdmVycmlkZSBhbnkKICAgIGZpZWxkLCBpbmplY3QgZnVsbHkgY3VzdG9tIG1hdGVyaWFscywgb3Igc2VsZWN0IGZyb20gdGhlIGJ1aWx0LWluCiAgICBjYXRhbG9ndWUuICBNYWduZXQgdHlwZSBpcyBzZWxlY3RhYmxlIChOZEZlQiAvIFNtQ28gLyBGZXJyaXRlIC8gQ3VzdG9tKS4KICAgICIiIgogICAgY29wcGVyOiBDb3BwZXJQcm9wZXJ0aWVzID0gZmllbGQoZGVmYXVsdF9mYWN0b3J5PUNvcHBlclByb3BlcnRpZXMpCiAgICBzdGVlbDogU3RlZWxMYW1pbmF0aW9uUHJvcGVydGllcyA9IGZpZWxkKGRlZmF1bHRfZmFjdG9yeT1TdGVlbExhbWluYXRpb25Qcm9wZXJ0aWVzKQogICAgbWFnbmV0OiBNYWduZXRQcm9wZXJ0aWVzID0gZmllbGQoZGVmYXVsdF9mYWN0b3J5PWxhbWJkYTogX25kZmViX2dyYWRlKCJONDJTSCIpKQoKICAgICMgU3RydWN0dXJhbCDigJQgYWxsIGRlZmF1bHQgdG8gNjA2MS1UNgogICAgcm90b3JfaG91c2luZzogU3RydWN0dXJhbE1hdGVyaWFsID0gZmllbGQoZGVmYXVsdF9mYWN0b3J5PVN0cnVjdHVyYWxNYXRlcmlhbCkKICAgIHN0YXRvcl9ob3VzaW5nOiBTdHJ1Y3R1cmFsTWF0ZXJpYWwgPSBmaWVsZChkZWZhdWx0X2ZhY3Rvcnk9U3RydWN0dXJhbE1hdGVyaWFsKQogICAgZW5kX2JlbGxfZGU6IFN0cnVjdHVyYWxNYXRlcmlhbCA9IGZpZWxkKGRlZmF1bHRfZmFjdG9yeT1TdHJ1Y3R1cmFsTWF0ZXJpYWwpCiAgICBlbmRfYmVsbF9uZGU6IFN0cnVjdHVyYWxNYXRlcmlhbCA9IGZpZWxkKGRlZmF1bHRfZmFjdG9yeT1TdHJ1Y3R1cmFsTWF0ZXJpYWwpCiAgICBtb3VudGluZ19wbGF0ZTogU3RydWN0dXJhbE1hdGVyaWFsID0gZmllbGQoZGVmYXVsdF9mYWN0b3J5PVN0cnVjdHVyYWxNYXRlcmlhbCkKCiAgICAjIFNoYWZ0IOKAlCBkZWZhdWx0cyB0byBBSVNJIDQxNDAgc3RlZWwgKG92ZXJyaWRhYmxlKQogICAgc2hhZnQ6IFN0cnVjdHVyYWxNYXRlcmlhbCA9IGZpZWxkKAogICAgICAgIGRlZmF1bHRfZmFjdG9yeT1sYW1iZGE6IGNvcHkuZGVlcGNvcHkoU1RSVUNUVVJBTF9DQVRBTE9HWyJBSVNJIDQxNDAiXSkKICAgICkKCiAgICAjIEJlYXJpbmdzCiAgICBiZWFyaW5nX2RyaXZlOiBCZWFyaW5nUHJvcGVydGllcyA9IGZpZWxkKGRlZmF1bHRfZmFjdG9yeT1CZWFyaW5nUHJvcGVydGllcykKICAgIGJlYXJpbmdfbm9uX2RyaXZlOiBCZWFyaW5nUHJvcGVydGllcyA9IGZpZWxkKGRlZmF1bHRfZmFjdG9yeT1CZWFyaW5nUHJvcGVydGllcykKCiAgICAjIE1vdW50aW5nCiAgICBtb3VudGluZzogTW91bnRpbmdDb25maWcgPSBmaWVsZChkZWZhdWx0X2ZhY3Rvcnk9TW91bnRpbmdDb25maWcpCgogICAgIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICMgY29udmVuaWVuY2UgaGVscGVycwogICAgIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgIGRlZiBzZXRfbWFnbmV0KHNlbGYsIG1hZ25ldF90eXBlOiBzdHIsIGdyYWRlOiBzdHIgPSAiIiwgKipvdmVycmlkZXMpIC0+IE5vbmU6CiAgICAgICAgIiIiCiAgICAgICAgU2VsZWN0IGEgbWFnbmV0IGZhbWlseSBhbmQgKG9wdGlvbmFsKSBncmFkZSBmcm9tIHRoZSBjYXRhbG9ndWUsCiAgICAgICAgb3IgcGFzcyBtYWduZXRfdHlwZT0iQ3VzdG9tIiB3aXRoIGtleXdvcmQgb3ZlcnJpZGVzLgoKICAgICAgICBFeGFtcGxlcwogICAgICAgIC0tLS0tLS0tCiAgICAgICAgPj4+IGRiID0gTWF0ZXJpYWxEYXRhYmFzZSgpCiAgICAgICAgPj4+IGRiLnNldF9tYWduZXQoIk5kRmVCIiwgZ3JhZGU9Ik41MiIpCiAgICAgICAgPj4+IGRiLnNldF9tYWduZXQoIlNtQ28iKQogICAgICAgID4+PiBkYi5zZXRfbWFnbmV0KCJGZXJyaXRlIiwgZ3JhZGU9IlkzMEJIIikKICAgICAgICA+Pj4gZGIuc2V0X21hZ25ldCgiQ3VzdG9tIiwgQnJfMjA9MS4xLCBIY2pfMjA9MTIwMGUzLCBkZW5zaXR5PTc2MDAsCiAgICAgICAgLi4uICAgICAgICAgICAgICAgbWF4X3RlbXA9MjAwLCBhbHBoYV9Ccj0tMC4wMDEpCiAgICAgICAgIiIiCiAgICAgICAgaWYgbWFnbmV0X3R5cGUgaW4gTUFHTkVUX0NBVEFMT0c6CiAgICAgICAgICAgIHNlbGYubWFnbmV0ID0gTUFHTkVUX0NBVEFMT0dbbWFnbmV0X3R5cGVdKGdyYWRlIG9yIG1hZ25ldF90eXBlKQogICAgICAgIGVsaWYgbWFnbmV0X3R5cGUgPT0gIkN1c3RvbSI6CiAgICAgICAgICAgIHNlbGYubWFnbmV0ID0gTWFnbmV0UHJvcGVydGllcyhtYWduZXRfdHlwZT1NYWduZXRUeXBlLkN1c3RvbSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGdyYWRlPWdyYWRlIG9yICJDdXN0b20iKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIHJhaXNlIFZhbHVlRXJyb3IoCiAgICAgICAgICAgICAgICBmIlVua25vd24gbWFnbmV0IHR5cGUgJ3ttYWduZXRfdHlwZX0nLiAiCiAgICAgICAgICAgICAgICBmIkNob29zZSBmcm9tIHtsaXN0KE1BR05FVF9DQVRBTE9HLmtleXMoKSl9IG9yICdDdXN0b20nLiIKICAgICAgICAgICAgKQogICAgICAgICMgQXBwbHkgYW55IHVzZXIgb3ZlcnJpZGVzIG9uIHRvcAogICAgICAgIGZvciBrLCB2IGluIG92ZXJyaWRlcy5pdGVtcygpOgogICAgICAgICAgICBpZiBoYXNhdHRyKHNlbGYubWFnbmV0LCBrKToKICAgICAgICAgICAgICAgIHNldGF0dHIoc2VsZi5tYWduZXQsIGssIHYpCgogICAgZGVmIHNldF9zdHJ1Y3R1cmFsX21hdGVyaWFsKHNlbGYsIGNvbXBvbmVudDogc3RyLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG1hdGVyaWFsOiBPcHRpb25hbFtTdHJ1Y3R1cmFsTWF0ZXJpYWxdID0gTm9uZSwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBwcmVzZXQ6IE9wdGlvbmFsW3N0cl0gPSBOb25lLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICoqb3ZlcnJpZGVzKSAtPiBOb25lOgogICAgICAgICIiIgogICAgICAgIFNldCBvciBvdmVycmlkZSB0aGUgc3RydWN0dXJhbCBtYXRlcmlhbCBmb3IgYSBuYW1lZCBjb21wb25lbnQuCgogICAgICAgIFBhcmFtZXRlcnMKICAgICAgICAtLS0tLS0tLS0tCiAgICAgICAgY29tcG9uZW50IDogc3RyCiAgICAgICAgICAgIE9uZSBvZjogcm90b3JfaG91c2luZywgc3RhdG9yX2hvdXNpbmcsIGVuZF9iZWxsX2RlLCBlbmRfYmVsbF9uZGUsCiAgICAgICAgICAgIG1vdW50aW5nX3BsYXRlLCBzaGFmdAogICAgICAgIG1hdGVyaWFsIDogU3RydWN0dXJhbE1hdGVyaWFsLCBvcHRpb25hbAogICAgICAgICAgICBGdWxseSBjdXN0b20gbWF0ZXJpYWwgaW5zdGFuY2UuCiAgICAgICAgcHJlc2V0IDogc3RyLCBvcHRpb25hbAogICAgICAgICAgICBOYW1lIGZyb20gU1RSVUNUVVJBTF9DQVRBTE9HICgiNjA2MS1UNiIsICI3MDc1LVQ2IiwgIkFJU0kgNDE0MCIsCiAgICAgICAgICAgICJUaS02QWwtNFYiKS4KICAgICAgICAqKm92ZXJyaWRlcwogICAgICAgICAgICBQYXRjaCBpbmRpdmlkdWFsIGZpZWxkcyBvbiB0b3Agb2YgcHJlc2V0IC8gY3VycmVudCBtYXRlcmlhbC4KCiAgICAgICAgRXhhbXBsZXMKICAgICAgICAtLS0tLS0tLQogICAgICAgID4+PiBkYi5zZXRfc3RydWN0dXJhbF9tYXRlcmlhbCgic2hhZnQiLCBwcmVzZXQ9IkFJU0kgNDE0MCIpCiAgICAgICAgPj4+IGRiLnNldF9zdHJ1Y3R1cmFsX21hdGVyaWFsKCJyb3Rvcl9ob3VzaW5nIiwgcHJlc2V0PSI3MDc1LVQ2IikKICAgICAgICA+Pj4gZGIuc2V0X3N0cnVjdHVyYWxfbWF0ZXJpYWwoIm1vdW50aW5nX3BsYXRlIiwKICAgICAgICAuLi4gICAgIG1hdGVyaWFsPVN0cnVjdHVyYWxNYXRlcmlhbChuYW1lPSJDdXN0b20gQ0YgcGxhdGUiLAogICAgICAgIC4uLiAgICAgICAgIGRlbnNpdHk9MTYwMCwgeWllbGRfc3RyZW5ndGg9NjAwZTYsIHlvdW5nc19tb2R1bHVzPTcwZTksCiAgICAgICAgLi4uICAgICAgICAgdGhlcm1hbF9jb25kdWN0aXZpdHk9NS4wLCBzcGVjaWZpY19oZWF0PTkwMCwgLi4uKSkKICAgICAgICAiIiIKICAgICAgICB2YWxpZCA9IHsicm90b3JfaG91c2luZyIsICJzdGF0b3JfaG91c2luZyIsICJlbmRfYmVsbF9kZSIsCiAgICAgICAgICAgICAgICAgImVuZF9iZWxsX25kZSIsICJtb3VudGluZ19wbGF0ZSIsICJzaGFmdCJ9CiAgICAgICAgaWYgY29tcG9uZW50IG5vdCBpbiB2YWxpZDoKICAgICAgICAgICAgcmFpc2UgVmFsdWVFcnJvcihmImNvbXBvbmVudCBtdXN0IGJlIG9uZSBvZiB7dmFsaWR9IikKCiAgICAgICAgaWYgbWF0ZXJpYWwgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIG1hdCA9IGNvcHkuZGVlcGNvcHkobWF0ZXJpYWwpCiAgICAgICAgZWxpZiBwcmVzZXQgaXMgbm90IE5vbmU6CiAgICAgICAgICAgIGlmIHByZXNldCBub3QgaW4gU1RSVUNUVVJBTF9DQVRBTE9HOgogICAgICAgICAgICAgICAgcmFpc2UgVmFsdWVFcnJvcigKICAgICAgICAgICAgICAgICAgICBmIlVua25vd24gcHJlc2V0ICd7cHJlc2V0fScuICIKICAgICAgICAgICAgICAgICAgICBmIkF2YWlsYWJsZToge2xpc3QoU1RSVUNUVVJBTF9DQVRBTE9HLmtleXMoKSl9IgogICAgICAgICAgICAgICAgKQogICAgICAgICAgICBtYXQgPSBjb3B5LmRlZXBjb3B5KFNUUlVDVFVSQUxfQ0FUQUxPR1twcmVzZXRdKQogICAgICAgIGVsc2U6CiAgICAgICAgICAgIG1hdCA9IGNvcHkuZGVlcGNvcHkoZ2V0YXR0cihzZWxmLCBjb21wb25lbnQpKQoKICAgICAgICBmb3IgaywgdiBpbiBvdmVycmlkZXMuaXRlbXMoKToKICAgICAgICAgICAgaWYgaGFzYXR0cihtYXQsIGspOgogICAgICAgICAgICAgICAgc2V0YXR0cihtYXQsIGssIHYpCgogICAgICAgIHNldGF0dHIoc2VsZiwgY29tcG9uZW50LCBtYXQpCgogICAgZGVmIGF1dG9fc2VsZWN0X21hZ25ldF9ncmFkZShzZWxmLCBtYXhfb3BlcmF0aW5nX3RlbXA6IGZsb2F0KSAtPiBOb25lOgogICAgICAgICIiIlBpY2sgdGhlIGNoZWFwZXN0IE5kRmVCIGdyYWRlIHRoYXQgc3Vydml2ZXMgdGhlIHRlbXBlcmF0dXJlLiIiIgogICAgICAgIG9yZGVyZWQgPSBbCiAgICAgICAgICAgICg4MCwgICJONDIiKSwKICAgICAgICAgICAgKDEyMCwgIk40MkgiKSwKICAgICAgICAgICAgKDE1MCwgIk40MlNIIiksCiAgICAgICAgICAgICgxODAsICJONDBVSCIpLAogICAgICAgICAgICAoMjAwLCAiTjM4RUgiKSwKICAgICAgICBdCiAgICAgICAgZm9yIHRfbGltLCBncmFkZSBpbiBvcmRlcmVkOgogICAgICAgICAgICBpZiBtYXhfb3BlcmF0aW5nX3RlbXAgPD0gdF9saW06CiAgICAgICAgICAgICAgICBzZWxmLnNldF9tYWduZXQoIk5kRmVCIiwgZ3JhZGU9Z3JhZGUpCiAgICAgICAgICAgICAgICByZXR1cm4KICAgICAgICBzZWxmLnNldF9tYWduZXQoIk5kRmVCIiwgZ3JhZGU9Ik4zOEVIIikKCiAgICBkZWYgc2VsZWN0X2JlYXJpbmcoc2VsZiwgc2hhZnRfZGlhbWV0ZXI6IGZsb2F0LAogICAgICAgICAgICAgICAgICAgICAgIHRhcmdldF9zcGVlZDogZmxvYXQpIC0+IE5vbmU6CiAgICAgICAgIiIiQXV0by1zZWxlY3QgYmVhcmluZyBmcm9tIHNpbXBsaWZpZWQgY2F0YWxvZ3VlLiIiIgogICAgICAgIGNhdGFsb2cgPSB7CiAgICAgICAgICAgIDAuMDA1OiAoMC4wMTYsIDAuMDA1LCAxMzgwLCAgNTQwLCAgNjAwMDAsIDIuMGU3KSwKICAgICAgICAgICAgMC4wMDg6ICgwLjAyMiwgMC4wMDcsIDM0NTAsICAxMzcwLCA0ODAwMCwgMy41ZTcpLAogICAgICAgICAgICAwLjAxMDogKDAuMDI2LCAwLjAwOCwgNDYyMCwgIDE5NjAsIDQwMDAwLCA1LjBlNyksCiAgICAgICAgICAgIDAuMDEyOiAoMC4wMjgsIDAuMDA4LCA1MDcwLCAgMjM2MCwgMzgwMDAsIDUuNWU3KSwKICAgICAgICAgICAgMC4wMTU6ICgwLjAzMiwgMC4wMDksIDU1OTAsICAyODUwLCAzNDAwMCwgNy4wZTcpLAogICAgICAgICAgICAwLjAxNzogKDAuMDM1LCAwLjAxMCwgNjA1MCwgIDMyNTAsIDMyMDAwLCA4LjBlNyksCiAgICAgICAgICAgIDAuMDIwOiAoMC4wNDIsIDAuMDEyLCA5MzYwLCAgNDUwMCwgMjgwMDAsIDEuMmU4KSwKICAgICAgICAgICAgMC4wMjU6ICgwLjA0NywgMC4wMTIsIDExMjAwLCA1ODUwLCAyNDAwMCwgMS41ZTgpLAogICAgICAgICAgICAwLjAzMDogKDAuMDU1LCAwLjAxMywgMTMzMDAsIDczNTAsIDIwMDAwLCAyLjBlOCksCiAgICAgICAgfQogICAgICAgIGJvcmVzID0gc29ydGVkKGNhdGFsb2cua2V5cygpKQogICAgICAgIHNlbCA9IG1pbihib3Jlcywga2V5PWxhbWJkYSB4OiBhYnMoeCAtIHNoYWZ0X2RpYW1ldGVyKSkKICAgICAgICBvZCwgdywgQywgQzAsIG1heF9ycG0sIGtfcmFkaWFsID0gY2F0YWxvZ1tzZWxdCiAgICAgICAgZm9yIGJyZyBpbiBbc2VsZi5iZWFyaW5nX2RyaXZlLCBzZWxmLmJlYXJpbmdfbm9uX2RyaXZlXToKICAgICAgICAgICAgYnJnLmJvcmVfZGlhbWV0ZXIgPSBzZWwKICAgICAgICAgICAgYnJnLm91dGVyX2RpYW1ldGVyID0gb2QKICAgICAgICAgICAgYnJnLndpZHRoID0gdwogICAgICAgICAgICBicmcuZHluYW1pY19sb2FkX3JhdGluZyA9IEMKICAgICAgICAgICAgYnJnLnN0YXRpY19sb2FkX3JhdGluZyA9IEMwCiAgICAgICAgICAgIGJyZy5tYXhfc3BlZWQgPSBtYXhfcnBtCiAgICAgICAgICAgIGJyZy5yYWRpYWxfc3RpZmZuZXNzID0ga19yYWRpYWwKCiAgICAjIExlZ2FjeSBjb21wYXRpYmlsaXR5IGFsaWFzZXMKICAgIEBwcm9wZXJ0eQogICAgZGVmIGFsdW1pbnVtKHNlbGYpIC0+IFN0cnVjdHVyYWxNYXRlcmlhbDoKICAgICAgICByZXR1cm4gc2VsZi5yb3Rvcl9ob3VzaW5nCgogICAgQHByb3BlcnR5CiAgICBkZWYgc2hhZnRfc3RlZWwoc2VsZikgLT4gU3RydWN0dXJhbE1hdGVyaWFsOgogICAgICAgIHJldHVybiBzZWxmLnNoYWZ0Cg==
+"""
+Temperature-dependent material property database for electric motor design.
+
+Supports user-selectable magnet types (NdFeB, SmCo, Ferrite, custom) and
+fully custom material injection for all components.  Default structural
+material is 6061-T6 aluminum throughout.
+
+Material models based on:
+- Bertotti's iron loss separation model (G. Bertotti, "General Properties
+  of Power Losses in Soft Ferromagnetic Materials," IEEE Transactions on
+  Magnetics, vol. 24, no. 1, 1988.)
+- NdFeB demagnetization curves from Arnold Magnetic Technologies datasheets
+  and K&J Magnetics BH curve data.
+- SmCo data from Electron Energy Corporation datasheets (EEC 2-17 series).
+- Ferrite data from TDK FB Series datasheets.
+- Temperature coefficients from IEC 60404 and manufacturer datasheets.
+- Copper resistivity model: IEC 60228 standard.
+- 6061-T6 aluminium properties: ASM Aerospace Specification Metals Inc.
+- AISI 4140 shaft steel: MatWeb / ASM data.
+
+References:
+  [1] G. Bertotti, "Hysteresis in Magnetism," Academic Press, 1998.
+  [2] J. Pyrhonen, T. Jokinen, V. Hrabovcova, "Design of Rotating
+      Electrical Machines," Wiley, 2nd ed., 2014. (Ch. 3)
+  [3] Arnold Magnetic Technologies, "N42SH Datasheet," 2023.
+  [4] S. Ruoho et al., "Temperature Dependence of Resistivity of Sintered
+      Rare-Earth Permanent Magnets," IEEE Trans. Magn., 2010.
+  [5] Electron Energy Corp., "2:17 SmCo Magnets Datasheet," 2022.
+  [6] TDK Corporation, "Ferrite Magnets FB Series Datasheet," 2021.
+  [7] ASM Aerospace Specification Metals, "Aluminum 6061-T6," 2023.
+"""
+
+from __future__ import annotations
+from dataclasses import dataclass, field
+from typing import Optional, Dict, Any, Callable
+from enum import Enum
+import numpy as np
+import copy
+
+
+# ---------------------------------------------------------------------------
+# Generic structural material
+# ---------------------------------------------------------------------------
+@dataclass
+class StructuralMaterial:
+    """
+    Generic isotropic structural material with mechanical + thermal props.
+    Default: 6061-T6 aluminium (ASM Aerospace Specification Metals).
+    """
+    name: str = "6061-T6 Aluminium"
+    density: float = 2710.0              # [kg/m³]
+    thermal_conductivity: float = 167.0  # [W/(m·K)]
+    specific_heat: float = 896.0         # [J/(kg·K)]
+    resistivity: float = 3.99e-8         # [Ohm·m]
+    yield_strength: float = 276e6        # [Pa]
+    ultimate_strength: float = 310e6     # [Pa]
+    youngs_modulus: float = 68.9e9       # [Pa]
+    poissons_ratio: float = 0.33
+    thermal_expansion: float = 23.6e-6   # [1/°C]
+    fatigue_strength: float = 96.5e6     # [Pa] at 5e8 cycles (Aluminum)
+    shear_modulus: float = 26.0e9        # [Pa]
+    shear_strength: float = 207e6        # [Pa]
+    max_service_temp: float = 170.0      # [°C]
+
+    def yield_at_temp(self, T: float) -> float:
+        """Yield strength derated with temperature (empirical for 6061-T6)."""
+        if T <= 100.0:
+            return self.yield_strength
+        # Linear de-rate: ~20 % drop from 100 °C to 200 °C
+        factor = max(1.0 - 0.002 * (T - 100.0), 0.3)
+        return self.yield_strength * factor
+
+
+# Pre-built structural material catalogue
+STRUCTURAL_CATALOG: Dict[str, StructuralMaterial] = {
+    "6061-T6": StructuralMaterial(),  # default
+    "7075-T6": StructuralMaterial(
+        name="7075-T6 Aluminium", density=2810.0,
+        thermal_conductivity=130.0, specific_heat=960.0,
+        resistivity=5.15e-8, yield_strength=503e6,
+        ultimate_strength=572e6, youngs_modulus=71.7e9,
+        poissons_ratio=0.33, thermal_expansion=23.4e-6,
+        fatigue_strength=159e6, shear_modulus=26.9e9,
+        shear_strength=331e6, max_service_temp=130.0,
+    ),
+    "AISI 4140": StructuralMaterial(
+        name="AISI 4140 Steel", density=7850.0,
+        thermal_conductivity=42.0, specific_heat=473.0,
+        resistivity=2.2e-7, yield_strength=655e6,
+        ultimate_strength=1020e6, youngs_modulus=205e9,
+        poissons_ratio=0.29, thermal_expansion=12.3e-6,
+        fatigue_strength=420e6, shear_modulus=80.0e9,
+        shear_strength=655e6, max_service_temp=400.0,
+    ),
+    "Ti-6Al-4V": StructuralMaterial(
+        name="Ti-6Al-4V Titanium", density=4430.0,
+        thermal_conductivity=6.7, specific_heat=526.0,
+        resistivity=1.78e-6, yield_strength=880e6,
+        ultimate_strength=950e6, youngs_modulus=113.8e9,
+        poissons_ratio=0.342, thermal_expansion=8.6e-6,
+        fatigue_strength=510e6, shear_modulus=44.0e9,
+        shear_strength=550e6, max_service_temp=300.0,
+    ),
+}
+
+
+# ---------------------------------------------------------------------------
+# Copper winding
+# ---------------------------------------------------------------------------
+@dataclass
+class CopperProperties:
+    """
+    Copper winding material with temperature-dependent resistivity.
+    Model: rho(T) = rho_20 * (1 + alpha*(T - 20))
+    Per IEC 60228: alpha_Cu ~ 0.00393 /°C for annealed copper.
+    """
+    rho_20: float = 1.724e-8
+    alpha: float = 0.00393
+    density: float = 8960.0
+    thermal_conductivity: float = 401.0
+    specific_heat: float = 385.0
+    max_temp: float = 180.0        # Class H insulation limit
+    fill_factor: float = 0.45
+
+    def resistivity(self, T: float) -> float:
+        return self.rho_20 * (1.0 + self.alpha * (T - 20.0))
+
+    def conductivity(self, T: float) -> float:
+        return 1.0 / self.resistivity(T)
+
+    def thermal_cond_at_temp(self, T: float) -> float:
+        return self.thermal_conductivity * (1.0 - 0.0003 * (T - 20.0))
+
+
+# ---------------------------------------------------------------------------
+# Steel lamination
+# ---------------------------------------------------------------------------
+@dataclass
+class SteelLaminationProperties:
+    """
+    Silicon steel lamination (e.g. M250-35A / M19-29Ga).
+    Iron loss via Bertotti's separation model (1988).
+    """
+    name: str = "M250-35A"
+    density: float = 7650.0
+    saturation_flux: float = 1.8
+    relative_permeability: float = 5000.0
+    lamination_thickness: float = 0.35e-3
+    stacking_factor: float = 0.97
+    k_h: float = 0.02
+    alpha_steinmetz: float = 1.8
+    k_e: float = 5.0e-5
+    k_ex: float = 1.0e-4
+    thermal_conductivity_radial: float = 28.0
+    thermal_conductivity_axial: float = 1.5
+    specific_heat: float = 460.0
+    max_temp: float = 200.0
+
+    def bh_curve(self, H: np.ndarray) -> np.ndarray:
+        mu_0 = 4 * np.pi * 1e-7
+        a = mu_0 * self.relative_permeability / (np.pi / 2 * self.saturation_flux)
+        return (2 * self.saturation_flux / np.pi) * np.arctan(a * H)
+
+    def iron_loss_density(self, f: float, B_peak: float, T: float = 20.0) -> float:
+        B_peak = abs(B_peak)
+        f = abs(f)
+        if B_peak < 1e-12 or f < 1e-6:
+            return 0.0
+        tf_h = 1.0 - 0.0003 * (T - 20.0)
+        tf_e = 1.0 + 0.0001 * (T - 20.0)
+        P_h = self.k_h * f * B_peak ** self.alpha_steinmetz * tf_h
+        P_e = self.k_e * (f * B_peak) ** 2 * tf_e
+        P_ex = self.k_ex * (f * B_peak) ** 1.5
+        result = P_h + P_e + P_ex
+        if np.isnan(result) or np.isinf(result):
+            return 0.0
+        return max(result, 0.0)
+
+
+# ---------------------------------------------------------------------------
+# Magnet type enumeration & generic magnet dataclass
+# ---------------------------------------------------------------------------
+class MagnetType(Enum):
+    NdFeB = "NdFeB"
+    SmCo = "SmCo"
+    Ferrite = "Ferrite"
+    Custom = "Custom"
+
+
+@dataclass
+class MagnetProperties:
+    """
+    Generic permanent-magnet material.
+
+    Works for NdFeB, SmCo, Ferrite, or any user-supplied magnet.
+    Temperature-dependent Br and Hcj models:
+        Br(T) = Br_20 * (1 + alpha_Br * (T - 20))
+        Hcj(T) = Hcj_20 * (1 + alpha_Hcj * (T - 20))
+
+    References (by magnet family):
+      NdFeB  — Arnold Magnetic Technologies datasheets; K&J Magnetics BH data.
+      SmCo   — Electron Energy Corp. EEC 2-17 series.
+      Ferrite — TDK FB-series datasheets.
+    """
+    magnet_type: MagnetType = MagnetType.NdFeB
+    grade: str = "N42SH"
+
+    # Magnetic properties at 20 °C
+    Br_20: float = 1.30            # Remanence [T]
+    Hcj_20: float = 1590e3         # Intrinsic coercivity [A/m]
+    Hcb_20: float = 995e3          # Normal coercivity [A/m]
+    BHmax_20: float = 334e3        # Max energy product [J/m³]
+    mu_rec: float = 1.05           # Recoil permeability
+
+    # Temperature coefficients
+    alpha_Br: float = -0.0011      # [1/°C]
+    alpha_Hcj: float = -0.006      # [1/°C]
+    alpha_Hcb: float = -0.005      # [1/°C]
+
+    # Physical / thermal
+    density: float = 7500.0
+    resistivity: float = 1.6e-6
+    thermal_conductivity: float = 8.0
+    specific_heat: float = 440.0
+    max_temp: float = 150.0
+    curie_temp: float = 340.0
+
+    # Geometry (set during design)
+    thickness: float = 0.003
+    arc_fraction: float = 0.85
+    length: float = 0.030
+
+    # --- derived helpers ---
+    def Br(self, T: float) -> float:
+        return self.Br_20 * (1.0 + self.alpha_Br * (T - 20.0))
+
+    def Hcj(self, T: float) -> float:
+        return self.Hcj_20 * (1.0 + self.alpha_Hcj * (T - 20.0))
+
+    def Hcb(self, T: float) -> float:
+        return self.Hcb_20 * (1.0 + self.alpha_Hcb * (T - 20.0))
+
+    def check_demagnetization(self, H_demag: float, T: float) -> bool:
+        """True if SAFE (operating point above the knee)."""
+        return abs(H_demag) < 0.8 * abs(self.Hcj(T))
+
+    def eddy_current_loss_density(self, f: float, B_peak: float, T: float = 20.0) -> float:
+        rho_T = self.resistivity * (1.0 + 0.001 * (T - 20.0))
+        if rho_T <= 0 or abs(f) < 1e-6:
+            return 0.0
+        result = (np.pi * self.thickness * f * B_peak) ** 2 / (6.0 * rho_T)
+        return 0.0 if (np.isnan(result) or np.isinf(result)) else max(result, 0.0)
+
+
+# Pre-built magnet catalogue --------------------------------------------------
+def _ndfeb_grade(grade: str = "N42SH") -> MagnetProperties:
+    """Return NdFeB magnet properties for common grades."""
+    base = MagnetProperties(magnet_type=MagnetType.NdFeB)
+    grades = {
+        "N35":   dict(Br_20=1.17, Hcj_20=955e3,  BHmax_20=263e3, max_temp=80,  grade="N35"),
+        "N42":   dict(Br_20=1.30, Hcj_20=955e3,  BHmax_20=334e3, max_temp=80,  grade="N42"),
+        "N42H":  dict(Br_20=1.30, Hcj_20=1353e3, BHmax_20=334e3, max_temp=120, grade="N42H"),
+        "N42SH": dict(Br_20=1.30, Hcj_20=1592e3, BHmax_20=334e3, max_temp=150, grade="N42SH"),
+        "N40UH": dict(Br_20=1.26, Hcj_20=1990e3, BHmax_20=318e3, max_temp=180, grade="N40UH"),
+        "N38EH": dict(Br_20=1.22, Hcj_20=2388e3, BHmax_20=294e3, max_temp=200, grade="N38EH"),
+        "N52":   dict(Br_20=1.44, Hcj_20=876e3,  BHmax_20=422e3, max_temp=60,  grade="N52"),
+    }
+    if grade in grades:
+        for k, v in grades[grade].items():
+            setattr(base, k, v)
+    else:
+        # fall back to N42SH
+        for k, v in grades["N42SH"].items():
+            setattr(base, k, v)
+    return base
+
+
+def _smco_grade(grade: str = "SmCo 2:17") -> MagnetProperties:
+    """Samarium Cobalt (Sm2Co17) — high-temperature, lower Br than NdFeB."""
+    return MagnetProperties(
+        magnet_type=MagnetType.SmCo, grade=grade,
+        Br_20=1.08, Hcj_20=2000e3, Hcb_20=820e3, BHmax_20=230e3,
+        mu_rec=1.05,
+        alpha_Br=-0.0003, alpha_Hcj=-0.002, alpha_Hcb=-0.002,
+        density=8400.0, resistivity=8.6e-7,
+        thermal_conductivity=12.0, specific_heat=370.0,
+        max_temp=300.0, curie_temp=800.0,
+    )
+
+
+def _ferrite_grade(grade: str = "Y30BH") -> MagnetProperties:
+    """Hard ferrite (ceramic) — cheap, low Br, good temperature stability."""
+    return MagnetProperties(
+        magnet_type=MagnetType.Ferrite, grade=grade,
+        Br_20=0.39, Hcj_20=240e3, Hcb_20=230e3, BHmax_20=30e3,
+        mu_rec=1.1,
+        alpha_Br=-0.002, alpha_Hcj=0.004,  # Note: positive for ferrite
+        alpha_Hcb=0.003,
+        density=4900.0, resistivity=1e4,  # effectively insulator
+        thermal_conductivity=4.0, specific_heat=800.0,
+        max_temp=250.0, curie_temp=450.0,
+    )
+
+
+MAGNET_CATALOG: Dict[str, Callable[..., MagnetProperties]] = {
+    "NdFeB": _ndfeb_grade,
+    "SmCo":  _smco_grade,
+    "Ferrite": _ferrite_grade,
+}
+
+
+# ---------------------------------------------------------------------------
+# Bearing
+# ---------------------------------------------------------------------------
+@dataclass
+class BearingProperties:
+    """
+    Deep-groove ball bearing — ISO 281:2007 L10 life model.
+    """
+    type: str = "deep_groove_ball"
+    bore_diameter: float = 0.010
+    outer_diameter: float = 0.026
+    width: float = 0.008
+    dynamic_load_rating: float = 4620.0   # C [N]
+    static_load_rating: float = 1960.0    # C0 [N]
+    max_speed: float = 40000.0            # [RPM]
+    life_exponent: float = 3.0
+    friction_coefficient: float = 0.0015
+    grease_temp_limit: float = 120.0
+    # Stiffness for vibration analysis (radial, N/m)
+    radial_stiffness: float = 5.0e7
+
+    def l10_life_hours(self, load_N: float, rpm: float) -> float:
+        if load_N <= 0 or rpm <= 0:
+            return float("inf")
+        L10_rev = (self.dynamic_load_rating / load_N) ** self.life_exponent
+        return L10_rev * 1e6 / (60.0 * rpm)
+
+    def friction_torque(self, load_N: float) -> float:
+        return self.friction_coefficient * load_N * self.bore_diameter / 2.0
+
+    def friction_loss(self, load_N: float, rpm: float) -> float:
+        return self.friction_torque(load_N) * rpm * 2 * np.pi / 60.0
+
+
+# ---------------------------------------------------------------------------
+# Mounting geometry
+# ---------------------------------------------------------------------------
+@dataclass
+class MountingConfig:
+    """
+    Motor mounting / interface geometry.
+
+    Supports four common arrangements:
+      - face_mount   : Bolted flange on drive-end face (e.g. drone arm clamp)
+      - foot_mount   : Feet under stator housing (IEC B3-style)
+      - shaft_clamp  : Shaft clamped into external structure
+      - custom       : User-defined bolt circle, thickness, etc.
+
+    All structural parts default to 6061-T6.
+    """
+    style: str = "face_mount"
+
+    # Bolt circle
+    num_bolts: int = 4
+    bolt_circle_diameter: float = 0.040   # [m]
+    bolt_diameter: float = 0.003          # M3  [m]
+    bolt_grade: float = 8.8              # ISO grade → tensile ~ 800 MPa
+
+    # Flange / foot plate
+    flange_thickness: float = 0.003       # [m]
+    flange_outer_diameter: float = 0.050  # [m]
+
+    # Material for mounting hardware (default 6061-T6)
+    material: StructuralMaterial = field(default_factory=StructuralMaterial)
+
+    # Loaded directions -------------------------------------------------------
+    axial_load: float = 0.0               # [N] along shaft axis
+    radial_load: float = 0.0              # [N] perpendicular to shaft
+    bending_moment: float = 0.0           # [N·m]
+
+    # For vibration isolation
+    isolator_stiffness: float = 0.0       # [N/m], 0 = rigid mount
+    isolator_damping: float = 0.0         # [N·s/m]
+
+
+# ---------------------------------------------------------------------------
+# Central material database
+# ---------------------------------------------------------------------------
+@dataclass
+class MaterialDatabase:
+    """
+    Central material registry for the motor optimiser.
+
+    Every structural component defaults to 6061-T6.  Users may override any
+    field, inject fully custom materials, or select from the built-in
+    catalogue.  Magnet type is selectable (NdFeB / SmCo / Ferrite / Custom).
+    """
+    copper: CopperProperties = field(default_factory=CopperProperties)
+    steel: SteelLaminationProperties = field(default_factory=SteelLaminationProperties)
+    magnet: MagnetProperties = field(default_factory=lambda: _ndfeb_grade("N42SH"))
+
+    # Structural — all default to 6061-T6
+    rotor_housing: StructuralMaterial = field(default_factory=StructuralMaterial)
+    stator_housing: StructuralMaterial = field(default_factory=StructuralMaterial)
+    end_bell_de: StructuralMaterial = field(default_factory=StructuralMaterial)
+    end_bell_nde: StructuralMaterial = field(default_factory=StructuralMaterial)
+    mounting_plate: StructuralMaterial = field(default_factory=StructuralMaterial)
+
+    # Shaft — defaults to AISI 4140 steel (overridable)
+    shaft: StructuralMaterial = field(
+        default_factory=lambda: copy.deepcopy(STRUCTURAL_CATALOG["AISI 4140"])
+    )
+
+    # Bearings
+    bearing_drive: BearingProperties = field(default_factory=BearingProperties)
+    bearing_non_drive: BearingProperties = field(default_factory=BearingProperties)
+
+    # Mounting
+    mounting: MountingConfig = field(default_factory=MountingConfig)
+
+    # ------------------------------------------------------------------
+    # convenience helpers
+    # ------------------------------------------------------------------
+    def set_magnet(self, magnet_type: str, grade: str = "", **overrides) -> None:
+        """
+        Select a magnet family and (optional) grade from the catalogue,
+        or pass magnet_type="Custom" with keyword overrides.
+
+        Examples
+        --------
+        >>> db = MaterialDatabase()
+        >>> db.set_magnet("NdFeB", grade="N52")
+        >>> db.set_magnet("SmCo")
+        >>> db.set_magnet("Ferrite", grade="Y30BH")
+        >>> db.set_magnet("Custom", Br_20=1.1, Hcj_20=1200e3, density=7600,
+        ...               max_temp=200, alpha_Br=-0.001)
+        """
+        if magnet_type in MAGNET_CATALOG:
+            self.magnet = MAGNET_CATALOG[magnet_type](grade or magnet_type)
+        elif magnet_type == "Custom":
+            self.magnet = MagnetProperties(magnet_type=MagnetType.Custom,
+                                           grade=grade or "Custom")
+        else:
+            raise ValueError(
+                f"Unknown magnet type '{magnet_type}'. "
+                f"Choose from {list(MAGNET_CATALOG.keys())} or 'Custom'."
+            )
+        # Apply any user overrides on top
+        for k, v in overrides.items():
+            if hasattr(self.magnet, k):
+                setattr(self.magnet, k, v)
+
+    def set_structural_material(self, component: str,
+                                material: Optional[StructuralMaterial] = None,
+                                preset: Optional[str] = None,
+                                **overrides) -> None:
+        """
+        Set or override the structural material for a named component.
+
+        Parameters
+        ----------
+        component : str
+            One of: rotor_housing, stator_housing, end_bell_de, end_bell_nde,
+            mounting_plate, shaft
+        material : StructuralMaterial, optional
+            Fully custom material instance.
+        preset : str, optional
+            Name from STRUCTURAL_CATALOG ("6061-T6", "7075-T6", "AISI 4140",
+            "Ti-6Al-4V").
+        **overrides
+            Patch individual fields on top of preset / current material.
+
+        Examples
+        --------
+        >>> db.set_structural_material("shaft", preset="AISI 4140")
+        >>> db.set_structural_material("rotor_housing", preset="7075-T6")
+        >>> db.set_structural_material("mounting_plate",
+        ...     material=StructuralMaterial(name="Custom CF plate",
+        ...         density=1600, yield_strength=600e6, youngs_modulus=70e9,
+        ...         thermal_conductivity=5.0, specific_heat=900, ...))
+        """
+        valid = {"rotor_housing", "stator_housing", "end_bell_de",
+                 "end_bell_nde", "mounting_plate", "shaft"}
+        if component not in valid:
+            raise ValueError(f"component must be one of {valid}")
+
+        if material is not None:
+            mat = copy.deepcopy(material)
+        elif preset is not None:
+            if preset not in STRUCTURAL_CATALOG:
+                raise ValueError(
+                    f"Unknown preset '{preset}'. "
+                    f"Available: {list(STRUCTURAL_CATALOG.keys())}"
+                )
+            mat = copy.deepcopy(STRUCTURAL_CATALOG[preset])
+        else:
+            mat = copy.deepcopy(getattr(self, component))
+
+        for k, v in overrides.items():
+            if hasattr(mat, k):
+                setattr(mat, k, v)
+
+        setattr(self, component, mat)
+
+    def auto_select_magnet_grade(self, max_operating_temp: float) -> None:
+        """Pick the cheapest NdFeB grade that survives the temperature."""
+        ordered = [
+            (80,  "N42"),
+            (120, "N42H"),
+            (150, "N42SH"),
+            (180, "N40UH"),
+            (200, "N38EH"),
+        ]
+        for t_lim, grade in ordered:
+            if max_operating_temp <= t_lim:
+                self.set_magnet("NdFeB", grade=grade)
+                return
+        self.set_magnet("NdFeB", grade="N38EH")
+
+    def select_bearing(self, shaft_diameter: float,
+                       target_speed: float) -> None:
+        """Auto-select bearing from simplified catalogue."""
+        catalog = {
+            0.005: (0.016, 0.005, 1380,  540,  60000, 2.0e7),
+            0.008: (0.022, 0.007, 3450,  1370, 48000, 3.5e7),
+            0.010: (0.026, 0.008, 4620,  1960, 40000, 5.0e7),
+            0.012: (0.028, 0.008, 5070,  2360, 38000, 5.5e7),
+            0.015: (0.032, 0.009, 5590,  2850, 34000, 7.0e7),
+            0.017: (0.035, 0.010, 6050,  3250, 32000, 8.0e7),
+            0.020: (0.042, 0.012, 9360,  4500, 28000, 1.2e8),
+            0.025: (0.047, 0.012, 11200, 5850, 24000, 1.5e8),
+            0.030: (0.055, 0.013, 13300, 7350, 20000, 2.0e8),
+        }
+        bores = sorted(catalog.keys())
+        sel = min(bores, key=lambda x: abs(x - shaft_diameter))
+        od, w, C, C0, max_rpm, k_radial = catalog[sel]
+        for brg in [self.bearing_drive, self.bearing_non_drive]:
+            brg.bore_diameter = sel
+            brg.outer_diameter = od
+            brg.width = w
+            brg.dynamic_load_rating = C
+            brg.static_load_rating = C0
+            brg.max_speed = max_rpm
+            brg.radial_stiffness = k_radial
+
+    # Legacy compatibility aliases
+    @property
+    def aluminum(self) -> StructuralMaterial:
+        return self.rotor_housing
+
+    @property
+    def shaft_steel(self) -> StructuralMaterial:
+        return self.shaft

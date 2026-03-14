@@ -1,1 +1,446 @@
-IiIiCk11bHRpLW9iamVjdGl2ZSBvcHRpbWlzYXRpb24gZW5naW5lIGZvciBvdXRydW5uZXIgQkxEQyBtb3RvciBkZXNpZ24uCgpVc2VzIE5TR0EtSUkgKE5vbi1kb21pbmF0ZWQgU29ydGluZyBHZW5ldGljIEFsZ29yaXRobSBJSSkgdmlhIHRoZSBweW1vbwpsaWJyYXJ5IGZvciBQYXJldG8tb3B0aW1hbCB0cmFkZS1vZmYgYmV0d2VlbiBlZmZpY2llbmN5LCBtYXNzLCB0b3JxdWUKZGVuc2l0eSwgdGhlcm1hbCBzYWZldHksIGFuZCBtZWNoYW5pY2FsIG1hcmdpbnMuCgpGYWxscyBiYWNrIHRvIGEgcHVyZS1OdW1QeSBkaWZmZXJlbnRpYWwtZXZvbHV0aW9uIGltcGxlbWVudGF0aW9uIGlmCnB5bW9vIGlzIHVuYXZhaWxhYmxlLgoKS2V5IFJlZmVyZW5jZXM6CiAgWzFdIEsuIERlYiwgQS4gUHJhdGFwLCBTLiBBZ2Fyd2FsLCBULiBNZXlhcml2YW4sICJBIEZhc3QgYW5kIEVsaXRpc3QKICAgICAgTXVsdGlvYmplY3RpdmUgR2VuZXRpYyBBbGdvcml0aG06IE5TR0EtSUksIiBJRUVFIFRyYW5zLiBFdm9sLiBDb21wLiwKICAgICAgdm9sLiA2LCBuby4gMiwgcHAuIDE4Mi0xOTcsIDIwMDIuCiAgWzJdIEouIEJsYW5rLCBLLiBEZWIsICJweW1vbzogTXVsdGktT2JqZWN0aXZlIE9wdGltaXphdGlvbiBpbiBQeXRob24sIgogICAgICBJRUVFIEFjY2Vzcywgdm9sLiA4LCBwcC4gODk0OTctODk1MDksIDIwMjAuCiAgWzNdIFIuIFN0b3JuLCBLLiBQcmljZSwgIkRpZmZlcmVudGlhbCBFdm9sdXRpb24g4oCUIEEgU2ltcGxlIGFuZCBFZmZpY2llbnQKICAgICAgSGV1cmlzdGljIGZvciBHbG9iYWwgT3B0aW1pemF0aW9uIG92ZXIgQ29udGludW91cyBTcGFjZXMsIiBKLiBHbG9iYWwKICAgICAgT3B0aW0uLCB2b2wuIDExLCBwcC4gMzQxLTM1OSwgMTk5Ny4KIiIiCgpmcm9tIF9fZnV0dXJlX18gaW1wb3J0IGFubm90YXRpb25zCmZyb20gZGF0YWNsYXNzZXMgaW1wb3J0IGRhdGFjbGFzcywgZmllbGQKZnJvbSB0eXBpbmcgaW1wb3J0IExpc3QsIERpY3QsIE9wdGlvbmFsLCBDYWxsYWJsZSwgVHVwbGUKaW1wb3J0IG51bXB5IGFzIG5wCmltcG9ydCB3YXJuaW5ncwoKZnJvbSAubWF0ZXJpYWxzIGltcG9ydCBNYXRlcmlhbERhdGFiYXNlCmZyb20gLmVsZWN0cm9tYWduZXRpYyBpbXBvcnQgKAogICAgTW90b3JTcGVjcywgRWxlY3Ryb21hZ25ldGljTW9kZWwsIEVNUmVzdWx0cywKICAgIHNlbGVjdF9zbG90X3BvbGUsIEdlb21ldHJ5UGFyYW1zLCBXaW5kaW5nQ29uZmlnLAopCmZyb20gLnRoZXJtYWwgaW1wb3J0IFRoZXJtYWxNb2RlbCwgVGhlcm1hbFJlc3VsdHMKZnJvbSAubWVjaGFuaWNhbCBpbXBvcnQgTWVjaGFuaWNhbE1vZGVsLCBNZWNoYW5pY2FsUmVzdWx0cwpmcm9tIC5jZmQgaW1wb3J0IENGRE1vZGVsLCBDRkRSZXN1bHRzCgoKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyBEZXNpZ24gdmVjdG9yICYgYm91bmRzCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCkRFU0lHTl9WQVJTID0gWwogICAgIyBuYW1lLCAgICAgICAgICAgICAgICAgICBsb3dlciwgICB1cHBlciwgIGRlc2NyaXB0aW9uCiAgICAoInN0YXRvcl9vdXRlcl9yYWRpdXMiLCAgIDAuMDEyLCAgIDAuMTUwLCAgIlN0YXRvciBvdXRlciByYWRpdXMgW21dIiksCiAgICAoInN0YWNrX2xlbmd0aCIsICAgICAgICAgIDAuMDA4LCAgIDAuMjAwLCAgIkFjdGl2ZSBzdGFjayBsZW5ndGggW21dIiksCiAgICAoIm1hZ25ldF90aGlja25lc3MiLCAgICAgIDAuMDAxLCAgIDAuMDEwLCAgIk1hZ25ldCByYWRpYWwgdGhpY2tuZXNzIFttXSIpLAogICAgKCJhaXJnYXAiLCAgICAgICAgICAgICAgICAwLjAwMDQsICAwLjAwMiwgICJNZWNoYW5pY2FsIGFpcmdhcCBbbV0iKSwKICAgICgic2xvdF9kZXB0aF9mcmFjIiwgICAgICAgMC4zLCAgICAgMC43LCAgICAiU2xvdCBkZXB0aCAvIGF2YWlsYWJsZSByYWRpYWwgc3BhY2UiKSwKICAgICgidG9vdGhfd2lkdGhfZnJhYyIsICAgICAgMC4zLCAgICAgMC42NSwgICAiVG9vdGggd2lkdGggLyBzbG90IHBpdGNoIiksCiAgICAoInR1cm5zX3Blcl9jb2lsIiwgICAgICAgIDEsICAgICAgIDgwLCAgICAgIlR1cm5zIHBlciBjb2lsIChpbnRlZ2VyKSIpLAogICAgKCJ3aXJlX2RpYW1ldGVyX21tIiwgICAgICAwLjIsICAgICAzLjAsICAgICJXaXJlIGRpYW1ldGVyIFttbV0iKSwKICAgICgibWFnbmV0X2FyY19mcmFjIiwgICAgICAgMC42LCAgICAgMC45NSwgICAiTWFnbmV0IGFyYyAvIHBvbGUgYXJjIiksCiAgICAoInJvdG9yX3lva2VfdGhpY2tuZXNzIiwgIDAuMDAxLCAgIDAuMDA4LCAgIlJvdG9yIGJhY2staXJvbiB0aGlja25lc3MgW21dIiksCl0KCk5fVkFSUyA9IGxlbihERVNJR05fVkFSUykKCgpkZWYgX2JvdW5kcygpOgogICAgbGIgPSBucC5hcnJheShbdlsxXSBmb3IgdiBpbiBERVNJR05fVkFSU10pCiAgICB1YiA9IG5wLmFycmF5KFt2WzJdIGZvciB2IGluIERFU0lHTl9WQVJTXSkKICAgIHJldHVybiBsYiwgdWIKCgojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQojIE9iamVjdGl2ZSBldmFsdWF0b3IKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KQGRhdGFjbGFzcwpjbGFzcyBFdmFsUmVzdWx0OgogICAgIiIiU2luZ2xlIGRlc2lnbi1wb2ludCBldmFsdWF0aW9uLiIiIgogICAgb2JqZWN0aXZlczogbnAubmRhcnJheSA9IGZpZWxkKGRlZmF1bHRfZmFjdG9yeT1sYW1iZGE6IG5wLnplcm9zKDMpKQogICAgY29uc3RyYWludHM6IG5wLm5kYXJyYXkgPSBmaWVsZChkZWZhdWx0X2ZhY3Rvcnk9bGFtYmRhOiBucC56ZXJvcyg2KSkKICAgIGVtOiBPcHRpb25hbFtFTVJlc3VsdHNdID0gTm9uZQogICAgdGhlcm1hbDogT3B0aW9uYWxbVGhlcm1hbFJlc3VsdHNdID0gTm9uZQogICAgbWVjaDogT3B0aW9uYWxbTWVjaGFuaWNhbFJlc3VsdHNdID0gTm9uZQogICAgY2ZkOiBPcHRpb25hbFtDRkRSZXN1bHRzXSA9IE5vbmUKICAgIGZlYXNpYmxlOiBib29sID0gRmFsc2UKICAgIGRlc2lnbl92ZWN0b3I6IE9wdGlvbmFsW25wLm5kYXJyYXldID0gTm9uZQogICAgc2xvdF9wb2xlOiBUdXBsZVtpbnQsIGludF0gPSAoMTIsIDE0KQoKCmRlZiBldmFsdWF0ZV9kZXNpZ24oeDogbnAubmRhcnJheSwKICAgICAgICAgICAgICAgICAgICBzcGVjczogTW90b3JTcGVjcywKICAgICAgICAgICAgICAgICAgICBtYXRlcmlhbHM6IE1hdGVyaWFsRGF0YWJhc2UsCiAgICAgICAgICAgICAgICAgICAgc2xvdF9wb2xlOiBUdXBsZVtpbnQsIGludF0gPSAoMTIsIDE0KSwKICAgICAgICAgICAgICAgICAgICBUX2FtYmllbnQ6IGZsb2F0ID0gMjUuMCwKICAgICAgICAgICAgICAgICAgICBtYXhfdGhlcm1hbF9pdGVyczogaW50ID0gNSwKICAgICAgICAgICAgICAgICAgICApIC0+IEV2YWxSZXN1bHQ6CiAgICAiIiIKICAgIEV2YWx1YXRlIGEgc2luZ2xlIGRlc2lnbiB2ZWN0b3IgdGhyb3VnaCB0aGUgY291cGxlZCBtdWx0aXBoeXNpY3MgcGlwZWxpbmUuCgogICAgT2JqZWN0aXZlcyAobWluaW1pc2UpOgogICAgICBmMCA9IC1lZmZpY2llbmN5ICAgICAgICAobWF4aW1pc2UgZWZmaWNpZW5jeSkKICAgICAgZjEgPSB0b3RhbF9tYXNzICAgICAgICAgKG1pbmltaXNlIG1hc3MpCiAgICAgIGYyID0gLXRvcnF1ZV9kZW5zaXR5ICAgIChtYXhpbWlzZSBUL2tnKQoKICAgIENvbnN0cmFpbnRzIChnIOKJpCAwKToKICAgICAgZzAgPSBUX3dpbmRpbmcgLSBUX2xpbWl0X3dpbmRpbmcKICAgICAgZzEgPSBUX21hZ25ldCAgLSBUX2xpbWl0X21hZ25ldAogICAgICBnMiA9IDEuNSAtIHNoYWZ0X3NhZmV0eV9mYWN0b3IKICAgICAgZzMgPSAxLjUgLSBtYWduZXRfcmV0ZW50aW9uX21hcmdpbgogICAgICBnNCA9IEpfY3VycmVudCAtIDEwICAoQS9tbcKyLCBrZWVwIGN1cnJlbnQgZGVuc2l0eSByZWFzb25hYmxlKQogICAgICBnNSA9IDEuMCAtIGJlYXJpbmdfc3BlZWRfb2sgICgwIGlmIE9LLCAxIGlmIHZpb2xhdGVkKQogICAgIiIiCiAgICByZXMgPSBFdmFsUmVzdWx0KCkKICAgIHJlcy5kZXNpZ25fdmVjdG9yID0geC5jb3B5KCkKICAgIHJlcy5zbG90X3BvbGUgPSBzbG90X3BvbGUKICAgIG5fc2xvdHMsIG5fcG9sZXMgPSBzbG90X3BvbGUKCiAgICAjIFVucGFjayBkZXNpZ24gdmVjdG9yCiAgICBSX3NvID0geFswXQogICAgTF9zdGFjayA9IHhbMV0KICAgIGhtID0geFsyXQogICAgZ19haXIgPSB4WzNdCiAgICBzZF9mcmFjID0geFs0XQogICAgdHdfZnJhYyA9IHhbNV0KICAgIHRwYyA9IG1heCgxLCBpbnQocm91bmQoeFs2XSkpKQogICAgZF93aXJlID0geFs3XSAqIDFlLTMgICMgbW0g4oaSIG0KICAgIG1hZ19hcmMgPSB4WzhdCiAgICB0X3lva2VfciA9IHhbOV0KCiAgICAjIEJ1aWxkIGdlb21ldHJ5CiAgICBnZW8gPSBHZW9tZXRyeVBhcmFtcygpCiAgICBnZW8uc3RhdG9yX291dGVyX3JhZGl1cyA9IFJfc28KICAgIGdlby5zdGFja19sZW5ndGggPSBMX3N0YWNrCiAgICBnZW8ubWFnbmV0X3RoaWNrbmVzcyA9IGhtCiAgICBnZW8uYWlyZ2FwID0gZ19haXIKCiAgICB0YXVfcyA9IDIgKiBucC5waSAqIFJfc28gLyBuX3Nsb3RzCiAgICBnZW8udG9vdGhfd2lkdGggPSB0d19mcmFjICogdGF1X3MKICAgIGdlby5zbG90X29wZW5pbmcgPSBtYXgodGF1X3MgKiAwLjI1LCAwLjAwMSkKCiAgICBnZW8uc3RhdG9yX3lva2VfdGhpY2tuZXNzID0gbWF4KDAuMDAyLCAoUl9zbyAtIGdlby5zaGFmdF9yYWRpdXMgLSAwLjAwMikgKiAwLjI1KQogICAgYXZhaWwgPSBSX3NvIC0gZ2VvLnN0YXRvcl95b2tlX3RoaWNrbmVzcyAtIGdlby5zaGFmdF9yYWRpdXMgLSAwLjAwMgogICAgZ2VvLnNsb3RfZGVwdGggPSBtYXgoc2RfZnJhYyAqIGF2YWlsLCAwLjAwMykKICAgIGdlby5zdGF0b3JfaW5uZXJfcmFkaXVzID0gZ2VvLnNoYWZ0X3JhZGl1cyArIDAuMDAxCgogICAgZ2VvLnJvdG9yX2lubmVyX3JhZGl1cyA9IFJfc28gKyBnX2FpcgogICAgZ2VvLnJvdG9yX3lva2VfdGhpY2tuZXNzID0gdF95b2tlX3IKICAgIGdlby5yb3Rvcl9vdXRlcl9yYWRpdXMgPSBnZW8ucm90b3JfaW5uZXJfcmFkaXVzICsgaG0gKyB0X3lva2VfcgoKICAgICMgVXBkYXRlIG1hZ25ldCBnZW9tZXRyeQogICAgbWF0ZXJpYWxzLm1hZ25ldC50aGlja25lc3MgPSBobQogICAgbWF0ZXJpYWxzLm1hZ25ldC5hcmNfZnJhY3Rpb24gPSBtYWdfYXJjCiAgICBtYXRlcmlhbHMubWFnbmV0Lmxlbmd0aCA9IExfc3RhY2sKCiAgICAjIEJ1aWxkIHdpbmRpbmcKICAgIHdkZyA9IFdpbmRpbmdDb25maWcoKQogICAgd2RnLm51bV9wb2xlcyA9IG5fcG9sZXMKICAgIHdkZy5udW1fc2xvdHMgPSBuX3Nsb3RzCiAgICB3ZGcudHVybnNfcGVyX2NvaWwgPSB0cGMKICAgIHdkZy53aXJlX2RpYW1ldGVyID0gZF93aXJlCiAgICB3ZGcubnVtX2xheWVycyA9IDIKICAgIHdkZy5jb2lsX3NwYW4gPSAxCgogICAgIyBDcmVhdGUgRU0gbW9kZWwgJiBjb21wdXRlIHdpbmRpbmcgZmFjdG9yCiAgICBlbV9tb2RlbCA9IEVsZWN0cm9tYWduZXRpY01vZGVsKHNwZWNzLCBtYXRlcmlhbHMpCiAgICBlbV9tb2RlbC5nZW9tZXRyeSA9IGdlbwoKICAgIGZyb20gLmVsZWN0cm9tYWduZXRpYyBpbXBvcnQgY29tcHV0ZV93aW5kaW5nX2ZhY3RvcgogICAgd2RnLndpbmRpbmdfZmFjdG9yID0gY29tcHV0ZV93aW5kaW5nX2ZhY3RvcihuX3Nsb3RzLCBuX3BvbGVzKQoKICAgICMgRW5kIHR1cm4gbGVuZ3RoCiAgICB3ZGcuZW5kX3R1cm5fbGVuZ3RoID0gMS41ICogZ2VvLnRvb3RoX3dpZHRoICsgMC4wMTAKCiAgICAjIFBoYXNlIHJlc2lzdGFuY2UKICAgIGNvaWxzX3Blcl9waGFzZSA9IG5fc2xvdHMgLy8gMwogICAgTl90b3RhbCA9IHRwYyAqIGNvaWxzX3Blcl9waGFzZSAqIHdkZy5udW1fbGF5ZXJzCiAgICBsX3R1cm4gPSAyICogTF9zdGFjayArIDIgKiB3ZGcuZW5kX3R1cm5fbGVuZ3RoCiAgICB3aXJlX2FyZWEgPSB3ZGcud2lyZV9hcmVhICogd2RnLm51bV9zdHJhbmRzCgogICAgcmhvX2N1ID0gbWF0ZXJpYWxzLmNvcHBlci5yZXNpc3Rpdml0eSg4MC4wKQogICAgd2RnLnBoYXNlX3Jlc2lzdGFuY2UgPSByaG9fY3UgKiBOX3RvdGFsICogbF90dXJuIC8gbWF4KHdpcmVfYXJlYSwgMWUtMTIpCgogICAgIyBJbmR1Y3RhbmNlIChzaW1wbGlmaWVkKQogICAgTVVfMCA9IDQgKiBucC5waSAqIDFlLTcKICAgIHAgPSBuX3BvbGVzIC8vIDIKICAgIHRhdV9wID0gbnAucGkgKiBSX3NvIC8gbWF4KHAsIDEpCiAgICBnX3RvdGFsID0gZ19haXIgKyBobSAvIG1hdGVyaWFscy5tYWduZXQubXVfcmVjCiAgICBMX2dhcCA9IE1VXzAgKiBOX3RvdGFsKioyICogTF9zdGFjayAqIHRhdV9wIC8gKG5wLnBpICogbWF4KHAsIDEpICogZ190b3RhbCkgKiAxLjUKICAgIExfc2xvdCA9IE1VXzAgKiBOX3RvdGFsKioyICogTF9zdGFjayAqIGNvaWxzX3Blcl9waGFzZSAqIFwKICAgICAgICAgICAgIGdlby5zbG90X2RlcHRoIC8gKDMgKiBtYXgoZ2VvLnNsb3Rfb3BlbmluZywgMC4wMDEpKQogICAgd2RnLnBoYXNlX2luZHVjdGFuY2UgPSBMX2dhcCArIExfc2xvdAoKICAgIGVtX21vZGVsLndpbmRpbmcgPSB3ZGcKCiAgICAjIC0tLSBDb3VwbGVkIEVNLVRoZXJtYWwgaXRlcmF0aW9uIC0tLQogICAgVF9tYWcgPSA4MC4wCiAgICBUX3dpbmQgPSAxMDAuMAoKICAgIGZvciBfaXRlciBpbiByYW5nZShtYXhfdGhlcm1hbF9pdGVycyk6CiAgICAgICAgdHJ5OgogICAgICAgICAgICBlbV9yZXMgPSBlbV9tb2RlbC5jb21wdXRlX3BlcmZvcm1hbmNlKFRfbWFnbmV0PVRfbWFnLCBUX3dpbmRpbmc9VF93aW5kKQogICAgICAgIGV4Y2VwdCBFeGNlcHRpb246CiAgICAgICAgICAgICMgSW5mZWFzaWJsZSBnZW9tZXRyeQogICAgICAgICAgICByZXMub2JqZWN0aXZlcyA9IG5wLmFycmF5KFswLCAxZTYsIDBdKQogICAgICAgICAgICByZXMuY29uc3RyYWludHMgPSBucC5hcnJheShbMTAwLCAxMDAsIDEwMCwgMTAwLCAxMDAsIDFdKQogICAgICAgICAgICByZXR1cm4gcmVzCgogICAgICAgICMgVGhlcm1hbAogICAgICAgIHRoX21vZGVsID0gVGhlcm1hbE1vZGVsKGdlbywgd2RnLCBtYXRlcmlhbHMsIFRfYW1iaWVudCkKICAgICAgICB0aF9yZXMgPSB0aF9tb2RlbC5idWlsZF9hbmRfc29sdmUoZW1fcmVzLCBzcGVjcy50YXJnZXRfcnBtKQoKICAgICAgICAjIENoZWNrIGNvbnZlcmdlbmNlCiAgICAgICAgZFRfbWFnID0gYWJzKHRoX3Jlcy5UX21hZ25ldHMgLSBUX21hZykKICAgICAgICBkVF93aW5kID0gYWJzKHRoX3Jlcy5UX3dpbmRpbmdfc2xvdCAtIFRfd2luZCkKICAgICAgICBUX21hZyA9IHRoX3Jlcy5UX21hZ25ldHMKICAgICAgICBUX3dpbmQgPSB0aF9yZXMuVF93aW5kaW5nX3Nsb3QKICAgICAgICBpZiBkVF9tYWcgPCAxLjAgYW5kIGRUX3dpbmQgPCAxLjA6CiAgICAgICAgICAgIGJyZWFrCgogICAgIyBDRkQgKHdpbmRhZ2UpCiAgICBjZmRfbW9kZWwgPSBDRkRNb2RlbChnZW8sIHdkZykKICAgIGNmZF9yZXMgPSBjZmRfbW9kZWwuY29tcHV0ZShzcGVjcy50YXJnZXRfcnBtLCBUX2Fpcj0oVF9hbWJpZW50ICsgVF9tYWcpIC8gMikKCiAgICAjIE1lY2hhbmljYWwKICAgIG1lY2hfbW9kZWwgPSBNZWNoYW5pY2FsTW9kZWwoZ2VvLCB3ZGcsIG1hdGVyaWFscykKICAgIG1lY2hfcmVzID0gbWVjaF9tb2RlbC5ydW5fZnVsbF9hbmFseXNpcygKICAgICAgICBzcGVjcy50YXJnZXRfcnBtLCBlbV9yZXMudG9ycXVlX2F2ZywgZW1fcmVzCiAgICApCgogICAgIyBUb3RhbCBsb3NzZXMgaW5jbHVkaW5nIHdpbmRhZ2UgYW5kIGJlYXJpbmcgZnJpY3Rpb24KICAgIHRvdGFsX2xvc3MgPSBlbV9yZXMudG90YWxfbG9zcyArIGNmZF9yZXMud2luZGFnZV9sb3NzICsgbWVjaF9yZXMuYmVhcmluZ3MuZnJpY3Rpb25fbG9zc190b3RhbAogICAgUF9vdXQgPSBlbV9yZXMucG93ZXJfb3V0cHV0CiAgICBQX2luID0gUF9vdXQgKyB0b3RhbF9sb3NzCiAgICBlZmZpY2llbmN5ID0gUF9vdXQgLyBQX2luIGlmIFBfaW4gPiAwIGVsc2UgMAoKICAgICMgTWFzcwogICAgd2VpZ2h0cyA9IGVtX21vZGVsLmNvbXB1dGVfd2VpZ2h0X2JyZWFrZG93bigpCiAgICB0b3RhbF9tYXNzID0gd2VpZ2h0c1sidG90YWxfa2ciXQoKICAgICMgVG9ycXVlIGRlbnNpdHkKICAgIHRvcnF1ZV9kZW5zaXR5ID0gZW1fcmVzLnRvcnF1ZV9hdmcgLyBtYXgodG90YWxfbWFzcywgMC4wMDEpCgogICAgIyAtLS0gT2JqZWN0aXZlcyAobWluaW1pc2UpIC0tLQogICAgcmVzLm9iamVjdGl2ZXMgPSBucC5hcnJheShbCiAgICAgICAgLWVmZmljaWVuY3ksICAgICAgICAgICMgbWF4aW1pc2Ug4oaSIG5lZ2F0ZQogICAgICAgIHRvdGFsX21hc3MsCiAgICAgICAgLXRvcnF1ZV9kZW5zaXR5LCAgICAgICMgbWF4aW1pc2Ug4oaSIG5lZ2F0ZQogICAgXSkKCiAgICAjIC0tLSBDb25zdHJhaW50cyAoZyDiiaQgMCBtZWFucyBmZWFzaWJsZSkgLS0tCiAgICByZXMuY29uc3RyYWludHMgPSBucC5hcnJheShbCiAgICAgICAgdGhfcmVzLlRfd2luZGluZ19zbG90IC0gbWF0ZXJpYWxzLmNvcHBlci5tYXhfdGVtcCwKICAgICAgICB0aF9yZXMuVF9tYWduZXRzIC0gbWF0ZXJpYWxzLm1hZ25ldC5tYXhfdGVtcCwKICAgICAgICAxLjUgLSBtZWNoX3Jlcy5zaGFmdC5zaGFmdF9zYWZldHlfZmFjdG9yLAogICAgICAgIDEuNSAtIG1lY2hfcmVzLnJvdG9yX3N0cmVzcy5tYWduZXRfcmV0ZW50aW9uX21hcmdpbiwKICAgICAgICBlbV9yZXMuY3VycmVudF9kZW5zaXR5IC0gMTAuMCwKICAgICAgICAwLjAgaWYgbWVjaF9yZXMuYmVhcmluZ3Muc3BlZWRfb2sgZWxzZSAxLjAsCiAgICBdKQoKICAgICMgR3VhcmQgYWdhaW5zdCBOYU4vSW5mIHByb3BhZ2F0aW9uIChjYXVzZXMgcHltb28gY29tcGFyaXNvbiBmYWlsdXJlcykKICAgIGlmIG5wLmFueShucC5pc25hbihyZXMub2JqZWN0aXZlcykpIG9yIG5wLmFueShucC5pc2luZihyZXMub2JqZWN0aXZlcykpOgogICAgICAgIHJlcy5vYmplY3RpdmVzID0gbnAuYXJyYXkoWzAsIDFlNiwgMF0pCiAgICAgICAgcmVzLmNvbnN0cmFpbnRzID0gbnAuYXJyYXkoWzEwMCwgMTAwLCAxMDAsIDEwMCwgMTAwLCAxXSkKICAgICAgICByZXMuZmVhc2libGUgPSBGYWxzZQogICAgICAgIHJldHVybiByZXMKICAgIGlmIG5wLmFueShucC5pc25hbihyZXMuY29uc3RyYWludHMpKSBvciBucC5hbnkobnAuaXNpbmYocmVzLmNvbnN0cmFpbnRzKSk6CiAgICAgICAgcmVzLmNvbnN0cmFpbnRzID0gbnAud2hlcmUoCiAgICAgICAgICAgIG5wLmlzbmFuKHJlcy5jb25zdHJhaW50cykgfCBucC5pc2luZihyZXMuY29uc3RyYWludHMpLAogICAgICAgICAgICAxMDAuMCwgcmVzLmNvbnN0cmFpbnRzCiAgICAgICAgKQoKICAgIHJlcy5mZWFzaWJsZSA9IG5wLmFsbChyZXMuY29uc3RyYWludHMgPD0gMCkKICAgIHJlcy5lbSA9IGVtX3JlcwogICAgcmVzLnRoZXJtYWwgPSB0aF9yZXMKICAgIHJlcy5tZWNoID0gbWVjaF9yZXMKICAgIHJlcy5jZmQgPSBjZmRfcmVzCiAgICByZXR1cm4gcmVzCgoKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyBOU0dBLUlJIHdyYXBwZXIgKHB5bW9vKQojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpkZWYgX3RyeV9weW1vb19uc2dhMihzcGVjcywgbWF0ZXJpYWxzLCBzbG90X3BvbGUsIFRfYW1iaWVudCwgcG9wX3NpemUsIG5fZ2VuKToKICAgICIiIkF0dGVtcHQgcHltb28tYmFzZWQgTlNHQS1JSS4gUmV0dXJucyAoWF9wYXJldG8sIEZfcGFyZXRvLCByZXN1bHRzKS4iIiIKICAgIGZyb20gcHltb28uY29yZS5wcm9ibGVtIGltcG9ydCBQcm9ibGVtCiAgICBmcm9tIHB5bW9vLmFsZ29yaXRobXMubW9vLm5zZ2EyIGltcG9ydCBOU0dBMgogICAgZnJvbSBweW1vby5vcGVyYXRvcnMuY3Jvc3NvdmVyLnNieCBpbXBvcnQgU0JYCiAgICBmcm9tIHB5bW9vLm9wZXJhdG9ycy5tdXRhdGlvbi5wbSBpbXBvcnQgUE0KICAgIGZyb20gcHltb28ub3BlcmF0b3JzLnNhbXBsaW5nLnJuZCBpbXBvcnQgRmxvYXRSYW5kb21TYW1wbGluZwogICAgZnJvbSBweW1vby5vcHRpbWl6ZSBpbXBvcnQgbWluaW1pemUgYXMgcHltb29fbWluaW1pemUKICAgIGZyb20gcHltb28udGVybWluYXRpb24gaW1wb3J0IGdldF90ZXJtaW5hdGlvbgoKICAgIGxiLCB1YiA9IF9ib3VuZHMoKQoKICAgIGNsYXNzIE1vdG9yUHJvYmxlbShQcm9ibGVtKToKICAgICAgICBkZWYgX19pbml0X18oc2VsZik6CiAgICAgICAgICAgIHN1cGVyKCkuX19pbml0X18obl92YXI9Tl9WQVJTLCBuX29iaj0zLCBuX2llcV9jb25zdHI9NiwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICB4bD1sYiwgeHU9dWIpCgogICAgICAgIGRlZiBfZXZhbHVhdGUoc2VsZiwgWCwgb3V0LCAqYXJncywgKiprd2FyZ3MpOgogICAgICAgICAgICBGID0gbnAuemVyb3MoKFguc2hhcGVbMF0sIDMpKQogICAgICAgICAgICBHID0gbnAuemVyb3MoKFguc2hhcGVbMF0sIDYpKQogICAgICAgICAgICBmb3IgaSBpbiByYW5nZShYLnNoYXBlWzBdKToKICAgICAgICAgICAgICAgIHIgPSBldmFsdWF0ZV9kZXNpZ24oWFtpXSwgc3BlY3MsIG1hdGVyaWFscywgc2xvdF9wb2xlLCBUX2FtYmllbnQpCiAgICAgICAgICAgICAgICBGW2ldID0gci5vYmplY3RpdmVzCiAgICAgICAgICAgICAgICBHW2ldID0gci5jb25zdHJhaW50cwogICAgICAgICAgICBvdXRbIkYiXSA9IEYKICAgICAgICAgICAgb3V0WyJHIl0gPSBHCgogICAgYWxnb3JpdGhtID0gTlNHQTIoCiAgICAgICAgcG9wX3NpemU9cG9wX3NpemUsCiAgICAgICAgc2FtcGxpbmc9RmxvYXRSYW5kb21TYW1wbGluZygpLAogICAgICAgIGNyb3Nzb3Zlcj1TQlgocHJvYj0wLjksIGV0YT0xNSksCiAgICAgICAgbXV0YXRpb249UE0oZXRhPTIwKSwKICAgICAgICBlbGltaW5hdGVfZHVwbGljYXRlcz1UcnVlLAogICAgKQoKICAgIHByb2JsZW0gPSBNb3RvclByb2JsZW0oKQogICAgdGVybWluYXRpb24gPSBnZXRfdGVybWluYXRpb24oIm5fZ2VuIiwgbl9nZW4pCgogICAgcmVzdWx0ID0gcHltb29fbWluaW1pemUocHJvYmxlbSwgYWxnb3JpdGhtLCB0ZXJtaW5hdGlvbiwgc2VlZD00MiwgdmVyYm9zZT1GYWxzZSkKCiAgICBpZiByZXN1bHQuWCBpcyBub3QgTm9uZSBhbmQgbGVuKHJlc3VsdC5YLnNoYXBlKSA9PSAyOgogICAgICAgIFhfcGFyZXRvID0gcmVzdWx0LlgKICAgICAgICBGX3BhcmV0byA9IHJlc3VsdC5GCiAgICBlbGlmIHJlc3VsdC5YIGlzIG5vdCBOb25lOgogICAgICAgIFhfcGFyZXRvID0gcmVzdWx0LlgucmVzaGFwZSgxLCAtMSkKICAgICAgICBGX3BhcmV0byA9IHJlc3VsdC5GLnJlc2hhcGUoMSwgLTEpCiAgICBlbHNlOgogICAgICAgIFhfcGFyZXRvID0gbnAuZW1wdHkoKDAsIE5fVkFSUykpCiAgICAgICAgRl9wYXJldG8gPSBucC5lbXB0eSgoMCwgMykpCgogICAgIyBSZS1ldmFsdWF0ZSBQYXJldG8gc2V0IHRvIGdldCBmdWxsIHJlc3VsdCBvYmplY3RzCiAgICBmdWxsX3Jlc3VsdHMgPSBbXQogICAgZm9yIHggaW4gWF9wYXJldG86CiAgICAgICAgZnVsbF9yZXN1bHRzLmFwcGVuZChldmFsdWF0ZV9kZXNpZ24oeCwgc3BlY3MsIG1hdGVyaWFscywgc2xvdF9wb2xlLCBUX2FtYmllbnQpKQoKICAgIHJldHVybiBYX3BhcmV0bywgRl9wYXJldG8sIGZ1bGxfcmVzdWx0cwoKCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMgRmFsbGJhY2s6IHNpbXBsZSBkaWZmZXJlbnRpYWwgZXZvbHV0aW9uIChOdW1QeSBvbmx5KQojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpkZWYgX2ZhbGxiYWNrX2RlKHNwZWNzLCBtYXRlcmlhbHMsIHNsb3RfcG9sZSwgVF9hbWJpZW50LCBwb3Bfc2l6ZSwgbl9nZW4pOgogICAgIiIiRGlmZmVyZW50aWFsIGV2b2x1dGlvbiB3aXRoIHBlbmFsdHktYmFzZWQgY29uc3RyYWludCBoYW5kbGluZy4iIiIKICAgIGxiLCB1YiA9IF9ib3VuZHMoKQogICAgcm5nID0gbnAucmFuZG9tLmRlZmF1bHRfcm5nKDQyKQoKICAgICMgSW5pdGlhbGlzZSBwb3B1bGF0aW9uCiAgICBwb3AgPSBsYiArICh1YiAtIGxiKSAqIHJuZy5yYW5kb20oKHBvcF9zaXplLCBOX1ZBUlMpKQogICAgZml0bmVzcyA9IG5wLmZ1bGwocG9wX3NpemUsIG5wLmluZikKCiAgICBkZWYgcGVuYWxpc2VkX3NjYWxhcih4KToKICAgICAgICByID0gZXZhbHVhdGVfZGVzaWduKHgsIHNwZWNzLCBtYXRlcmlhbHMsIHNsb3RfcG9sZSwgVF9hbWJpZW50KQogICAgICAgICMgV2VpZ2h0ZWQgc3VtICsgcGVuYWx0eQogICAgICAgIG9iaiA9IC0wLjUgKiByLm9iamVjdGl2ZXNbMF0gKyAwLjMgKiByLm9iamVjdGl2ZXNbMV0gKyAtMC4yICogci5vYmplY3RpdmVzWzJdCiAgICAgICAgcGVuYWx0eSA9IDEwMDAgKiBucC5zdW0obnAubWF4aW11bShyLmNvbnN0cmFpbnRzLCAwKSAqKiAyKQogICAgICAgIHJldHVybiBvYmogKyBwZW5hbHR5LCByCgogICAgYmVzdF9yZXN1bHRzID0gW10KCiAgICBmb3IgZ2VuIGluIHJhbmdlKG5fZ2VuKToKICAgICAgICBmb3IgaSBpbiByYW5nZShwb3Bfc2l6ZSk6CiAgICAgICAgICAgICMgTXV0YXRpb24gKERFL3JhbmQvMSkKICAgICAgICAgICAgaWR4cyA9IHJuZy5jaG9pY2UoW2ogZm9yIGogaW4gcmFuZ2UocG9wX3NpemUpIGlmIGogIT0gaV0sIDMsIHJlcGxhY2U9RmFsc2UpCiAgICAgICAgICAgIGEsIGIsIGMgPSBwb3BbaWR4c10KICAgICAgICAgICAgRl9kZSA9IDAuOAogICAgICAgICAgICBtdXRhbnQgPSBhICsgRl9kZSAqIChiIC0gYykKICAgICAgICAgICAgbXV0YW50ID0gbnAuY2xpcChtdXRhbnQsIGxiLCB1YikKCiAgICAgICAgICAgICMgQ3Jvc3NvdmVyCiAgICAgICAgICAgIENSID0gMC45CiAgICAgICAgICAgIG1hc2sgPSBybmcucmFuZG9tKE5fVkFSUykgPCBDUgogICAgICAgICAgICBpZiBub3QgbnAuYW55KG1hc2spOgogICAgICAgICAgICAgICAgbWFza1tybmcuaW50ZWdlcnMoTl9WQVJTKV0gPSBUcnVlCiAgICAgICAgICAgIHRyaWFsID0gbnAud2hlcmUobWFzaywgbXV0YW50LCBwb3BbaV0pCgogICAgICAgICAgICBmX3RyaWFsLCByX3RyaWFsID0gcGVuYWxpc2VkX3NjYWxhcih0cmlhbCkKICAgICAgICAgICAgaWYgZl90cmlhbCA8IGZpdG5lc3NbaV06CiAgICAgICAgICAgICAgICBwb3BbaV0gPSB0cmlhbAogICAgICAgICAgICAgICAgZml0bmVzc1tpXSA9IGZfdHJpYWwKCiAgICAjIENvbGxlY3QgdG9wIHJlc3VsdHMKICAgIG9yZGVyID0gbnAuYXJnc29ydChmaXRuZXNzKQogICAgWF9wYXJldG8gPSBwb3Bbb3JkZXJbOm1pbigxMCwgcG9wX3NpemUpXV0KICAgIGZ1bGxfcmVzdWx0cyA9IFtdCiAgICBmb3IgeCBpbiBYX3BhcmV0bzoKICAgICAgICBmdWxsX3Jlc3VsdHMuYXBwZW5kKGV2YWx1YXRlX2Rlc2lnbih4LCBzcGVjcywgbWF0ZXJpYWxzLCBzbG90X3BvbGUsIFRfYW1iaWVudCkpCiAgICBGX3BhcmV0byA9IG5wLmFycmF5KFtyLm9iamVjdGl2ZXMgZm9yIHIgaW4gZnVsbF9yZXN1bHRzXSkKCiAgICByZXR1cm4gWF9wYXJldG8sIEZfcGFyZXRvLCBmdWxsX3Jlc3VsdHMKCgojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQojIFB1YmxpYyBBUEkKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZGVmIHJ1bl9vcHRpbWlzYXRpb24oc3BlY3M6IE1vdG9yU3BlY3MsCiAgICAgICAgICAgICAgICAgICAgIG1hdGVyaWFsczogTWF0ZXJpYWxEYXRhYmFzZSwKICAgICAgICAgICAgICAgICAgICAgc2xvdF9wb2xlOiBPcHRpb25hbFtUdXBsZVtpbnQsIGludF1dID0gTm9uZSwKICAgICAgICAgICAgICAgICAgICAgVF9hbWJpZW50OiBmbG9hdCA9IDI1LjAsCiAgICAgICAgICAgICAgICAgICAgIHBvcF9zaXplOiBpbnQgPSA0MCwKICAgICAgICAgICAgICAgICAgICAgbl9nZW46IGludCA9IDMwLAogICAgICAgICAgICAgICAgICAgICApIC0+IERpY3Q6CiAgICAiIiIKICAgIFJ1biBtdWx0aS1vYmplY3RpdmUgb3B0aW1pc2F0aW9uIG9mIHRoZSBtb3RvciBkZXNpZ24uCgogICAgUmV0dXJucyBkaWN0IHdpdGgga2V5czoKICAgICAgLSBwYXJldG9fWCAgICAgICA6IGFycmF5IG9mIFBhcmV0by1vcHRpbWFsIGRlc2lnbiB2ZWN0b3JzCiAgICAgIC0gcGFyZXRvX0YgICAgICAgOiBjb3JyZXNwb25kaW5nIG9iamVjdGl2ZSB2YWx1ZXMKICAgICAgLSBwYXJldG9fcmVzdWx0cyA6IGxpc3RbRXZhbFJlc3VsdF0gd2l0aCBmdWxsIHBoeXNpY3MgcmVzdWx0cwogICAgICAtIGJlc3RfaWR4ICAgICAgIDogaW5kZXggb2YgdGhlICJrbmVlIiBkZXNpZ24gKGJhbGFuY2VkKQogICAgICAtIGFsZ29yaXRobSAgICAgIDogIk5TR0EtSUkiIG9yICJERS1mYWxsYmFjayIKICAgICIiIgogICAgIyBBdXRvLXNlbGVjdCBzbG90LXBvbGUgaWYgbm90IHByb3ZpZGVkCiAgICBpZiBzbG90X3BvbGUgaXMgTm9uZToKICAgICAgICBjYW5kaWRhdGVzID0gc2VsZWN0X3Nsb3RfcG9sZShzcGVjcy50YXJnZXRfcnBtLCBzcGVjcy50YXJnZXRfdG9ycXVlLAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNwZWNzLnZvbHRhZ2UpCiAgICAgICAgaWYgY2FuZGlkYXRlczoKICAgICAgICAgICAgc2xvdF9wb2xlID0gKGNhbmRpZGF0ZXNbMF1bMF0sIGNhbmRpZGF0ZXNbMF1bMV0pCiAgICAgICAgZWxzZToKICAgICAgICAgICAgc2xvdF9wb2xlID0gKDEyLCAxNCkKCiAgICAjIFRyeSBweW1vbyBmaXJzdAogICAgdHJ5OgogICAgICAgIFgsIEYsIHJlc3VsdHMgPSBfdHJ5X3B5bW9vX25zZ2EyKAogICAgICAgICAgICBzcGVjcywgbWF0ZXJpYWxzLCBzbG90X3BvbGUsIFRfYW1iaWVudCwgcG9wX3NpemUsIG5fZ2VuCiAgICAgICAgKQogICAgICAgIGFsZ28gPSAiTlNHQS1JSSIKICAgIGV4Y2VwdCBJbXBvcnRFcnJvcjoKICAgICAgICB3YXJuaW5ncy53YXJuKCJweW1vbyBub3QgaW5zdGFsbGVkIOKAlCBmYWxsaW5nIGJhY2sgdG8gZGlmZmVyZW50aWFsIGV2b2x1dGlvbi4iKQogICAgICAgIFgsIEYsIHJlc3VsdHMgPSBfZmFsbGJhY2tfZGUoCiAgICAgICAgICAgIHNwZWNzLCBtYXRlcmlhbHMsIHNsb3RfcG9sZSwgVF9hbWJpZW50LCBwb3Bfc2l6ZSwgbl9nZW4KICAgICAgICApCiAgICAgICAgYWxnbyA9ICJERS1mYWxsYmFjayIKCiAgICAjIFBpY2sgdGhlICJrbmVlIiBwb2ludDogY2xvc2VzdCB0byBpZGVhbCAodXRvcGlhKSBwb2ludCBpbiBub3JtYWxpc2VkIHNwYWNlCiAgICBpZiBGLnNoYXBlWzBdID4gMDoKICAgICAgICBGX21pbiA9IEYubWluKGF4aXM9MCkKICAgICAgICBGX21heCA9IEYubWF4KGF4aXM9MCkKICAgICAgICBGX3JhbmdlID0gRl9tYXggLSBGX21pbgogICAgICAgIEZfcmFuZ2VbRl9yYW5nZSA9PSAwXSA9IDEKICAgICAgICBGX25vcm0gPSAoRiAtIEZfbWluKSAvIEZfcmFuZ2UKICAgICAgICBkaXN0ID0gbnAubGluYWxnLm5vcm0oRl9ub3JtLCBheGlzPTEpCiAgICAgICAgYmVzdF9pZHggPSBpbnQobnAuYXJnbWluKGRpc3QpKQogICAgZWxzZToKICAgICAgICBiZXN0X2lkeCA9IDAKCiAgICByZXR1cm4gewogICAgICAgICJwYXJldG9fWCI6IFgsCiAgICAgICAgInBhcmV0b19GIjogRiwKICAgICAgICAicGFyZXRvX3Jlc3VsdHMiOiByZXN1bHRzLAogICAgICAgICJiZXN0X2lkeCI6IGJlc3RfaWR4LAogICAgICAgICJhbGdvcml0aG0iOiBhbGdvLAogICAgICAgICJzbG90X3BvbGUiOiBzbG90X3BvbGUsCiAgICB9Cg==
+"""
+Multi-objective optimisation engine for outrunner BLDC motor design.
+
+Uses NSGA-II (Non-dominated Sorting Genetic Algorithm II) via the pymoo
+library for Pareto-optimal trade-off between efficiency, mass, torque
+density, thermal safety, and mechanical margins.
+
+Falls back to a pure-NumPy differential-evolution implementation if
+pymoo is unavailable.
+
+Key References:
+  [1] K. Deb, A. Pratap, S. Agarwal, T. Meyarivan, "A Fast and Elitist
+      Multiobjective Genetic Algorithm: NSGA-II," IEEE Trans. Evol. Comp.,
+      vol. 6, no. 2, pp. 182-197, 2002.
+  [2] J. Blank, K. Deb, "pymoo: Multi-Objective Optimization in Python,"
+      IEEE Access, vol. 8, pp. 89497-89509, 2020.
+  [3] R. Storn, K. Price, "Differential Evolution — A Simple and Efficient
+      Heuristic for Global Optimization over Continuous Spaces," J. Global
+      Optim., vol. 11, pp. 341-359, 1997.
+"""
+
+from __future__ import annotations
+from dataclasses import dataclass, field
+from typing import List, Dict, Optional, Callable, Tuple
+import numpy as np
+import warnings
+
+from .materials import MaterialDatabase
+from .electromagnetic import (
+    MotorSpecs, ElectromagneticModel, EMResults,
+    select_slot_pole, GeometryParams, WindingConfig,
+)
+from .thermal import ThermalModel, ThermalResults
+from .mechanical import MechanicalModel, MechanicalResults
+from .cfd import CFDModel, CFDResults
+
+
+# ---------------------------------------------------------------------------
+# Design vector & bounds
+# ---------------------------------------------------------------------------
+DESIGN_VARS = [
+    # name,                   lower,   upper,  description
+    ("stator_outer_radius",   0.012,   0.150,  "Stator outer radius [m]"),
+    ("stack_length",          0.008,   0.200,  "Active stack length [m]"),
+    ("magnet_thickness",      0.001,   0.010,  "Magnet radial thickness [m]"),
+    ("airgap",                0.0004,  0.002,  "Mechanical airgap [m]"),
+    ("slot_depth_frac",       0.3,     0.7,    "Slot depth / available radial space"),
+    ("tooth_width_frac",      0.3,     0.65,   "Tooth width / slot pitch"),
+    ("turns_per_coil",        1,       80,     "Turns per coil (integer)"),
+    ("wire_diameter_mm",      0.2,     3.0,    "Wire diameter [mm]"),
+    ("magnet_arc_frac",       0.6,     0.95,   "Magnet arc / pole arc"),
+    ("rotor_yoke_thickness",  0.001,   0.008,  "Rotor back-iron thickness [m]"),
+]
+
+N_VARS = len(DESIGN_VARS)
+
+
+def _bounds():
+    lb = np.array([v[1] for v in DESIGN_VARS])
+    ub = np.array([v[2] for v in DESIGN_VARS])
+    return lb, ub
+
+
+# ---------------------------------------------------------------------------
+# Objective evaluator
+# ---------------------------------------------------------------------------
+@dataclass
+class EvalResult:
+    """Single design-point evaluation."""
+    objectives: np.ndarray = field(default_factory=lambda: np.zeros(3))
+    constraints: np.ndarray = field(default_factory=lambda: np.zeros(6))
+    em: Optional[EMResults] = None
+    thermal: Optional[ThermalResults] = None
+    mech: Optional[MechanicalResults] = None
+    cfd: Optional[CFDResults] = None
+    feasible: bool = False
+    design_vector: Optional[np.ndarray] = None
+    slot_pole: Tuple[int, int] = (12, 14)
+
+
+def evaluate_design(x: np.ndarray,
+                    specs: MotorSpecs,
+                    materials: MaterialDatabase,
+                    slot_pole: Tuple[int, int] = (12, 14),
+                    T_ambient: float = 25.0,
+                    max_thermal_iters: int = 5,
+                    ) -> EvalResult:
+    """
+    Evaluate a single design vector through the coupled multiphysics pipeline.
+
+    Objectives (minimise):
+      f0 = -efficiency        (maximise efficiency)
+      f1 = total_mass         (minimise mass)
+      f2 = -torque_density    (maximise T/kg)
+
+    Constraints (g ≤ 0):
+      g0 = T_winding - T_limit_winding
+      g1 = T_magnet  - T_limit_magnet
+      g2 = 1.5 - shaft_safety_factor
+      g3 = 1.5 - magnet_retention_margin
+      g4 = J_current - 10  (A/mm², keep current density reasonable)
+      g5 = 1.0 - bearing_speed_ok  (0 if OK, 1 if violated)
+    """
+    res = EvalResult()
+    res.design_vector = x.copy()
+    res.slot_pole = slot_pole
+    n_slots, n_poles = slot_pole
+
+    # Unpack design vector
+    R_so = x[0]
+    L_stack = x[1]
+    hm = x[2]
+    g_air = x[3]
+    sd_frac = x[4]
+    tw_frac = x[5]
+    tpc = max(1, int(round(x[6])))
+    d_wire = x[7] * 1e-3  # mm → m
+    mag_arc = x[8]
+    t_yoke_r = x[9]
+
+    # Build geometry
+    geo = GeometryParams()
+    geo.stator_outer_radius = R_so
+    geo.stack_length = L_stack
+    geo.magnet_thickness = hm
+    geo.airgap = g_air
+
+    tau_s = 2 * np.pi * R_so / n_slots
+    geo.tooth_width = tw_frac * tau_s
+    geo.slot_opening = max(tau_s * 0.25, 0.001)
+
+    geo.stator_yoke_thickness = max(0.002, (R_so - geo.shaft_radius - 0.002) * 0.25)
+    avail = R_so - geo.stator_yoke_thickness - geo.shaft_radius - 0.002
+    geo.slot_depth = max(sd_frac * avail, 0.003)
+    geo.stator_inner_radius = geo.shaft_radius + 0.001
+
+    geo.rotor_inner_radius = R_so + g_air
+    geo.rotor_yoke_thickness = t_yoke_r
+    geo.rotor_outer_radius = geo.rotor_inner_radius + hm + t_yoke_r
+
+    # Update magnet geometry
+    materials.magnet.thickness = hm
+    materials.magnet.arc_fraction = mag_arc
+    materials.magnet.length = L_stack
+
+    # Build winding
+    wdg = WindingConfig()
+    wdg.num_poles = n_poles
+    wdg.num_slots = n_slots
+    wdg.turns_per_coil = tpc
+    wdg.wire_diameter = d_wire
+    wdg.num_layers = 2
+    wdg.coil_span = 1
+
+    # Create EM model & compute winding factor
+    em_model = ElectromagneticModel(specs, materials)
+    em_model.geometry = geo
+
+    from .electromagnetic import compute_winding_factor
+    wdg.winding_factor = compute_winding_factor(n_slots, n_poles)
+
+    # End turn length
+    wdg.end_turn_length = 1.5 * geo.tooth_width + 0.010
+
+    # Phase resistance
+    coils_per_phase = n_slots // 3
+    N_total = tpc * coils_per_phase * wdg.num_layers
+    l_turn = 2 * L_stack + 2 * wdg.end_turn_length
+    wire_area = wdg.wire_area * wdg.num_strands
+
+    rho_cu = materials.copper.resistivity(80.0)
+    wdg.phase_resistance = rho_cu * N_total * l_turn / max(wire_area, 1e-12)
+
+    # Inductance (simplified)
+    MU_0 = 4 * np.pi * 1e-7
+    p = n_poles // 2
+    tau_p = np.pi * R_so / max(p, 1)
+    g_total = g_air + hm / materials.magnet.mu_rec
+    L_gap = MU_0 * N_total**2 * L_stack * tau_p / (np.pi * max(p, 1) * g_total) * 1.5
+    L_slot = MU_0 * N_total**2 * L_stack * coils_per_phase * \
+             geo.slot_depth / (3 * max(geo.slot_opening, 0.001))
+    wdg.phase_inductance = L_gap + L_slot
+
+    em_model.winding = wdg
+
+    # --- Coupled EM-Thermal iteration ---
+    T_mag = 80.0
+    T_wind = 100.0
+
+    for _iter in range(max_thermal_iters):
+        try:
+            em_res = em_model.compute_performance(T_magnet=T_mag, T_winding=T_wind)
+        except Exception:
+            # Infeasible geometry
+            res.objectives = np.array([0, 1e6, 0])
+            res.constraints = np.array([100, 100, 100, 100, 100, 1])
+            return res
+
+        # Thermal
+        th_model = ThermalModel(geo, wdg, materials, T_ambient)
+        th_res = th_model.build_and_solve(em_res, specs.target_rpm)
+
+        # Check convergence
+        dT_mag = abs(th_res.T_magnets - T_mag)
+        dT_wind = abs(th_res.T_winding_slot - T_wind)
+        T_mag = th_res.T_magnets
+        T_wind = th_res.T_winding_slot
+        if dT_mag < 1.0 and dT_wind < 1.0:
+            break
+
+    # CFD (windage)
+    cfd_model = CFDModel(geo, wdg)
+    cfd_res = cfd_model.compute(specs.target_rpm, T_air=(T_ambient + T_mag) / 2)
+
+    # Mechanical
+    mech_model = MechanicalModel(geo, wdg, materials)
+    mech_res = mech_model.run_full_analysis(
+        specs.target_rpm, em_res.torque_avg, em_res
+    )
+
+    # Total losses including windage and bearing friction
+    total_loss = em_res.total_loss + cfd_res.windage_loss + mech_res.bearings.friction_loss_total
+    P_out = em_res.power_output
+    P_in = P_out + total_loss
+    efficiency = P_out / P_in if P_in > 0 else 0
+
+    # Mass
+    weights = em_model.compute_weight_breakdown()
+    total_mass = weights["total_kg"]
+
+    # Torque density
+    torque_density = em_res.torque_avg / max(total_mass, 0.001)
+
+    # --- Objectives (minimise) ---
+    res.objectives = np.array([
+        -efficiency,          # maximise → negate
+        total_mass,
+        -torque_density,      # maximise → negate
+    ])
+
+    # --- Constraints (g ≤ 0 means feasible) ---
+    res.constraints = np.array([
+        th_res.T_winding_slot - materials.copper.max_temp,
+        th_res.T_magnets - materials.magnet.max_temp,
+        1.5 - mech_res.shaft.shaft_safety_factor,
+        1.5 - mech_res.rotor_stress.magnet_retention_margin,
+        em_res.current_density - 10.0,
+        0.0 if mech_res.bearings.speed_ok else 1.0,
+    ])
+
+    # Guard against NaN/Inf propagation (causes pymoo comparison failures)
+    if np.any(np.isnan(res.objectives)) or np.any(np.isinf(res.objectives)):
+        res.objectives = np.array([0, 1e6, 0])
+        res.constraints = np.array([100, 100, 100, 100, 100, 1])
+        res.feasible = False
+        return res
+    if np.any(np.isnan(res.constraints)) or np.any(np.isinf(res.constraints)):
+        res.constraints = np.where(
+            np.isnan(res.constraints) | np.isinf(res.constraints),
+            100.0, res.constraints
+        )
+
+    res.feasible = np.all(res.constraints <= 0)
+    res.em = em_res
+    res.thermal = th_res
+    res.mech = mech_res
+    res.cfd = cfd_res
+    return res
+
+
+# ---------------------------------------------------------------------------
+# NSGA-II wrapper (pymoo)
+# ---------------------------------------------------------------------------
+def _try_pymoo_nsga2(specs, materials, slot_pole, T_ambient, pop_size, n_gen):
+    """Attempt pymoo-based NSGA-II. Returns (X_pareto, F_pareto, results)."""
+    from pymoo.core.problem import Problem
+    from pymoo.algorithms.moo.nsga2 import NSGA2
+    from pymoo.operators.crossover.sbx import SBX
+    from pymoo.operators.mutation.pm import PM
+    from pymoo.operators.sampling.rnd import FloatRandomSampling
+    from pymoo.optimize import minimize as pymoo_minimize
+    from pymoo.termination import get_termination
+
+    lb, ub = _bounds()
+
+    class MotorProblem(Problem):
+        def __init__(self):
+            super().__init__(n_var=N_VARS, n_obj=3, n_ieq_constr=6,
+                             xl=lb, xu=ub)
+
+        def _evaluate(self, X, out, *args, **kwargs):
+            F = np.zeros((X.shape[0], 3))
+            G = np.zeros((X.shape[0], 6))
+            for i in range(X.shape[0]):
+                r = evaluate_design(X[i], specs, materials, slot_pole, T_ambient)
+                F[i] = r.objectives
+                G[i] = r.constraints
+            out["F"] = F
+            out["G"] = G
+
+    algorithm = NSGA2(
+        pop_size=pop_size,
+        sampling=FloatRandomSampling(),
+        crossover=SBX(prob=0.9, eta=15),
+        mutation=PM(eta=20),
+        eliminate_duplicates=True,
+    )
+
+    problem = MotorProblem()
+    termination = get_termination("n_gen", n_gen)
+
+    result = pymoo_minimize(problem, algorithm, termination, seed=42, verbose=False)
+
+    if result.X is not None and len(result.X.shape) == 2:
+        X_pareto = result.X
+        F_pareto = result.F
+    elif result.X is not None:
+        X_pareto = result.X.reshape(1, -1)
+        F_pareto = result.F.reshape(1, -1)
+    else:
+        X_pareto = np.empty((0, N_VARS))
+        F_pareto = np.empty((0, 3))
+
+    # Re-evaluate Pareto set to get full result objects
+    full_results = []
+    for x in X_pareto:
+        full_results.append(evaluate_design(x, specs, materials, slot_pole, T_ambient))
+
+    return X_pareto, F_pareto, full_results
+
+
+# ---------------------------------------------------------------------------
+# Fallback: simple differential evolution (NumPy only)
+# ---------------------------------------------------------------------------
+def _fallback_de(specs, materials, slot_pole, T_ambient, pop_size, n_gen):
+    """Differential evolution with penalty-based constraint handling."""
+    lb, ub = _bounds()
+    rng = np.random.default_rng(42)
+
+    # Initialise population
+    pop = lb + (ub - lb) * rng.random((pop_size, N_VARS))
+    fitness = np.full(pop_size, np.inf)
+
+    def penalised_scalar(x):
+        r = evaluate_design(x, specs, materials, slot_pole, T_ambient)
+        # Weighted sum + penalty
+        obj = -0.5 * r.objectives[0] + 0.3 * r.objectives[1] + -0.2 * r.objectives[2]
+        penalty = 1000 * np.sum(np.maximum(r.constraints, 0) ** 2)
+        return obj + penalty, r
+
+    best_results = []
+
+    for gen in range(n_gen):
+        for i in range(pop_size):
+            # Mutation (DE/rand/1)
+            idxs = rng.choice([j for j in range(pop_size) if j != i], 3, replace=False)
+            a, b, c = pop[idxs]
+            F_de = 0.8
+            mutant = a + F_de * (b - c)
+            mutant = np.clip(mutant, lb, ub)
+
+            # Crossover
+            CR = 0.9
+            mask = rng.random(N_VARS) < CR
+            if not np.any(mask):
+                mask[rng.integers(N_VARS)] = True
+            trial = np.where(mask, mutant, pop[i])
+
+            f_trial, r_trial = penalised_scalar(trial)
+            if f_trial < fitness[i]:
+                pop[i] = trial
+                fitness[i] = f_trial
+
+    # Collect top results
+    order = np.argsort(fitness)
+    X_pareto = pop[order[:min(10, pop_size)]]
+    full_results = []
+    for x in X_pareto:
+        full_results.append(evaluate_design(x, specs, materials, slot_pole, T_ambient))
+    F_pareto = np.array([r.objectives for r in full_results])
+
+    return X_pareto, F_pareto, full_results
+
+
+# ---------------------------------------------------------------------------
+# Public API
+# ---------------------------------------------------------------------------
+def run_optimisation(specs: MotorSpecs,
+                     materials: MaterialDatabase,
+                     slot_pole: Optional[Tuple[int, int]] = None,
+                     T_ambient: float = 25.0,
+                     pop_size: int = 40,
+                     n_gen: int = 30,
+                     ) -> Dict:
+    """
+    Run multi-objective optimisation of the motor design.
+
+    Returns dict with keys:
+      - pareto_X       : array of Pareto-optimal design vectors
+      - pareto_F       : corresponding objective values
+      - pareto_results : list[EvalResult] with full physics results
+      - best_idx       : index of the "knee" design (balanced)
+      - algorithm      : "NSGA-II" or "DE-fallback"
+    """
+    # Auto-select slot-pole if not provided
+    if slot_pole is None:
+        candidates = select_slot_pole(specs.target_rpm, specs.target_torque,
+                                      specs.voltage)
+        if candidates:
+            slot_pole = (candidates[0][0], candidates[0][1])
+        else:
+            slot_pole = (12, 14)
+
+    # Try pymoo first
+    try:
+        X, F, results = _try_pymoo_nsga2(
+            specs, materials, slot_pole, T_ambient, pop_size, n_gen
+        )
+        algo = "NSGA-II"
+    except ImportError:
+        warnings.warn("pymoo not installed — falling back to differential evolution.")
+        X, F, results = _fallback_de(
+            specs, materials, slot_pole, T_ambient, pop_size, n_gen
+        )
+        algo = "DE-fallback"
+
+    # Pick the "knee" point: closest to ideal (utopia) point in normalised space
+    if F.shape[0] > 0:
+        F_min = F.min(axis=0)
+        F_max = F.max(axis=0)
+        F_range = F_max - F_min
+        F_range[F_range == 0] = 1
+        F_norm = (F - F_min) / F_range
+        dist = np.linalg.norm(F_norm, axis=1)
+        best_idx = int(np.argmin(dist))
+    else:
+        best_idx = 0
+
+    return {
+        "pareto_X": X,
+        "pareto_F": F,
+        "pareto_results": results,
+        "best_idx": best_idx,
+        "algorithm": algo,
+        "slot_pole": slot_pole,
+    }

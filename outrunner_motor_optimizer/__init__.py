@@ -56,7 +56,7 @@ References & Algorithms Used:
 License: MIT
 """
 
-__version__ = "3.0.0"
+__version__ = "2.0.0"
 
 from .materials import (
     MaterialDatabase, MagnetProperties, MagnetType, StructuralMaterial,
@@ -69,16 +69,6 @@ from .mechanical import MechanicalModel
 from .cfd import CFDModel
 from .optimizer import run_optimisation, evaluate_design
 from .main import design_motor, validate_design
-
-# FEM modules (optional — require scikit-fem)
-try:
-    from .fem_electromagnetic import FEMElectromagneticModel, FEMEMResults
-    from .fem_thermal import FEMThermalModel, FEMThermalResults
-    from .fem_mechanical import FEMMechanicalModel, FEMMechanicalResults
-    from .fem_optimizer import run_optimisation_fem, evaluate_design_fem
-    HAS_FEM = True
-except ImportError:
-    HAS_FEM = False
 
 __all__ = [
     "design_motor",
@@ -97,14 +87,4 @@ __all__ = [
     "evaluate_design",
     "STRUCTURAL_CATALOG",
     "MAGNET_CATALOG",
-    # FEM exports
-    "FEMElectromagneticModel",
-    "FEMThermalModel",
-    "FEMMechanicalModel",
-    "FEMEMResults",
-    "FEMThermalResults",
-    "FEMMechanicalResults",
-    "run_optimisation_fem",
-    "evaluate_design_fem",
-    "HAS_FEM",
 ]

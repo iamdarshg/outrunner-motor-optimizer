@@ -1,1 +1,149 @@
-IyBPdXRydW5uZXIgQkxEQyBNb3RvciBEZXNpZ24gT3B0aW1pemVyCgpBIGNvdXBsZWQgZWxlY3Ryb21hZ25ldGljLXRoZXJtYWwtbWVjaGFuaWNhbC1DRkQgc2ltdWxhdGlvbiBhbmQgbXVsdGktb2JqZWN0aXZlCm9wdGltaXphdGlvbiBmcmFtZXdvcmsgZm9yIGRlc2lnbmluZyBvdXRydW5uZXIgKGV4dGVybmFsLXJvdG9yKSBicnVzaGxlc3MgREMKcGVybWFuZW50IG1hZ25ldCBtb3RvcnMsIHdpdGggcGFyYW1ldHJpYyBTVEVQIGZpbGUgZXhwb3J0LgoKU3VwcG9ydHMgYm90aCBmYXN0IGFuYWx5dGljYWwgc29sdmVycyBhbmQgZnVsbCAyLUQgZmluaXRlIGVsZW1lbnQgbWV0aG9kIChGRU0pCnNvbHZlcnMgdmlhIHNjaWtpdC1mZW0sIHdpdGggYXV0b21hdGljIGZhbGxiYWNrLgoKIyMgRmVhdHVyZXMKCiMjIyBBbmFseXRpY2FsIFNvbHZlcnMgKGRlZmF1bHQpCi0gKipFbGVjdHJvbWFnbmV0aWMgbW9kZWwqKiDigJQgQW5hbHl0aWNhbCBzdWJkb21haW4gbWV0aG9kIChaaHUgJiBIb3dlIDE5OTMpLCBCZXJ0b3R0aQogIGlyb24gbG9zcywgQ2FydGVyIGNvZWZmaWNpZW50LCB3aW5kaW5nIGZhY3RvciBjb21wdXRhdGlvbiwgY29nZ2luZyB0b3JxdWUgZXN0aW1hdGlvbgotICoqVGhlcm1hbCBtb2RlbCoqIOKAlCAxMC1ub2RlIEx1bXBlZCBQYXJhbWV0ZXIgVGhlcm1hbCBOZXR3b3JrIChMUFROKSB3aXRoCiAgVGF5bG9yLUNvdWV0dGUgYWlyZ2FwIGNvbnZlY3Rpb24gKEJlY2tlciAmIEtheWUgMTk2MiksIHRlbXBlcmF0dXJlLWRlcGVuZGVudAogIG1hdGVyaWFsIHByb3BlcnRpZXMKLSAqKk1lY2hhbmljYWwgbW9kZWwqKiDigJQgUm90b3IgaG9vcCBzdHJlc3MgKFRpbW9zaGVua28pLCBzaGFmdCBjcml0aWNhbCBzcGVlZAogIChEdW5rZXJsZXkpLCBiZWFyaW5nIEwxMCBsaWZlIChJU08gMjgxKSwgVkRJIDIyMzAgYm9sdCBhbmFseXNpcywgUm9hcmsgZmxhbmdlCiAgYmVuZGluZywgMy1ET0YgdmlicmF0aW9uL21vZGFsIGFuYWx5c2lzIHdpdGggSVNPIDEwODE2IGNsYXNzaWZpY2F0aW9uCi0gKipDRkQgbW9kZWwqKiDigJQgQ29ycmVsYXRpb24tYmFzZWQgY29udmVjdGl2ZSBoZWF0IHRyYW5zZmVyIChLcmVpdGggMTk2OCwKICBPd2VuICYgUm9nZXJzIDE5ODkpLCB3aW5kYWdlIGxvc3MsIHNlbGYtcHVtcGluZyBhaXJmbG93IGVzdGltYXRlCgojIyMgRkVNIFNvbHZlcnMgKHVzZV9mZW09VHJ1ZSkKLSAqKkZFTSBFbGVjdHJvbWFnbmV0aWMqKiDigJQgMi1EIG1hZ25ldG9zdGF0aWMgQV96IGZvcm11bGF0aW9uLCBlbGVtZW50LXdpc2UKICBwZXJtZWFiaWxpdHkgYXNzaWdubWVudCAoc3RhdG9yIGlyb24gwrVfcj04MDAsIFBNIHJlbWFuZW5jZSBzb3VyY2UgdGVybSksCiAgTWF4d2VsbCBzdHJlc3MgdGVuc29yIHRvcnF1ZSBleHRyYWN0aW9uIG9uIGEgc2luZ2xlIGFpcmdhcCBjb250b3VyCi0gKipGRU0gVGhlcm1hbCoqIOKAlCBTdGVhZHktc3RhdGUgaGVhdCBjb25kdWN0aW9uICgt4oiHwrcoa+KIh1QpID0gcSkgd2l0aAogIERpcmljaGxldCBib3VuZGFyeSBjb25kaXRpb25zLCBlZmZlY3RpdmUgYWlyIGNvbmR1Y3Rpdml0eSwgdm9sdW1ldHJpYwogIGhlYXQgc291cmNlcyBmcm9tIEVNIGxvc3NlcwotICoqRkVNIE1lY2hhbmljYWwqKiDigJQgUGxhbmUtc3RyZXNzIGxpbmVhciBlbGFzdGljaXR5IHdpdGggY2VudHJpZnVnYWwgYm9keQogIGZvcmNlcyAocm90b3Itb25seSByb3RhdGlvbiksIHRoZXJtYWwgcHJlLXN0cmVzcyBjb3VwbGluZywgZWlnZW52YWx1ZQogIG1vZGFsIGFuYWx5c2lzIGZvciBuYXR1cmFsIGZyZXF1ZW5jaWVzCgojIyMgQ29tbW9uCi0gKipNdWx0aS1vYmplY3RpdmUgb3B0aW1pemF0aW9uKiog4oCUIE5TR0EtSUkgdmlhIHB5bW9vIChEZWIgZXQgYWwuIDIwMDIpIHdpdGgKICBERSBmYWxsYmFjazsgb3B0aW1pemVzIGVmZmljaWVuY3ksIG1hc3MsIGFuZCB0b3JxdWUgZGVuc2l0eSBzaW11bHRhbmVvdXNseQotICoqQ0FEIGV4cG9ydCoqIOKAlCBDYWRRdWVyeS1iYXNlZCBwYXJhbWV0cmljIFNURVAgZmlsZSBnZW5lcmF0aW9uIGZvciBzdGF0b3IsCiAgcm90b3IsIG1hZ25ldHMsIHNoYWZ0LCBtb3VudGluZyBmbGFuZ2UsIGFuZCBmdWxsIGFzc2VtYmx5CgojIyBNYXRlcmlhbCBTeXN0ZW0KCi0gKipNYWduZXRzKio6IE5kRmVCICg3IGdyYWRlczogTjM1IHRocm91Z2ggTjUyKSwgU21DbyAyOjE3LCBGZXJyaXRlLCBvciBmdWxseQogIGN1c3RvbSB1c2VyLWRlZmluZWQgbWFnbmV0cyB3aXRoIHRlbXBlcmF0dXJlLWRlcGVuZGVudCBCci9IY2oKLSAqKlN0cnVjdHVyYWwqKjogNjA2MS1UNiBhbHVtaW5pdW0gKGRlZmF1bHQgZm9yIGFsbCBzdHJ1Y3R1cmFsIGNvbXBvbmVudHMpLAogIDcwNzUtVDYsIEFJU0kgNDE0MCBzdGVlbCwgVGktNkFsLTRWIHRpdGFuaXVtLCBvciBmdWxseSBjdXN0b20KLSAqKk1vdW50aW5nKio6IEZhY2UgbW91bnQsIGZvb3QgbW91bnQsIHNoYWZ0IGNsYW1wLCBvciBjdXN0b20gYm9sdCBwYXR0ZXJucwogIHdpdGggZnVsbCBzaGVhci90ZW5zaWxlL3ZpYnJhdGlvbiBhbmFseXNpcwoKIyMgUXVpY2sgU3RhcnQKCiMjIyBBbmFseXRpY2FsIG1vZGUgKGZhc3QsIH4zMHMpCgpgYGBweXRob24KZnJvbSBvdXRydW5uZXJfbW90b3Jfb3B0aW1pemVyIGltcG9ydCBkZXNpZ25fbW90b3IKCnJlc3VsdCA9IGRlc2lnbl9tb3RvcigKICAgIHZvbHRhZ2U9MjQuMCwKICAgIHJwbT01MDAwLAogICAgdG9ycXVlPTAuNSwKICAgIGN1cnJlbnQ9MjAuMCwKICAgIGVmZmljaWVuY3lfdGFyZ2V0PTAuOTAsCiAgICBtYWduZXRfdHlwZT0iTmRGZUIiLCAgICAgICAgIyBvciAiU21DbyIsICJGZXJyaXRlIiwgIkN1c3RvbSIKICAgIG1hZ25ldF9ncmFkZT0iTjQyU0giLAogICAgc3RydWN0dXJhbF9tYXRlcmlhbD0iNjA2MS1UNiIsCiAgICBzaGFmdF9tYXRlcmlhbD0iQUlTSSA0MTQwIiwKICAgIG1vdW50aW5nX3N0eWxlPSJmYWNlX21vdW50IiwKICAgIG51bV9ib2x0cz00LAogICAgYm9sdF9kaWFtZXRlcj0wLjAwMywgICAgICAgICMgTTMKICAgIHJhZGlhbF9sb2FkPTUuMCwgICAgICAgICAgICAjIE4KICAgIGF4aWFsX2xvYWQ9Mi4wLCAgICAgICAgICAgICAjIE4KICAgIHBvcF9zaXplPTQwLCAgICAgICAgICAgICAgICAjIE5TR0EtSUkgcG9wdWxhdGlvbgogICAgbl9nZW49MzAsICAgICAgICAgICAgICAgICAgICMgZ2VuZXJhdGlvbnMKICAgIGV4cG9ydF9zdGVwPVRydWUsICAgICAgICAgICAjIHJlcXVpcmVzIGNhZHF1ZXJ5CiAgICBvdXRwdXRfZGlyPSJtb3Rvcl9zdGVwX291dHB1dCIsCikKCnByaW50KHJlc3VsdFsicmVwb3J0Il0pCmBgYAoKIyMjIEZFTSBtb2RlIChoaWdoZXIgZmlkZWxpdHksIH4xMG1pbikKCmBgYHB5dGhvbgpyZXN1bHQgPSBkZXNpZ25fbW90b3IoCiAgICB2b2x0YWdlPTI0LjAsCiAgICBycG09NTAwMCwKICAgIHRvcnF1ZT0wLjUsCiAgICBjdXJyZW50PTIwLjAsCiAgICB1c2VfZmVtPVRydWUsICAgICAgICAgICAgICAgIyBFbmFibGUgMi1EIEZFTSBzb2x2ZXJzCiAgICBmZW1fbWVzaF9kZW5zaXR5PTYwLCAgICAgICAgIyBDaXJjdW1mZXJlbnRpYWwgbWVzaCBwb2ludHMKICAgIHBvcF9zaXplPTIwLCAgICAgICAgICAgICAgICAjIFNtYWxsZXIgcG9wIGZvciBGRU0gKHNsb3dlcikKICAgIG5fZ2VuPTE1LCAgICAgICAgICAgICAgICAgICAjIEZld2VyIGdlbmVyYXRpb25zCiAgICBleHBvcnRfc3RlcD1GYWxzZSwKKQpgYGAKCiMjIyBVc2luZyBGRU0gc29sdmVycyBkaXJlY3RseQoKYGBgcHl0aG9uCmZyb20gb3V0cnVubmVyX21vdG9yX29wdGltaXplciBpbXBvcnQgKAogICAgRkVNRWxlY3Ryb21hZ25ldGljTW9kZWwsIEZFTVRoZXJtYWxNb2RlbCwgRkVNTWVjaGFuaWNhbE1vZGVsLAogICAgTW90b3JTcGVjcywgR2VvbWV0cnlQYXJhbXMsIFdpbmRpbmdDb25maWcsIE1hdGVyaWFsRGF0YWJhc2UsCikKCnNwZWNzID0gTW90b3JTcGVjcyh2b2x0YWdlPTI0LCB0YXJnZXRfcnBtPTUwMDAsIHRhcmdldF90b3JxdWU9MC41LCBtYXhfY3VycmVudD0yMCkKZ2VvID0gR2VvbWV0cnlQYXJhbXMoKSAgICMgdXNlIGRlZmF1bHRzIG9yIGNvbmZpZ3VyZQp3ZGcgPSBXaW5kaW5nQ29uZmlnKCkKbWF0cyA9IE1hdGVyaWFsRGF0YWJhc2UoKQoKIyBFTSBzb2x2ZQpmZW1fZW0gPSBGRU1FbGVjdHJvbWFnbmV0aWNNb2RlbChzcGVjcywgZ2VvLCB3ZGcsIG1hdHMpCmVtX3Jlc3VsdHMgPSBmZW1fZW0uc29sdmVfbWFnbmV0b3N0YXRpYygpCgojIFRoZXJtYWwgc29sdmUgKG5lZWRzIGFuYWx5dGljYWwgRU0gcmVzdWx0cyBmb3IgbG9zcyBpbnB1dHMpCmZyb20gb3V0cnVubmVyX21vdG9yX29wdGltaXplci5lbGVjdHJvbWFnbmV0aWMgaW1wb3J0IEVsZWN0cm9tYWduZXRpY01vZGVsCmVtX21vZGVsID0gRWxlY3Ryb21hZ25ldGljTW9kZWwoc3BlY3MsIG1hdHMpCmVtX21vZGVsLmdlb21ldHJ5ID0gZ2VvCmVtX21vZGVsLndpbmRpbmcgPSB3ZGcKZW1fcmVzID0gZW1fbW9kZWwuY29tcHV0ZV9wZXJmb3JtYW5jZSgpCgpmZW1fdGggPSBGRU1UaGVybWFsTW9kZWwoZ2VvLCB3ZGcsIG1hdHMpCnRoX3Jlc3VsdHMgPSBmZW1fdGguc29sdmVfc3RlYWR5X3N0YXRlKGVtX3JlcywgcnBtPTUwMDApCgojIE1lY2hhbmljYWwgc29sdmUKZmVtX21lY2ggPSBGRU1NZWNoYW5pY2FsTW9kZWwoZ2VvLCB3ZGcsIG1hdHMpCm1lY2hfcmVzdWx0cyA9IGZlbV9tZWNoLnNvbHZlX3N0YXRpYyhycG09NTAwMCkKZmVtX21lY2guc29sdmVfbW9kYWwobl9tb2Rlcz02KQpgYGAKCiMjIyBDdXN0b20gbWFnbmV0IGV4YW1wbGUKCmBgYHB5dGhvbgpyZXN1bHQgPSBkZXNpZ25fbW90b3IoCiAgICB2b2x0YWdlPTI0LjAsIHJwbT01MDAwLCB0b3JxdWU9MC41LCBjdXJyZW50PTIwLjAsCiAgICBtYWduZXRfdHlwZT0iQ3VzdG9tIiwKICAgIGN1c3RvbV9tYWduZXQ9ewogICAgICAgICJCcl8yMCI6IDEuMSwKICAgICAgICAiSGNqXzIwIjogMTIwMGUzLAogICAgICAgICJkZW5zaXR5IjogNzYwMCwKICAgICAgICAibWF4X3RlbXAiOiAyMDAsCiAgICAgICAgImFscGhhX0JyIjogLTAuMDAxLAogICAgfSwKKQpgYGAKCiMjIyBDdXN0b20gc3RydWN0dXJhbCBtYXRlcmlhbCBwZXIgY29tcG9uZW50CgpgYGBweXRob24KcmVzdWx0ID0gZGVzaWduX21vdG9yKAogICAgdm9sdGFnZT0yNC4wLCBycG09NTAwMCwgdG9ycXVlPTAuNSwgY3VycmVudD0yMC4wLAogICAgY3VzdG9tX21hdGVyaWFscz17CiAgICAgICAgInJvdG9yX2hvdXNpbmciOiB7InByZXNldCI6ICI3MDc1LVQ2In0sCiAgICAgICAgInNoYWZ0IjogeyJwcmVzZXQiOiAiVGktNkFsLTRWIn0sCiAgICB9LAopCmBgYAoKIyMgQ0xJIFVzYWdlCgpgYGBiYXNoCnB5dGhvbiAtbSBvdXRydW5uZXJfbW90b3Jfb3B0aW1pemVyLm1haW4KYGBgCgojIyBJbnN0YWxsYXRpb24KCmBgYGJhc2gKcGlwIGluc3RhbGwgbnVtcHkgcHltb28gc2NpcHkKCiMgRm9yIEZFTSBzb2x2ZXJzIChvcHRpb25hbCBidXQgcmVjb21tZW5kZWQpOgpwaXAgaW5zdGFsbCBzY2lraXQtZmVtW2FsbF0gbWVzaGlvCgojIEZvciBTVEVQIGV4cG9ydCAob3B0aW9uYWwpOgojIGNvbmRhIGluc3RhbGwgLWMgY29uZGEtZm9yZ2UgLWMgY2FkcXVlcnkgY2FkcXVlcnkKYGBgCgojIyBBcmNoaXRlY3R1cmUKCmBgYApVc2VyIFNwZWNzIChWLCBSUE0sIFQsIEksIM63KQogIOKGkiBNYXRlcmlhbCBzZWxlY3Rpb24gKG1hZ25ldCArIHN0cnVjdHVyYWwgKyBtb3VudGluZykKICDihpIgU2xvdC1wb2xlIHNlbGVjdGlvbiAoc2NvcmVkIGNhbmRpZGF0ZSBsaXN0KQogIOKGkiBOU0dBLUlJIG11bHRpLW9iamVjdGl2ZSBvcHRpbWl6YXRpb24gbG9vcDoKICAgICAg4pSc4pSA4pSAIEVsZWN0cm9tYWduZXRpYyBkZXNpZ24KICAgICAg4pSCICAgICDilJzilIDilIAgQW5hbHl0aWNhbDogc3ViZG9tYWluIG1ldGhvZAogICAgICDilIIgICAgIOKUlOKUgOKUgCBGRU06IDItRCBtYWduZXRvc3RhdGljIEFfeiAoc2Npa2l0LWZlbSkKICAgICAg4pSc4pSA4pSAIENvdXBsZWQgRU0tVGhlcm1hbCBpdGVyYXRpb24KICAgICAg4pSCICAgICDilJzilIDilIAgQW5hbHl0aWNhbDogTFBUTgogICAgICDilIIgICAgIOKUlOKUgOKUgCBGRU06IHN0ZWFkeS1zdGF0ZSBoZWF0IGNvbmR1Y3Rpb24KICAgICAg4pSc4pSA4pSAIENGRC9Db29saW5nIChOdXNzZWx0IGNvcnJlbGF0aW9ucyDigJQgYWx3YXlzIGFuYWx5dGljYWwpCiAgICAgIOKUlOKUgOKUgCBNZWNoYW5pY2FsIGFuYWx5c2lzCiAgICAgICAgICAgIOKUnOKUgOKUgCBBbmFseXRpY2FsOiBzdHJlc3MsIHNoYWZ0LCBiZWFyaW5ncywgbW91bnRpbmcsIHZpYnJhdGlvbgogICAgICAgICAgICDilJTilIDilIAgRkVNOiBwbGFuZS1zdHJlc3MgZWxhc3RpY2l0eSArIGVpZ2VudmFsdWUgbW9kYWwKICDihpIgUGFyZXRvIGZyb250IOKGkiBrbmVlLXBvaW50IHNlbGVjdGlvbgogIOKGkiBWYWxpZGF0aW9uIGNoZWNrcyAoS3QgY3Jvc3MtY2hlY2ssIGVuZXJneSBiYWxhbmNlLCB0aGVybWFsLCBtZWNoYW5pY2FsKQogIOKGkiBTVEVQIGV4cG9ydCAoQ2FkUXVlcnkgcGFyYW1ldHJpYyBtb2RlbHMpCmBgYAoKIyMgTW9kdWxlcwoKfCBNb2R1bGUgfCBEZXNjcmlwdGlvbiB8CnwtLS0tLS0tLXwtLS0tLS0tLS0tLS0tfAp8IGBtYXRlcmlhbHMucHlgIHwgTWF0ZXJpYWwgZGF0YWJhc2Ugd2l0aCB0ZW1wZXJhdHVyZS1kZXBlbmRlbnQgcHJvcGVydGllcyB8CnwgYGVsZWN0cm9tYWduZXRpYy5weWAgfCBBbmFseXRpY2FsIEVNIGRlc2lnbiAoc3ViZG9tYWluIG1ldGhvZCkgfAp8IGB0aGVybWFsLnB5YCB8IExQVE4gdGhlcm1hbCBtb2RlbCB8CnwgYG1lY2hhbmljYWwucHlgIHwgQW5hbHl0aWNhbCBzdHJlc3MsIHNoYWZ0LCBiZWFyaW5nLCBtb3VudGluZywgdmlicmF0aW9uIHwKfCBgY2ZkLnB5YCB8IENvcnJlbGF0aW9uLWJhc2VkIGNvbnZlY3Rpb24gYW5kIHdpbmRhZ2UgfAp8IGBvcHRpbWl6ZXIucHlgIHwgTlNHQS1JSSAvIERFIG11bHRpLW9iamVjdGl2ZSBvcHRpbWl6ZXIgKGFuYWx5dGljYWwpIHwKfCBgY2FkX2V4cG9ydC5weWAgfCBDYWRRdWVyeSBTVEVQIGZpbGUgZ2VuZXJhdGlvbiB8CnwgYG1haW4ucHlgIHwgSGlnaC1sZXZlbCBwaXBlbGluZSBBUEkgfAp8IGBmZW1fZWxlY3Ryb21hZ25ldGljLnB5YCB8IDItRCBGRU0gbWFnbmV0b3N0YXRpYyBzb2x2ZXIgfAp8IGBmZW1fdGhlcm1hbC5weWAgfCAyLUQgRkVNIHN0ZWFkeS1zdGF0ZSB0aGVybWFsIHNvbHZlciB8CnwgYGZlbV9tZWNoYW5pY2FsLnB5YCB8IDItRCBGRU0gZWxhc3RpY2l0eSArIG1vZGFsIHNvbHZlciB8CnwgYGZlbV9vcHRpbWl6ZXIucHlgIHwgRkVNLWF1Z21lbnRlZCBvcHRpbWl6ZXIgd2l0aCBhbmFseXRpY2FsIGZhbGxiYWNrIHwKCiMjIFZhbGlkYXRpb24gQ2hlY2tzCgpUaGUgcGlwZWxpbmUgYXV0b21hdGljYWxseSBydW5zIHRoZXNlIHBoeXNpY3Mgc2FuaXR5IGNoZWNrczoKCnwgQ2hlY2sgfCBDcml0ZXJpb24gfAp8LS0tLS0tLXwtLS0tLS0tLS0tLXwKfCBUb3JxdWUgY29uc3RhbnQgY29uc2lzdGVuY3kgfCBLdChUL0kpIHZzIEt0KDNFL8+JKSByYXRpbyB3aXRoaW4gMC434oCTMS4zIHwKfCBFbmVyZ3kgYmFsYW5jZSB8IDAuNTAgPCDOtyA8IDAuOTkgfAp8IFRoZXJtYWwgZ3JhZGllbnQgfCBUX3dpbmRpbmcgPiBUX21hZ25ldCA+IFRfYW1iaWVudCB8CnwgQ3VycmVudCBkZW5zaXR5IHwgMeKAkzE1IEEvbW3CsiB8CnwgQWlyZ2FwIGZsdXggZGVuc2l0eSB8IDAuM+KAkzEuMiBUIGZvciBzdXJmYWNlLVBNIHwKfCBTaGFmdCBzYWZldHkgZmFjdG9yIHwgPiAxLjUgfAp8IE1hZ25ldCByZXRlbnRpb24gfCA+IDEuNcOXIHwKfCBWaWJyYXRpb24gfCBJU08gMTA4MTYgWm9uZSBBIG9yIEIgfAoKIyMgUmVmZXJlbmNlcwoKLSBaLlEuIFpodSwgRC4gSG93ZSwgSUVFRSBUcmFucy4gTWFnbmV0aWNzLCAxOTkzIChzdWJkb21haW4gbWV0aG9kKQotIEcuIEJlcnRvdHRpLCBJRUVFIFRyYW5zLiBNYWduZXRpY3MsIDE5ODggKGlyb24gbG9zcyBzZXBhcmF0aW9uKQotIEEuIEJvZ2xpZXR0aSBldCBhbC4sIElFRUUgVHJhbnMuIEluZC4gRWxlY3Ryb24uLCAyMDA5IChMUFROKQotIEQuIFN0YXRvbiwgQS4gQ2F2YWduaW5vLCBJRUVFIFRyYW5zLiBJbmQuIEVsZWN0cm9uLiwgMjAwOCAoY29udmVjdGlvbikKLSBTLlAuIFRpbW9zaGVua28sIEouTi4gR29vZGllciwgMTk3MCAocm90YXRpbmcgY3lsaW5kZXIgc3RyZXNzKQotIE8uQy4gWmllbmtpZXdpY3osIFIuTC4gVGF5bG9yLCAyMDEzIChGRU0gZm9yIHNvbGlkIG1lY2hhbmljcykKLSBJU08gMjgxOjIwMDcgKGJlYXJpbmcgbGlmZSkKLSBWREkgMjIzMCAoYm9sdGVkIGpvaW50IGFuYWx5c2lzKQotIFMuUy4gUmFvLCBNZWNoYW5pY2FsIFZpYnJhdGlvbnMsIDZ0aCBlZC4sIDIwMTcKLSBLLiBEZWIgZXQgYWwuLCBJRUVFIFRyYW5zLiBFdm9sLiBDb21wLiwgMjAwMiAoTlNHQS1JSSkKLSBULiBHdXN0YWZzc29uLCBHLiBNY0JhaW4sIEpPU1MsIDIwMjAgKHNjaWtpdC1mZW0pCi0gSy5NLiBCZWNrZXIsIEouIEtheWUsIEFTTUUgSi4gSGVhdCBUcmFuc2ZlciwgMTk2MiAoVGF5bG9yLUNvdWV0dGUpCi0gRi4gS3JlaXRoLCBBZHZhbmNlcyBpbiBIZWF0IFRyYW5zZmVyLCAxOTY4IChyb3RhdGluZyBjeWxpbmRlcikKLSBKLk0uIE93ZW4sIFIuSC4gUm9nZXJzLCAxOTg5IChyb3RhdGluZyBkaXNjKQoKIyMgTGljZW5zZQoKTUlUCg==
+# Outrunner BLDC Motor Design Optimizer
+
+A coupled electromagnetic-thermal-mechanical-CFD simulation and multi-objective
+optimization framework for designing outrunner (external-rotor) brushless DC
+permanent magnet motors, with parametric STEP file export.
+
+## Features
+
+- **Electromagnetic model** — Analytical subdomain method (Zhu & Howe 1993), Bertotti
+  iron loss, Carter coefficient, winding factor computation, cogging torque estimation
+- **Thermal model** — 10-node Lumped Parameter Thermal Network (LPTN) with
+  Taylor-Couette airgap convection (Becker & Kaye 1962), temperature-dependent
+  material properties
+- **Mechanical model** — Rotor hoop stress (Timoshenko), shaft critical speed
+  (Dunkerley), bearing L10 life (ISO 281), VDI 2230 bolt analysis, Roark flange
+  bending, 3-DOF vibration/modal analysis with ISO 10816 classification
+- **CFD model** — Correlation-based convective heat transfer (Kreith 1968,
+  Owen & Rogers 1989), windage loss, self-pumping airflow estimate
+- **Multi-objective optimization** — NSGA-II via pymoo (Deb et al. 2002) with
+  DE fallback; optimizes efficiency, mass, and torque density simultaneously
+- **CAD export** — CadQuery-based parametric STEP file generation for stator,
+  rotor, magnets, shaft, mounting flange, and full assembly
+
+## Material System
+
+- **Magnets**: NdFeB (7 grades: N35 through N52), SmCo 2:17, Ferrite, or fully
+  custom user-defined magnets with temperature-dependent Br/Hcj
+- **Structural**: 6061-T6 aluminium (default for all structural components),
+  7075-T6, AISI 4140 steel, Ti-6Al-4V titanium, or fully custom
+- **Mounting**: Face mount, foot mount, shaft clamp, or custom bolt patterns
+  with full shear/tensile/vibration analysis
+
+## Quick Start
+
+```python
+from outrunner_motor_optimizer import design_motor
+
+result = design_motor(
+    voltage=24.0,
+    rpm=5000,
+    torque=0.5,
+    current=20.0,
+    efficiency_target=0.90,
+    magnet_type="NdFeB",        # or "SmCo", "Ferrite", "Custom"
+    magnet_grade="N42SH",
+    structural_material="6061-T6",
+    shaft_material="AISI 4140",
+    mounting_style="face_mount",
+    num_bolts=4,
+    bolt_diameter=0.003,        # M3
+    radial_load=5.0,            # N
+    axial_load=2.0,             # N
+    pop_size=40,                # NSGA-II population
+    n_gen=30,                   # generations
+    export_step=True,           # requires cadquery
+    output_dir="motor_step_output",
+)
+
+print(result["report"])
+print("All validation checks passed:", result["all_checks_passed"])
+```
+
+### Custom magnet example
+
+```python
+result = design_motor(
+    voltage=24.0, rpm=5000, torque=0.5, current=20.0,
+    magnet_type="Custom",
+    custom_magnet={
+        "Br_20": 1.1,
+        "Hcj_20": 1200e3,
+        "density": 7600,
+        "max_temp": 200,
+        "alpha_Br": -0.001,
+    },
+)
+```
+
+### Custom structural material per component
+
+```python
+result = design_motor(
+    voltage=24.0, rpm=5000, torque=0.5, current=20.0,
+    custom_materials={
+        "rotor_housing": {"preset": "7075-T6"},
+        "shaft": {"preset": "Ti-6Al-4V"},
+    },
+)
+```
+
+## CLI Usage
+
+```bash
+python -m outrunner_motor_optimizer.main
+```
+
+## Installation
+
+```bash
+pip install numpy pymoo
+# For STEP export (optional):
+# conda install -c conda-forge -c cadquery cadquery
+```
+
+## Architecture
+
+```
+User Specs (V, RPM, T, I, η)
+  → Material selection (magnet + structural + mounting)
+  → Slot-pole selection (scored candidate list)
+  → NSGA-II multi-objective optimization loop:
+      ├── Electromagnetic design (analytical subdomain)
+      ├── Coupled EM-Thermal iteration (LPTN)
+      ├── CFD/Cooling (Nusselt correlations)
+      └── Mechanical analysis (stress, shaft, bearings, mounting, vibration)
+  → Pareto front → knee-point selection
+  → Validation checks (Kt cross-check, energy balance, thermal, mechanical)
+  → STEP export (CadQuery parametric models)
+```
+
+## Validation Checks
+
+The pipeline automatically runs these physics sanity checks:
+
+| Check | Criterion |
+|-------|-----------|
+| Torque constant consistency | Kt(T/I) vs Kt(3E/ω) ratio within 0.7–1.3 |
+| Energy balance | 0.50 < η < 0.99 |
+| Thermal gradient | T_winding > T_magnet > T_ambient |
+| Current density | 1–15 A/mm² |
+| Airgap flux density | 0.3–1.2 T for surface-PM |
+| Shaft safety factor | > 1.5 |
+| Magnet retention | > 1.5× |
+| Vibration | ISO 10816 Zone A or B |
+
+## References
+
+- Z.Q. Zhu, D. Howe, IEEE Trans. Magnetics, 1993 (subdomain method)
+- G. Bertotti, IEEE Trans. Magnetics, 1988 (iron loss separation)
+- A. Boglietti et al., IEEE Trans. Ind. Electron., 2009 (LPTN)
+- D. Staton, A. Cavagnino, IEEE Trans. Ind. Electron., 2008 (convection)
+- S.P. Timoshenko, J.N. Goodier, 1970 (rotating cylinder stress)
+- ISO 281:2007 (bearing life)
+- VDI 2230 (bolted joint analysis)
+- S.S. Rao, Mechanical Vibrations, 6th ed., 2017
+- K. Deb et al., IEEE Trans. Evol. Comp., 2002 (NSGA-II)
+- K.M. Becker, J. Kaye, ASME J. Heat Transfer, 1962 (Taylor-Couette)
+- F. Kreith, Advances in Heat Transfer, 1968 (rotating cylinder)
+- J.M. Owen, R.H. Rogers, 1989 (rotating disc)

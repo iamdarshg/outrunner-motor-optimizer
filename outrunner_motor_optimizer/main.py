@@ -1,1 +1,488 @@
-IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwoiIiIKT3V0cnVubmVyIEJMREMgTW90b3IgRGVzaWduIE9wdGltaXNlciDigJQgTWFpbiBQaXBlbGluZQo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQoKRW5kLXRvLWVuZCB3b3JrZmxvdzoKICAxLiBBY2NlcHQgdXNlciBzcGVjaWZpY2F0aW9ucyAodm9sdGFnZSwgUlBNLCB0b3JxdWUsIGN1cnJlbnQsIGVmZmljaWVuY3kpCiAgMi4gQ29uZmlndXJlIG1hdGVyaWFscyAobWFnbmV0IHR5cGUsIHN0cnVjdHVyYWwgYWxsb3ksIGN1c3RvbSBvdmVycmlkZXMpCiAgMy4gQ29uZmlndXJlIG1vdW50aW5nIChib2x0IHBhdHRlcm4sIGxvYWRzLCB2aWJyYXRpb24gaXNvbGF0aW9uKQogIDQuIFJ1biBjb3VwbGVkIEVNLXRoZXJtYWwtbWVjaGFuaWNhbC1DRkQgbXVsdGktb2JqZWN0aXZlIG9wdGltaXNhdGlvbgogIDUuIEV4cG9ydCBTVEVQIGZpbGVzIGZvciB0aGUgYmVzdCBkZXNpZ24KICA2LiBQcmludCBmdWxsIGRlc2lnbiByZXBvcnQgd2l0aCB2YWxpZGF0aW9uIGNoZWNrcwoKVXNhZ2UgKGFzIHNjcmlwdCk6CiAgICBweXRob24gLW0gb3V0cnVubmVyX21vdG9yX29wdGltaXplci5tYWluCgpVc2FnZSAoYXMgbGlicmFyeSk6CiAgICBmcm9tIG91dHJ1bm5lcl9tb3Rvcl9vcHRpbWl6ZXIubWFpbiBpbXBvcnQgZGVzaWduX21vdG9yCiAgICByZXN1bHQgPSBkZXNpZ25fbW90b3IoCiAgICAgICAgdm9sdGFnZT0yNCwgcnBtPTUwMDAsIHRvcnF1ZT0wLjUsIGN1cnJlbnQ9MjAsCiAgICAgICAgbWFnbmV0X3R5cGU9Ik5kRmVCIiwgbWFnbmV0X2dyYWRlPSJONDJTSCIsCiAgICApCgpWYWxpZGF0aW9uIGFwcHJvYWNoOgogIC0gVG9ycXVlIGNvbnN0YW50IGNyb3NzLWNoZWNrOiAgS3QgPSBUIC8gSSAgc2hvdWxkIG1hdGNoICBLdF9lbSA9IDMqRS/PiQogIC0gRWZmaWNpZW5jeSBzYW5pdHk6IGNvcHBlcitpcm9uK21hZ25ldCt3aW5kYWdlK2JlYXJpbmcgbG9zc2VzIHN1bSB0byAoMS3OtykqUF9pbgogIC0gVGhlcm1hbCBwbGF1c2liaWxpdHk6IHdpbmRpbmcgdGVtcCA+IG1hZ25ldCB0ZW1wID4gYW1iaWVudCAoZm9yIG91dHJ1bm5lcikKICAtIFdlaWdodCBwbGF1c2liaWxpdHk6IHBvd2VyLWRlbnNpdHkgMC41LTUga1cva2cgZm9yIEJMREMgbW90b3JzIChSb3VzZSBldCBhbC4gMjAyMykKICAtIFN0cnVjdHVyYWw6IHNhZmV0eSBmYWN0b3JzID4gMS41IGV2ZXJ5d2hlcmUKClJlZmVyZW5jZXM6CiAgWzFdIFUuSC4gTGVlIGV0IGFsLiwgIkhvdyB0byBNb2RlbCBCcnVzaGxlc3MgRWxlY3RyaWMgTW90b3JzIGZvciB0aGUKICAgICAgRGVzaWduIG9mIExpZ2h0d2VpZ2h0IFJvYm90aWMgU3lzdGVtcywiIGFyWGl2OjIzMTAuMDAwODAsIDIwMjMuCiAgICAgIChNb3RvciBtb2RlbGxpbmcsIEt0IGNyb3NzLWNoZWNrIG1ldGhvZG9sb2d5KQogIFsyXSBKLiBQeXJob25lbiBldCBhbC4sICJEZXNpZ24gb2YgUm90YXRpbmcgRWxlY3RyaWNhbCBNYWNoaW5lcywiCiAgICAgIFdpbGV5LCAyMDE0LiAoVGFuZ2VudGlhbCBzdHJlc3MgMjAtNTAga1BhIGZvciBQTSBtYWNoaW5lcykKIiIiCgpmcm9tIF9fZnV0dXJlX18gaW1wb3J0IGFubm90YXRpb25zCmltcG9ydCBqc29uCmltcG9ydCB0aW1lCmZyb20gcGF0aGxpYiBpbXBvcnQgUGF0aApmcm9tIHR5cGluZyBpbXBvcnQgT3B0aW9uYWwsIERpY3QsIEFueQoKaW1wb3J0IG51bXB5IGFzIG5wCgpmcm9tIC5tYXRlcmlhbHMgaW1wb3J0ICgKICAgIE1hdGVyaWFsRGF0YWJhc2UsIE1hZ25ldFR5cGUsIFN0cnVjdHVyYWxNYXRlcmlhbCwgTW91bnRpbmdDb25maWcsCiAgICBTVFJVQ1RVUkFMX0NBVEFMT0csCikKZnJvbSAuZWxlY3Ryb21hZ25ldGljIGltcG9ydCBNb3RvclNwZWNzLCBFbGVjdHJvbWFnbmV0aWNNb2RlbCwgc2VsZWN0X3Nsb3RfcG9sZQpmcm9tIC50aGVybWFsIGltcG9ydCBUaGVybWFsTW9kZWwKZnJvbSAubWVjaGFuaWNhbCBpbXBvcnQgTWVjaGFuaWNhbE1vZGVsCmZyb20gLmNmZCBpbXBvcnQgQ0ZETW9kZWwKZnJvbSAub3B0aW1pemVyIGltcG9ydCBydW5fb3B0aW1pc2F0aW9uLCBldmFsdWF0ZV9kZXNpZ24KCgojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQojIFZhbGlkYXRpb24gdGVzdHMKIyAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZGVmIHZhbGlkYXRlX2Rlc2lnbihyZXN1bHQpIC0+IERpY3Rbc3RyLCBBbnldOgogICAgIiIiCiAgICBSdW4gc2FuaXR5IC8gcGh5c2ljcyBjaGVja3Mgb24gYW4gZXZhbHVhdGVkIGRlc2lnbi4KCiAgICBSZXR1cm5zIGRpY3Qgb2Yge2NoZWNrX25hbWU6IHtwYXNzZWQ6IGJvb2wsIHZhbHVlOiAuLi4sIGV4cGVjdGVkOiAuLi4sIG5vdGU6IC4uLn19CiAgICAiIiIKICAgIGNoZWNrcyA9IHt9CiAgICBlbSA9IHJlc3VsdC5lbQogICAgdGggPSByZXN1bHQudGhlcm1hbAogICAgbWVjaCA9IHJlc3VsdC5tZWNoCgogICAgaWYgZW0gaXMgTm9uZToKICAgICAgICByZXR1cm4geyJub19lbV9yZXN1bHRzIjogeyJwYXNzZWQiOiBGYWxzZSwgIm5vdGUiOiAiRU0gcmVzdWx0cyBtaXNzaW5nIn19CgogICAgIyAxLiBUb3JxdWUgY29uc3RhbnQgY3Jvc3MtY2hlY2sKICAgIG9tZWdhID0gZW0ucG93ZXJfb3V0cHV0IC8gbWF4KGVtLnRvcnF1ZV9hdmcsIDFlLTYpIGlmIGVtLnRvcnF1ZV9hdmcgPiAwIGVsc2UgMQogICAgS3RfZnJvbV90b3JxdWUgPSBlbS50b3JxdWVfYXZnIC8gbWF4KGVtLnBoYXNlX2N1cnJlbnRfcm1zLCAxZS02KQogICAgS3RfZnJvbV9lbWYgPSAzICogZW0uYmFja19lbWZfcm1zIC8gbWF4KG9tZWdhLCAxZS02KQogICAgcmF0aW8gPSBLdF9mcm9tX3RvcnF1ZSAvIG1heChLdF9mcm9tX2VtZiwgMWUtOSkKICAgIGNoZWNrc1sidG9ycXVlX2NvbnN0YW50X2NvbnNpc3RlbmN5Il0gPSB7CiAgICAgICAgInBhc3NlZCI6IDAuNyA8IHJhdGlvIDwgMS4zLAogICAgICAgICJ2YWx1ZSI6IGYiS3QoVC9JKT17S3RfZnJvbV90b3JxdWU6LjRmfSwgS3QoM0Uvz4kpPXtLdF9mcm9tX2VtZjouNGZ9LCByYXRpbz17cmF0aW86LjJmfSIsCiAgICAgICAgImV4cGVjdGVkIjogInJhdGlvIDAuNyDigJMgMS4zIiwKICAgIH0KCiAgICAjIDIuIEVuZXJneSBiYWxhbmNlCiAgICBQX291dCA9IGVtLnBvd2VyX291dHB1dAogICAgUF9sb3NzID0gZW0udG90YWxfbG9zcwogICAgUF9pbiA9IFBfb3V0ICsgUF9sb3NzCiAgICBldGEgPSBQX291dCAvIG1heChQX2luLCAxZS02KQogICAgY2hlY2tzWyJlbmVyZ3lfYmFsYW5jZSJdID0gewogICAgICAgICJwYXNzZWQiOiAwLjUwIDwgZXRhIDwgMC45OSwKICAgICAgICAidmFsdWUiOiBmIs63PXtldGE6LjNmfSwgUF9vdXQ9e1Bfb3V0Oi4xZn1XLCBQX2xvc3M9e1BfbG9zczouMWZ9VyIsCiAgICAgICAgImV4cGVjdGVkIjogIjAuNTAgPCDOtyA8IDAuOTkiLAogICAgfQoKICAgICMgMy4gVGhlcm1hbCBwbGF1c2liaWxpdHkKICAgIGlmIHRoIGlzIG5vdCBOb25lOgogICAgICAgIFRfd2luZCA9IHRoLlRfd2luZGluZ19zbG90CiAgICAgICAgVF9tYWcgPSB0aC5UX21hZ25ldHMKICAgICAgICBUX2FtYiA9IHRoLlRfYW1iaWVudAogICAgICAgIHRoZXJtYWxfb2sgPSBUX3dpbmQgPiBUX2FtYiBhbmQgVF9tYWcgPiBUX2FtYgogICAgICAgIGNoZWNrc1sidGhlcm1hbF9ncmFkaWVudCJdID0gewogICAgICAgICAgICAicGFzc2VkIjogdGhlcm1hbF9vaywKICAgICAgICAgICAgInZhbHVlIjogZiJUX3dpbmQ9e1Rfd2luZDouMWZ9wrBDLCBUX21hZz17VF9tYWc6LjFmfcKwQywgVF9hbWI9e1RfYW1iOi4xZn3CsEMiLAogICAgICAgICAgICAiZXhwZWN0ZWQiOiAiVF93aW5kaW5nID4gVF9tYWduZXQgPiBUX2FtYmllbnQgKGdlbmVyYWxseSkiLAogICAgICAgIH0KCiAgICAjIDQuIEN1cnJlbnQgZGVuc2l0eQogICAgSiA9IGVtLmN1cnJlbnRfZGVuc2l0eQogICAgY2hlY2tzWyJjdXJyZW50X2RlbnNpdHkiXSA9IHsKICAgICAgICAicGFzc2VkIjogMS4wIDwgSiA8IDE1LjAsCiAgICAgICAgInZhbHVlIjogZiJKPXtKOi4xZn0gQS9tbcKyIiwKICAgICAgICAiZXhwZWN0ZWQiOiAiMSDigJMgMTUgQS9tbcKyIChhaXItY29vbGVkOiAzLTggdHlwaWNhbCkiLAogICAgfQoKICAgICMgNS4gQWlyZ2FwIGZsdXggZGVuc2l0eQogICAgQmcgPSBlbS5haXJnYXBfZmx1eF9kZW5zaXR5CiAgICBjaGVja3NbImFpcmdhcF9mbHV4X2RlbnNpdHkiXSA9IHsKICAgICAgICAicGFzc2VkIjogMC4zIDwgQmcgPCAxLjIsCiAgICAgICAgInZhbHVlIjogZiJCZzE9e0JnOi4zZn0gVCIsCiAgICAgICAgImV4cGVjdGVkIjogIjAuMyDigJMgMS4yIFQgZm9yIHN1cmZhY2UtUE0iLAogICAgfQoKICAgICMgNi4gTWVjaGFuaWNhbCBzYWZldHkKICAgIGlmIG1lY2ggaXMgbm90IE5vbmU6CiAgICAgICAgc2YgPSBtZWNoLnNoYWZ0LnNoYWZ0X3NhZmV0eV9mYWN0b3IKICAgICAgICBtciA9IG1lY2gucm90b3Jfc3RyZXNzLm1hZ25ldF9yZXRlbnRpb25fbWFyZ2luCiAgICAgICAgY2hlY2tzWyJzaGFmdF9zYWZldHkiXSA9IHsKICAgICAgICAgICAgInBhc3NlZCI6IHNmID4gMS41LAogICAgICAgICAgICAidmFsdWUiOiBmIlNGPXtzZjouMmZ9IiwKICAgICAgICAgICAgImV4cGVjdGVkIjogIj4gMS41IiwKICAgICAgICB9CiAgICAgICAgY2hlY2tzWyJtYWduZXRfcmV0ZW50aW9uIl0gPSB7CiAgICAgICAgICAgICJwYXNzZWQiOiBtciA+IDEuNSwKICAgICAgICAgICAgInZhbHVlIjogZiJtYXJnaW49e21yOi4yZn0iLAogICAgICAgICAgICAiZXhwZWN0ZWQiOiAiPiAxLjUiLAogICAgICAgIH0KICAgICAgICBjaGVja3NbInZpYnJhdGlvbl96b25lIl0gPSB7CiAgICAgICAgICAgICJwYXNzZWQiOiBtZWNoLnZpYnJhdGlvbi5pc29fMTA4MTZfem9uZSBpbiAoIkEiLCAiQiIpLAogICAgICAgICAgICAidmFsdWUiOiBtZWNoLnZpYnJhdGlvbi5pc29fMTA4MTZfem9uZSwKICAgICAgICAgICAgImV4cGVjdGVkIjogIkEgb3IgQiIsCiAgICAgICAgfQoKICAgIHJldHVybiBjaGVja3MKCgojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQojIEhpZ2gtbGV2ZWwgQVBJCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmRlZiBkZXNpZ25fbW90b3IoCiAgICB2b2x0YWdlOiBmbG9hdCwKICAgIHJwbTogZmxvYXQsCiAgICB0b3JxdWU6IGZsb2F0LAogICAgY3VycmVudDogZmxvYXQsCiAgICBlZmZpY2llbmN5X3RhcmdldDogZmxvYXQgPSAwLjkwLAogICAgbWFnbmV0X3R5cGU6IHN0ciA9ICJOZEZlQiIsCiAgICBtYWduZXRfZ3JhZGU6IHN0ciA9ICJONDJTSCIsCiAgICBzdHJ1Y3R1cmFsX21hdGVyaWFsOiBzdHIgPSAiNjA2MS1UNiIsCiAgICBzaGFmdF9tYXRlcmlhbDogc3RyID0gIkFJU0kgNDE0MCIsCiAgICBtb3VudGluZ19zdHlsZTogc3RyID0gImZhY2VfbW91bnQiLAogICAgbnVtX2JvbHRzOiBpbnQgPSA0LAogICAgYm9sdF9kaWFtZXRlcjogZmxvYXQgPSAwLjAwMywKICAgIHJhZGlhbF9sb2FkOiBmbG9hdCA9IDAuMCwKICAgIGF4aWFsX2xvYWQ6IGZsb2F0ID0gMC4wLAogICAgYmVuZGluZ19tb21lbnQ6IGZsb2F0ID0gMC4wLAogICAgaXNvbGF0b3Jfc3RpZmZuZXNzOiBmbG9hdCA9IDAuMCwKICAgIFRfYW1iaWVudDogZmxvYXQgPSAyNS4wLAogICAgcG9wX3NpemU6IGludCA9IDQwLAogICAgbl9nZW46IGludCA9IDMwLAogICAgZXhwb3J0X3N0ZXA6IGJvb2wgPSBUcnVlLAogICAgb3V0cHV0X2Rpcjogc3RyID0gIm1vdG9yX3N0ZXBfb3V0cHV0IiwKICAgIGN1c3RvbV9tYWduZXQ6IE9wdGlvbmFsW0RpY3Rbc3RyLCBmbG9hdF1dID0gTm9uZSwKICAgIGN1c3RvbV9tYXRlcmlhbHM6IE9wdGlvbmFsW0RpY3Rbc3RyLCBEaWN0W3N0ciwgZmxvYXRdXV0gPSBOb25lLAogICAgdXNlX2ZlbTogYm9vbCA9IEZhbHNlLAogICAgZmVtX21lc2hfZGVuc2l0eTogaW50ID0gNjAsCikgLT4gRGljdFtzdHIsIEFueV06CiAgICAiIiIKICAgIEZ1bGwgbW90b3IgZGVzaWduIHBpcGVsaW5lLgoKICAgIFBhcmFtZXRlcnMKICAgIC0tLS0tLS0tLS0KICAgIHZvbHRhZ2UsIHJwbSwgdG9ycXVlLCBjdXJyZW50IDogZmxvYXQKICAgICAgICBFbGVjdHJpY2FsIHNwZWNpZmljYXRpb25zLgogICAgZWZmaWNpZW5jeV90YXJnZXQgOiBmbG9hdAogICAgICAgIFRhcmdldCBlZmZpY2llbmN5ICgwLTEpLgogICAgbWFnbmV0X3R5cGUgOiBzdHIKICAgICAgICAiTmRGZUIiLCAiU21DbyIsICJGZXJyaXRlIiwgb3IgIkN1c3RvbSIuCiAgICBtYWduZXRfZ3JhZGUgOiBzdHIKICAgICAgICBHcmFkZSB3aXRoaW4gZmFtaWx5IChlLmcuICJONDJTSCIsICJONTIiKS4KICAgIHN0cnVjdHVyYWxfbWF0ZXJpYWwgOiBzdHIKICAgICAgICBEZWZhdWx0IGZvciBhbGwgc3RydWN0dXJhbCBwYXJ0cyAoIjYwNjEtVDYiLCAiNzA3NS1UNiIsIGV0Yy4pLgogICAgc2hhZnRfbWF0ZXJpYWwgOiBzdHIKICAgICAgICBTaGFmdCBtYXRlcmlhbCBwcmVzZXQuCiAgICBtb3VudGluZ19zdHlsZSA6IHN0cgogICAgICAgICJmYWNlX21vdW50IiwgImZvb3RfbW91bnQiLCAic2hhZnRfY2xhbXAiLCAiY3VzdG9tIi4KICAgIG51bV9ib2x0cywgYm9sdF9kaWFtZXRlciA6IGludCwgZmxvYXQKICAgICAgICBCb2x0IHBhdHRlcm4uCiAgICByYWRpYWxfbG9hZCwgYXhpYWxfbG9hZCwgYmVuZGluZ19tb21lbnQgOiBmbG9hdAogICAgICAgIEV4dGVybmFsIGxvYWRzIG9uIHRoZSBtb3RvciBbTl0gLyBbTsK3bV0uCiAgICBpc29sYXRvcl9zdGlmZm5lc3MgOiBmbG9hdAogICAgICAgIFZpYnJhdGlvbiBpc29sYXRvciBzdGlmZm5lc3MgW04vbV0sIDAgPSByaWdpZC4KICAgIFRfYW1iaWVudCA6IGZsb2F0CiAgICAgICAgQW1iaWVudCB0ZW1wZXJhdHVyZSBbwrBDXS4KICAgIHBvcF9zaXplLCBuX2dlbiA6IGludAogICAgICAgIE9wdGltaXNlciBwb3B1bGF0aW9uIHNpemUgYW5kIGdlbmVyYXRpb25zLgogICAgZXhwb3J0X3N0ZXAgOiBib29sCiAgICAgICAgV2hldGhlciB0byBnZW5lcmF0ZSBTVEVQIGZpbGVzLgogICAgb3V0cHV0X2RpciA6IHN0cgogICAgICAgIERpcmVjdG9yeSBmb3IgU1RFUCBmaWxlcy4KICAgIGN1c3RvbV9tYWduZXQgOiBkaWN0LCBvcHRpb25hbAogICAgICAgIE92ZXJyaWRlcyBmb3IgY3VzdG9tIG1hZ25ldCBwcm9wZXJ0aWVzIChCcl8yMCwgSGNqXzIwLCBkZW5zaXR5LCAuLi4pLgogICAgY3VzdG9tX21hdGVyaWFscyA6IGRpY3QsIG9wdGlvbmFsCiAgICAgICAgUGVyLWNvbXBvbmVudCBtYXRlcmlhbCBvdmVycmlkZXMuIEtleXM6ICJyb3Rvcl9ob3VzaW5nIiwKICAgICAgICAic3RhdG9yX2hvdXNpbmciLCAiZW5kX2JlbGxfZGUiLCAiZW5kX2JlbGxfbmRlIiwgIm1vdW50aW5nX3BsYXRlIiwKICAgICAgICAic2hhZnQiLiAgVmFsdWVzOiBkaWN0cyBvZiBTdHJ1Y3R1cmFsTWF0ZXJpYWwgZmllbGQgb3ZlcnJpZGVzLgogICAgdXNlX2ZlbSA6IGJvb2wKICAgICAgICBJZiBUcnVlLCB1c2UgMi1EIGZpbml0ZSBlbGVtZW50IHNvbHZlcnMgKHNjaWtpdC1mZW0pIGZvciBFTSwKICAgICAgICB0aGVybWFsLCBhbmQgbWVjaGFuaWNhbCBhbmFseXNpcyBpbnN0ZWFkIG9mIHRoZSBkZWZhdWx0IGFuYWx5dGljYWwKICAgICAgICBtb2RlbHMuICBGYWxscyBiYWNrIHRvIGFuYWx5dGljYWwgaWYgc2Npa2l0LWZlbSBpcyBub3QgaW5zdGFsbGVkLgogICAgZmVtX21lc2hfZGVuc2l0eSA6IGludAogICAgICAgIENpcmN1bWZlcmVudGlhbCBtZXNoIHBvaW50cyBmb3IgRkVNIChoaWdoZXIgPSBtb3JlIGFjY3VyYXRlLCBzbG93ZXIpLgoKICAgIFJldHVybnMKICAgIC0tLS0tLS0KICAgIGRpY3Qgd2l0aCBrZXlzOgogICAgICAgIHNwZWNzLCBtYXRlcmlhbHMsIG9wdGltaXNhdGlvbiwgYmVzdF9kZXNpZ24sIHZhbGlkYXRpb24sCiAgICAgICAgc3RlcF9maWxlcywgcmVwb3J0CiAgICAiIiIKICAgIHQwID0gdGltZS50aW1lKCkKCiAgICAjIC0tLSAxLiBCdWlsZCBzcGVjcyAtLS0KICAgIHNwZWNzID0gTW90b3JTcGVjcygKICAgICAgICB2b2x0YWdlPXZvbHRhZ2UsCiAgICAgICAgdGFyZ2V0X3JwbT1ycG0sCiAgICAgICAgdGFyZ2V0X3RvcnF1ZT10b3JxdWUsCiAgICAgICAgbWF4X2N1cnJlbnQ9Y3VycmVudCwKICAgICAgICB0YXJnZXRfZWZmaWNpZW5jeT1lZmZpY2llbmN5X3RhcmdldCwKICAgICkKCiAgICAjIC0tLSAyLiBDb25maWd1cmUgbWF0ZXJpYWxzIC0tLQogICAgbWF0cyA9IE1hdGVyaWFsRGF0YWJhc2UoKQoKICAgICMgTWFnbmV0CiAgICBpZiBtYWduZXRfdHlwZSA9PSAiQ3VzdG9tIiBhbmQgY3VzdG9tX21hZ25ldDoKICAgICAgICBtYXRzLnNldF9tYWduZXQoIkN1c3RvbSIsICoqY3VzdG9tX21hZ25ldCkKICAgIGVsc2U6CiAgICAgICAgbWF0cy5zZXRfbWFnbmV0KG1hZ25ldF90eXBlLCBncmFkZT1tYWduZXRfZ3JhZGUpCgogICAgIyBTdHJ1Y3R1cmFsIChhbGwgcGFydHMgZGVmYXVsdCB0byB0aGUgc2FtZSBhbGxveSkKICAgIGZvciBjb21wIGluIFsicm90b3JfaG91c2luZyIsICJzdGF0b3JfaG91c2luZyIsICJlbmRfYmVsbF9kZSIsCiAgICAgICAgICAgICAgICAgImVuZF9iZWxsX25kZSIsICJtb3VudGluZ19wbGF0ZSJdOgogICAgICAgIG1hdHMuc2V0X3N0cnVjdHVyYWxfbWF0ZXJpYWwoY29tcCwgcHJlc2V0PXN0cnVjdHVyYWxfbWF0ZXJpYWwpCiAgICBtYXRzLnNldF9zdHJ1Y3R1cmFsX21hdGVyaWFsKCJzaGFmdCIsIHByZXNldD1zaGFmdF9tYXRlcmlhbCkKCiAgICAjIEN1c3RvbSBwZXItY29tcG9uZW50IG92ZXJyaWRlcwogICAgaWYgY3VzdG9tX21hdGVyaWFsczoKICAgICAgICBmb3IgY29tcCwgb3ZlcnJpZGVzIGluIGN1c3RvbV9tYXRlcmlhbHMuaXRlbXMoKToKICAgICAgICAgICAgbWF0cy5zZXRfc3RydWN0dXJhbF9tYXRlcmlhbChjb21wLCAqKm92ZXJyaWRlcykKCiAgICAjIC0tLSAzLiBDb25maWd1cmUgbW91bnRpbmcgLS0tCiAgICBtYXRzLm1vdW50aW5nID0gTW91bnRpbmdDb25maWcoCiAgICAgICAgc3R5bGU9bW91bnRpbmdfc3R5bGUsCiAgICAgICAgbnVtX2JvbHRzPW51bV9ib2x0cywKICAgICAgICBib2x0X2RpYW1ldGVyPWJvbHRfZGlhbWV0ZXIsCiAgICAgICAgcmFkaWFsX2xvYWQ9cmFkaWFsX2xvYWQsCiAgICAgICAgYXhpYWxfbG9hZD1heGlhbF9sb2FkLAogICAgICAgIGJlbmRpbmdfbW9tZW50PWJlbmRpbmdfbW9tZW50LAogICAgICAgIGlzb2xhdG9yX3N0aWZmbmVzcz1pc29sYXRvcl9zdGlmZm5lc3MsCiAgICAgICAgbWF0ZXJpYWw9bWF0cy5tb3VudGluZ19wbGF0ZSwKICAgICkKCiAgICAjIC0tLSA0LiBSdW4gb3B0aW1pc2F0aW9uIC0tLQogICAgaWYgdXNlX2ZlbToKICAgICAgICB0cnk6CiAgICAgICAgICAgIGZyb20gLmZlbV9vcHRpbWl6ZXIgaW1wb3J0IHJ1bl9vcHRpbWlzYXRpb25fZmVtCiAgICAgICAgICAgIG9wdF9yZXN1bHQgPSBydW5fb3B0aW1pc2F0aW9uX2ZlbSgKICAgICAgICAgICAgICAgIHNwZWNzLCBtYXRzLAogICAgICAgICAgICAgICAgVF9hbWJpZW50PVRfYW1iaWVudCwKICAgICAgICAgICAgICAgIHBvcF9zaXplPXBvcF9zaXplLAogICAgICAgICAgICAgICAgbl9nZW49bl9nZW4sCiAgICAgICAgICAgICAgICBtZXNoX2RlbnNpdHk9ZmVtX21lc2hfZGVuc2l0eSwKICAgICAgICAgICAgKQogICAgICAgIGV4Y2VwdCBJbXBvcnRFcnJvcjoKICAgICAgICAgICAgaW1wb3J0IHdhcm5pbmdzCiAgICAgICAgICAgIHdhcm5pbmdzLndhcm4oCiAgICAgICAgICAgICAgICAic2Npa2l0LWZlbSBub3QgaW5zdGFsbGVkIOKAlCBmYWxsaW5nIGJhY2sgdG8gYW5hbHl0aWNhbCBvcHRpbWlzYXRpb24uIgogICAgICAgICAgICApCiAgICAgICAgICAgIG9wdF9yZXN1bHQgPSBydW5fb3B0aW1pc2F0aW9uKAogICAgICAgICAgICAgICAgc3BlY3MsIG1hdHMsCiAgICAgICAgICAgICAgICBUX2FtYmllbnQ9VF9hbWJpZW50LAogICAgICAgICAgICAgICAgcG9wX3NpemU9cG9wX3NpemUsCiAgICAgICAgICAgICAgICBuX2dlbj1uX2dlbiwKICAgICAgICAgICAgKQogICAgZWxzZToKICAgICAgICBvcHRfcmVzdWx0ID0gcnVuX29wdGltaXNhdGlvbigKICAgICAgICAgICAgc3BlY3MsIG1hdHMsCiAgICAgICAgICAgIFRfYW1iaWVudD1UX2FtYmllbnQsCiAgICAgICAgICAgIHBvcF9zaXplPXBvcF9zaXplLAogICAgICAgICAgICBuX2dlbj1uX2dlbiwKICAgICAgICApCgogICAgYmVzdF9pZHggPSBvcHRfcmVzdWx0WyJiZXN0X2lkeCJdCiAgICBiZXN0ID0gb3B0X3Jlc3VsdFsicGFyZXRvX3Jlc3VsdHMiXVtiZXN0X2lkeF0gaWYgb3B0X3Jlc3VsdFsicGFyZXRvX3Jlc3VsdHMiXSBlbHNlIE5vbmUKCiAgICAjIC0tLSA1LiBWYWxpZGF0aW9uIC0tLQogICAgdmFsaWRhdGlvbiA9IHZhbGlkYXRlX2Rlc2lnbihiZXN0KSBpZiBiZXN0IGVsc2Uge30KICAgIGFsbF9wYXNzZWQgPSBhbGwodi5nZXQoInBhc3NlZCIsIEZhbHNlKSBmb3IgdiBpbiB2YWxpZGF0aW9uLnZhbHVlcygpKQoKICAgICMgLS0tIDYuIFNURVAgZXhwb3J0IC0tLQogICAgc3RlcF9maWxlcyA9IHt9CiAgICBpZiBleHBvcnRfc3RlcCBhbmQgYmVzdCBpcyBub3QgTm9uZToKICAgICAgICB0cnk6CiAgICAgICAgICAgIGZyb20gLmNhZF9leHBvcnQgaW1wb3J0IGV4cG9ydF9zdGVwX2ZpbGVzCiAgICAgICAgICAgIGVtX21vZGVsID0gRWxlY3Ryb21hZ25ldGljTW9kZWwoc3BlY3MsIG1hdHMpCiAgICAgICAgICAgICMgUmVjb25zdHJ1Y3QgZ2VvbWV0cnkgZnJvbSBiZXN0IGRlc2lnbgogICAgICAgICAgICBlbV9tb2RlbC5nZW9tZXRyeSA9IF9yZWNvbnN0cnVjdF9nZW9tZXRyeSgKICAgICAgICAgICAgICAgIGJlc3QuZGVzaWduX3ZlY3Rvciwgb3B0X3Jlc3VsdFsic2xvdF9wb2xlIl0sIG1hdHMKICAgICAgICAgICAgKQogICAgICAgICAgICBlbV9tb2RlbC53aW5kaW5nID0gX3JlY29uc3RydWN0X3dpbmRpbmcoCiAgICAgICAgICAgICAgICBiZXN0LmRlc2lnbl92ZWN0b3IsIG9wdF9yZXN1bHRbInNsb3RfcG9sZSJdLCBlbV9tb2RlbC5nZW9tZXRyeSwgbWF0cwogICAgICAgICAgICApCiAgICAgICAgICAgIHN0ZXBfZmlsZXMgPSBleHBvcnRfc3RlcF9maWxlcygKICAgICAgICAgICAgICAgIGVtX21vZGVsLmdlb21ldHJ5LCBlbV9tb2RlbC53aW5kaW5nLCBtYXRzLCBvdXRwdXRfZGlyCiAgICAgICAgICAgICkKICAgICAgICBleGNlcHQgSW1wb3J0RXJyb3I6CiAgICAgICAgICAgIHN0ZXBfZmlsZXMgPSB7ImVycm9yIjogIkNhZFF1ZXJ5IG5vdCBpbnN0YWxsZWQg4oCUIFNURVAgZXhwb3J0IHNraXBwZWQifQogICAgICAgIGV4Y2VwdCBFeGNlcHRpb24gYXMgZToKICAgICAgICAgICAgc3RlcF9maWxlcyA9IHsiZXJyb3IiOiBzdHIoZSl9CgogICAgIyAtLS0gNy4gQnVpbGQgcmVwb3J0IC0tLQogICAgZWxhcHNlZCA9IHRpbWUudGltZSgpIC0gdDAKICAgIHJlcG9ydCA9IF9idWlsZF9yZXBvcnQoc3BlY3MsIG1hdHMsIG9wdF9yZXN1bHQsIGJlc3QsIHZhbGlkYXRpb24sCiAgICAgICAgICAgICAgICAgICAgICAgICAgIHN0ZXBfZmlsZXMsIGVsYXBzZWQpCgogICAgcmV0dXJuIHsKICAgICAgICAic3BlY3MiOiBzcGVjcywKICAgICAgICAibWF0ZXJpYWxzIjogbWF0cywKICAgICAgICAib3B0aW1pc2F0aW9uIjogb3B0X3Jlc3VsdCwKICAgICAgICAiYmVzdF9kZXNpZ24iOiBiZXN0LAogICAgICAgICJ2YWxpZGF0aW9uIjogdmFsaWRhdGlvbiwKICAgICAgICAiYWxsX2NoZWNrc19wYXNzZWQiOiBhbGxfcGFzc2VkLAogICAgICAgICJzdGVwX2ZpbGVzIjogc3RlcF9maWxlcywKICAgICAgICAicmVwb3J0IjogcmVwb3J0LAogICAgICAgICJlbGFwc2VkX3NlY29uZHMiOiBlbGFwc2VkLAogICAgfQoKCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMgSGVscGVycwojIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpkZWYgX3JlY29uc3RydWN0X2dlb21ldHJ5KHgsIHNsb3RfcG9sZSwgbWF0cyk6CiAgICAiIiJSZWJ1aWxkIEdlb21ldHJ5UGFyYW1zIGZyb20gYSBkZXNpZ24gdmVjdG9yLiIiIgogICAgZnJvbSAuZWxlY3Ryb21hZ25ldGljIGltcG9ydCBHZW9tZXRyeVBhcmFtcwogICAgbl9zbG90cywgbl9wb2xlcyA9IHNsb3RfcG9sZQogICAgZ2VvID0gR2VvbWV0cnlQYXJhbXMoKQogICAgZ2VvLnN0YXRvcl9vdXRlcl9yYWRpdXMgPSB4WzBdCiAgICBnZW8uc3RhY2tfbGVuZ3RoID0geFsxXQogICAgZ2VvLm1hZ25ldF90aGlja25lc3MgPSB4WzJdCiAgICBnZW8uYWlyZ2FwID0geFszXQogICAgdGF1X3MgPSAyICogbnAucGkgKiB4WzBdIC8gbl9zbG90cwogICAgZ2VvLnRvb3RoX3dpZHRoID0geFs1XSAqIHRhdV9zCiAgICBnZW8uc2xvdF9vcGVuaW5nID0gbWF4KHRhdV9zICogMC4yNSwgMC4wMDEpCiAgICBnZW8uc3RhdG9yX3lva2VfdGhpY2tuZXNzID0gbWF4KDAuMDAyLCAoeFswXSAtIGdlby5zaGFmdF9yYWRpdXMgLSAwLjAwMikgKiAwLjI1KQogICAgYXZhaWwgPSB4WzBdIC0gZ2VvLnN0YXRvcl95b2tlX3RoaWNrbmVzcyAtIGdlby5zaGFmdF9yYWRpdXMgLSAwLjAwMgogICAgZ2VvLnNsb3RfZGVwdGggPSBtYXgoeFs0XSAqIGF2YWlsLCAwLjAwMykKICAgIGdlby5zdGF0b3JfaW5uZXJfcmFkaXVzID0gZ2VvLnNoYWZ0X3JhZGl1cyArIDAuMDAxCiAgICBnZW8ucm90b3JfaW5uZXJfcmFkaXVzID0geFswXSArIHhbM10KICAgIGdlby5yb3Rvcl95b2tlX3RoaWNrbmVzcyA9IHhbOV0KICAgIGdlby5yb3Rvcl9vdXRlcl9yYWRpdXMgPSBnZW8ucm90b3JfaW5uZXJfcmFkaXVzICsgeFsyXSArIHhbOV0KICAgIHJldHVybiBnZW8KCgpkZWYgX3JlY29uc3RydWN0X3dpbmRpbmcoeCwgc2xvdF9wb2xlLCBnZW8sIG1hdHMpOgogICAgIiIiUmVidWlsZCBXaW5kaW5nQ29uZmlnIGZyb20gYSBkZXNpZ24gdmVjdG9yLiIiIgogICAgZnJvbSAuZWxlY3Ryb21hZ25ldGljIGltcG9ydCBXaW5kaW5nQ29uZmlnLCBjb21wdXRlX3dpbmRpbmdfZmFjdG9yCiAgICBuX3Nsb3RzLCBuX3BvbGVzID0gc2xvdF9wb2xlCiAgICB3ZGcgPSBXaW5kaW5nQ29uZmlnKCkKICAgIHdkZy5udW1fcG9sZXMgPSBuX3BvbGVzCiAgICB3ZGcubnVtX3Nsb3RzID0gbl9zbG90cwogICAgd2RnLnR1cm5zX3Blcl9jb2lsID0gbWF4KDEsIGludChyb3VuZCh4WzZdKSkpCiAgICB3ZGcud2lyZV9kaWFtZXRlciA9IHhbN10gKiAxZS0zCiAgICB3ZGcubnVtX2xheWVycyA9IDIKICAgIHdkZy5jb2lsX3NwYW4gPSAxCiAgICB3ZGcud2luZGluZ19mYWN0b3IgPSBjb21wdXRlX3dpbmRpbmdfZmFjdG9yKG5fc2xvdHMsIG5fcG9sZXMpCiAgICB3ZGcuZW5kX3R1cm5fbGVuZ3RoID0gMS41ICogZ2VvLnRvb3RoX3dpZHRoICsgMC4wMTAKICAgIHJldHVybiB3ZGcKCgpkZWYgX2J1aWxkX3JlcG9ydChzcGVjcywgbWF0cywgb3B0LCBiZXN0LCB2YWxpZGF0aW9uLCBzdGVwX2ZpbGVzLCBlbGFwc2VkKToKICAgICIiIkJ1aWxkIGEgaHVtYW4tcmVhZGFibGUgdGV4dCByZXBvcnQuIiIiCiAgICBsaW5lcyA9IFtdCiAgICBsaW5lcy5hcHBlbmQoIj0iICogNzApCiAgICBsaW5lcy5hcHBlbmQoIiAgT1VUUlVOTkVSIEJMREMgTU9UT1IgREVTSUdOIFJFUE9SVCIpCiAgICBsaW5lcy5hcHBlbmQoIj0iICogNzApCiAgICBsaW5lcy5hcHBlbmQoIiIpCgogICAgbGluZXMuYXBwZW5kKCIjIyBTcGVjaWZpY2F0aW9ucyIpCiAgICBsaW5lcy5hcHBlbmQoZiIgIFZvbHRhZ2U6ICAgICAge3NwZWNzLnZvbHRhZ2U6LjFmfSBWIikKICAgIGxpbmVzLmFwcGVuZChmIiAgVGFyZ2V0IFJQTTogICB7c3BlY3MudGFyZ2V0X3JwbTouMGZ9IikKICAgIGxpbmVzLmFwcGVuZChmIiAgVGFyZ2V0IFRvcnF1ZTp7c3BlY3MudGFyZ2V0X3RvcnF1ZTouM2Z9IE7Ct20iKQogICAgbGluZXMuYXBwZW5kKGYiICBNYXggQ3VycmVudDogIHtzcGVjcy5tYXhfY3VycmVudDouMWZ9IEEiKQogICAgbGluZXMuYXBwZW5kKGYiICBUYXJnZXQgzrc6ICAgICB7c3BlY3MudGFyZ2V0X2VmZmljaWVuY3kqMTAwOi4wZn0lIikKICAgIGxpbmVzLmFwcGVuZCgiIikKCiAgICBsaW5lcy5hcHBlbmQoIiMjIE1hdGVyaWFscyIpCiAgICBsaW5lcy5hcHBlbmQoZiIgIE1hZ25ldDogICAgICAge21hdHMubWFnbmV0Lm1hZ25ldF90eXBlLnZhbHVlfSAvIHttYXRzLm1hZ25ldC5ncmFkZX0iKQogICAgbGluZXMuYXBwZW5kKGYiICAgIEJyKDIwwrBDKTogICB7bWF0cy5tYWduZXQuQnJfMjA6LjNmfSBUIikKICAgIGxpbmVzLmFwcGVuZChmIiAgICBIY2ooMjDCsEMpOiAge21hdHMubWFnbmV0Lkhjal8yMC8xZTM6LjBmfSBrQS9tIikKICAgIGxpbmVzLmFwcGVuZChmIiAgICBNYXggdGVtcDogICB7bWF0cy5tYWduZXQubWF4X3RlbXA6LjBmfSDCsEMiKQogICAgbGluZXMuYXBwZW5kKGYiICBSb3RvciBob3VzaW5nOnttYXRzLnJvdG9yX2hvdXNpbmcubmFtZX0iKQogICAgbGluZXMuYXBwZW5kKGYiICBTaGFmdDogICAgICAgIHttYXRzLnNoYWZ0Lm5hbWV9IikKICAgIGxpbmVzLmFwcGVuZChmIiAgTW91bnRpbmc6ICAgICB7bWF0cy5tb3VudGluZy5zdHlsZX0sIHttYXRzLm1vdW50aW5nLm51bV9ib2x0c314IE17bWF0cy5tb3VudGluZy5ib2x0X2RpYW1ldGVyKjFlMzouMGZ9IikKICAgIGxpbmVzLmFwcGVuZCgiIikKCiAgICBsaW5lcy5hcHBlbmQoZiIjIyBPcHRpbWlzYXRpb24gICh7b3B0WydhbGdvcml0aG0nXX0sICIKICAgICAgICAgICAgICAgICBmInNsb3QvcG9sZSA9IHtvcHRbJ3Nsb3RfcG9sZSddWzBdfS97b3B0WydzbG90X3BvbGUnXVsxXX0pIikKICAgIG5fcGFyZXRvID0gbGVuKG9wdFsicGFyZXRvX3Jlc3VsdHMiXSkKICAgIGxpbmVzLmFwcGVuZChmIiAgUGFyZXRvIHNvbHV0aW9ucyBmb3VuZDoge25fcGFyZXRvfSIpCiAgICBsaW5lcy5hcHBlbmQoZiIgIEJlc3QgKGtuZWUpIGluZGV4OiAgICAgIHtvcHRbJ2Jlc3RfaWR4J119IikKICAgIGxpbmVzLmFwcGVuZCgiIikKCiAgICBpZiBiZXN0IGFuZCBiZXN0LmVtOgogICAgICAgIGVtID0gYmVzdC5lbQogICAgICAgIGxpbmVzLmFwcGVuZCgiIyMgRWxlY3Ryb21hZ25ldGljIFBlcmZvcm1hbmNlIikKICAgICAgICBsaW5lcy5hcHBlbmQoZiIgIEJhY2stRU1GIChwZWFrKTogICAge2VtLmJhY2tfZW1mX3BlYWs6LjJmfSBWIikKICAgICAgICBsaW5lcy5hcHBlbmQoZiIgIEFpcmdhcCBCZzE6ICAgICAgICAge2VtLmFpcmdhcF9mbHV4X2RlbnNpdHk6LjNmfSBUIikKICAgICAgICBsaW5lcy5hcHBlbmQoZiIgIFRvcnF1ZSAoYXZnKTogICAgICAge2VtLnRvcnF1ZV9hdmc6LjRmfSBOwrdtIikKICAgICAgICBsaW5lcy5hcHBlbmQoZiIgIFRvcnF1ZSByaXBwbGU6ICAgICAge2VtLnRvcnF1ZV9yaXBwbGU6LjFmfSUiKQogICAgICAgIGxpbmVzLmFwcGVuZChmIiAgUGhhc2UgY3VycmVudCBSTVM6ICB7ZW0ucGhhc2VfY3VycmVudF9ybXM6LjJmfSBBIikKICAgICAgICBsaW5lcy5hcHBlbmQoZiIgIEN1cnJlbnQgZGVuc2l0eTogICAge2VtLmN1cnJlbnRfZGVuc2l0eTouMWZ9IEEvbW3CsiIpCiAgICAgICAgbGluZXMuYXBwZW5kKGYiICBQb3dlciBvdXRwdXQ6ICAgICAgIHtlbS5wb3dlcl9vdXRwdXQ6LjFmfSBXIikKICAgICAgICBsaW5lcy5hcHBlbmQoZiIgIENvcHBlciBsb3NzOiAgICAgICAge2VtLmNvcHBlcl9sb3NzOi4xZn0gVyIpCiAgICAgICAgbGluZXMuYXBwZW5kKGYiICBJcm9uIGxvc3MgKHN0YXRvcik6IHtlbS5pcm9uX2xvc3Nfc3RhdG9yOi4xZn0gVyIpCiAgICAgICAgbGluZXMuYXBwZW5kKGYiICBNYWduZXQgbG9zczogICAgICAgIHtlbS5tYWduZXRfbG9zczouMmZ9IFciKQogICAgICAgIGxpbmVzLmFwcGVuZChmIiAgRWZmaWNpZW5jeTogICAgICAgICB7ZW0uZWZmaWNpZW5jeSoxMDA6LjFmfSUiKQogICAgICAgIGxpbmVzLmFwcGVuZCgiIikKCiAgICBpZiBiZXN0IGFuZCBiZXN0LnRoZXJtYWw6CiAgICAgICAgdGggPSBiZXN0LnRoZXJtYWwKICAgICAgICBsaW5lcy5hcHBlbmQoIiMjIFRoZXJtYWwiKQogICAgICAgIGxpbmVzLmFwcGVuZChmIiAgV2luZGluZyAoc2xvdCk6ICAgICB7dGguVF93aW5kaW5nX3Nsb3Q6LjFmfSDCsEMiKQogICAgICAgIGxpbmVzLmFwcGVuZChmIiAgRW5kIHdpbmRpbmc6ICAgICAgICB7dGguVF9lbmRfd2luZGluZ19kZTouMWZ9IC8ge3RoLlRfZW5kX3dpbmRpbmdfbmRlOi4xZn0gwrBDIikKICAgICAgICBsaW5lcy5hcHBlbmQoZiIgIE1hZ25ldHM6ICAgICAgICAgICAge3RoLlRfbWFnbmV0czouMWZ9IMKwQyIpCiAgICAgICAgbGluZXMuYXBwZW5kKGYiICBSb3RvciB5b2tlOiAgICAgICAgIHt0aC5UX3JvdG9yX3lva2U6LjFmfSDCsEMiKQogICAgICAgIGxpbmVzLmFwcGVuZChmIiAgSG90c3BvdCBtYXJnaW46ICAgICB7dGguaG90c3BvdF9tYXJnaW46LjFmfSDCsEMgKHt0aC5jcml0aWNhbF9jb21wb25lbnR9KSIpCiAgICAgICAgbGluZXMuYXBwZW5kKGYiICBTYWZlOiAgICAgICAgICAgICAgIHsnWUVTJyBpZiB0aC5pc19zYWZlIGVsc2UgJ05PJ30iKQogICAgICAgIGxpbmVzLmFwcGVuZCgiIikKCiAgICBpZiBiZXN0IGFuZCBiZXN0Lm1lY2g6CiAgICAgICAgbSA9IGJlc3QubWVjaAogICAgICAgIGxpbmVzLmFwcGVuZCgiIyMgTWVjaGFuaWNhbCIpCiAgICAgICAgbGluZXMuYXBwZW5kKGYiICBTaGFmdCBTRjogICAgICAgICAgIHttLnNoYWZ0LnNoYWZ0X3NhZmV0eV9mYWN0b3I6LjFmfSIpCiAgICAgICAgbGluZXMuYXBwZW5kKGYiICAxc3QgY3JpdGljYWwgc3BlZWQ6IHttLnNoYWZ0LmNyaXRpY2FsX3NwZWVkXzFzdDouMGZ9IFJQTSIpCiAgICAgICAgbGluZXMuYXBwZW5kKGYiICBNYWduZXQgcmV0ZW50aW9uOiAgIHttLnJvdG9yX3N0cmVzcy5tYWduZXRfcmV0ZW50aW9uX21hcmdpbjouMWZ9eCIpCiAgICAgICAgbGluZXMuYXBwZW5kKGYiICBNYXggc2FmZSBSUE06ICAgICAgIHttLnJvdG9yX3N0cmVzcy5tYXhfc2FmZV9ycG06LjBmfSIpCiAgICAgICAgbGluZXMuYXBwZW5kKGYiICBCZWFyaW5nIEwxMCAoc3lzKTogIHttLmJlYXJpbmdzLnN5c3RlbV9sMTBfaG91cnM6LjBmfSBoIikKICAgICAgICBsaW5lcy5hcHBlbmQoZiIgIEJlYXJpbmcgZnJpY3Rpb246ICAge20uYmVhcmluZ3MuZnJpY3Rpb25fbG9zc190b3RhbDouMmZ9IFciKQogICAgICAgIGxpbmVzLmFwcGVuZChmIiAgTW91bnQgYm9sdCBTRjogICAgICB7bS5tb3VudGluZy5ib2x0X2NvbWJpbmVkX3NhZmV0eV9mYWN0b3I6LjFmfSIpCiAgICAgICAgbGluZXMuYXBwZW5kKGYiICBGbGFuZ2UgU0Y6ICAgICAgICAgIHttLm1vdW50aW5nLmZsYW5nZV9zYWZldHlfZmFjdG9yOi4xZn0iKQogICAgICAgIGxpbmVzLmFwcGVuZChmIiAgVmlicmF0aW9uIHpvbmU6ICAgICBJU08gMTA4MTYgWm9uZSB7bS52aWJyYXRpb24uaXNvXzEwODE2X3pvbmV9IikKICAgICAgICBsaW5lcy5hcHBlbmQoZiIgIEZvcmNlZCBhbXBsaXR1ZGU6ICAge20udmlicmF0aW9uLmZvcmNlZF9hbXBsaXR1ZGVfbW06LjNmfSBtbSIpCiAgICAgICAgbGluZXMuYXBwZW5kKGYiICBSZXNvbmFuY2UgbWFyZ2luOiAgIHttLnZpYnJhdGlvbi5yZXNvbmFuY2VfbWFyZ2luKjEwMDouMGZ9JSIpCiAgICAgICAgbGluZXMuYXBwZW5kKCIiKQoKICAgIGlmIGJlc3QgYW5kIGJlc3QuY2ZkOgogICAgICAgIGMgPSBiZXN0LmNmZAogICAgICAgIGxpbmVzLmFwcGVuZCgiIyMgQ0ZEIC8gQWlyZmxvdyIpCiAgICAgICAgbGluZXMuYXBwZW5kKGYiICBGbG93IHJlZ2ltZTogICAgICAgIHtjLmZsb3dfcmVnaW1lfSIpCiAgICAgICAgbGluZXMuYXBwZW5kKGYiICBUYXlsb3IgbnVtYmVyOiAgICAgIHtjLnRheWxvcl9udW1iZXI6LjFmfSIpCiAgICAgICAgbGluZXMuYXBwZW5kKGYiICBoX2FpcmdhcDogICAgICAgICAgIHtjLmhfYWlyZ2FwOi4xZn0gVy8obcKywrdLKSIpCiAgICAgICAgbGluZXMuYXBwZW5kKGYiICBoX2V4dGVybmFsOiAgICAgICAgIHtjLmhfcm90b3JfZXh0ZXJuYWw6LjFmfSBXLyhtwrLCt0spIikKICAgICAgICBsaW5lcy5hcHBlbmQoZiIgIFdpbmRhZ2UgbG9zczogICAgICAge2Mud2luZGFnZV9sb3NzOi4yZn0gVyIpCiAgICAgICAgbGluZXMuYXBwZW5kKCIiKQoKICAgIGxpbmVzLmFwcGVuZCgiIyMgVmFsaWRhdGlvbiBDaGVja3MiKQogICAgZm9yIG5hbWUsIHYgaW4gdmFsaWRhdGlvbi5pdGVtcygpOgogICAgICAgIHN0YXR1cyA9ICJQQVNTIiBpZiB2LmdldCgicGFzc2VkIikgZWxzZSAiRkFJTCIKICAgICAgICBsaW5lcy5hcHBlbmQoZiIgIFt7c3RhdHVzfV0ge25hbWV9OiB7di5nZXQoJ3ZhbHVlJywgJycpfSIpCiAgICBsaW5lcy5hcHBlbmQoIiIpCgogICAgaWYgc3RlcF9maWxlczoKICAgICAgICBsaW5lcy5hcHBlbmQoIiMjIFNURVAgRmlsZXMiKQogICAgICAgIGZvciBuYW1lLCBwYXRoIGluIHN0ZXBfZmlsZXMuaXRlbXMoKToKICAgICAgICAgICAgbGluZXMuYXBwZW5kKGYiICB7bmFtZX06IHtwYXRofSIpCiAgICAgICAgbGluZXMuYXBwZW5kKCIiKQoKICAgIGxpbmVzLmFwcGVuZChmIkVsYXBzZWQ6IHtlbGFwc2VkOi4xZn1zIikKICAgIGxpbmVzLmFwcGVuZCgiPSIgKiA3MCkKCiAgICByZXR1cm4gIlxuIi5qb2luKGxpbmVzKQoKCiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMgQ0xJIGVudHJ5IHBvaW50CiMgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCmlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6CiAgICAjIEV4YW1wbGU6IHNtYWxsIGRyb25lIG1vdG9yCiAgICByZXN1bHQgPSBkZXNpZ25fbW90b3IoCiAgICAgICAgdm9sdGFnZT0yNC4wLAogICAgICAgIHJwbT01MDAwLAogICAgICAgIHRvcnF1ZT0wLjUsCiAgICAgICAgY3VycmVudD0yMC4wLAogICAgICAgIGVmZmljaWVuY3lfdGFyZ2V0PTAuOTAsCiAgICAgICAgbWFnbmV0X3R5cGU9Ik5kRmVCIiwKICAgICAgICBtYWduZXRfZ3JhZGU9Ik40MlNIIiwKICAgICAgICBzdHJ1Y3R1cmFsX21hdGVyaWFsPSI2MDYxLVQ2IiwKICAgICAgICBzaGFmdF9tYXRlcmlhbD0iQUlTSSA0MTQwIiwKICAgICAgICBtb3VudGluZ19zdHlsZT0iZmFjZV9tb3VudCIsCiAgICAgICAgbnVtX2JvbHRzPTQsCiAgICAgICAgYm9sdF9kaWFtZXRlcj0wLjAwMywKICAgICAgICByYWRpYWxfbG9hZD01LjAsCiAgICAgICAgYXhpYWxfbG9hZD0yLjAsCiAgICAgICAgcG9wX3NpemU9MjAsCiAgICAgICAgbl9nZW49MTAsCiAgICAgICAgZXhwb3J0X3N0ZXA9RmFsc2UsICAjIFNldCBUcnVlIGlmIGNhZHF1ZXJ5IGluc3RhbGxlZAogICAgKQogICAgcHJpbnQocmVzdWx0WyJyZXBvcnQiXSkK
+#!/usr/bin/env python3
+"""
+Outrunner BLDC Motor Design Optimiser — Main Pipeline
+=====================================================
+
+End-to-end workflow:
+  1. Accept user specifications (voltage, RPM, torque, current, efficiency)
+  2. Configure materials (magnet type, structural alloy, custom overrides)
+  3. Configure mounting (bolt pattern, loads, vibration isolation)
+  4. Run coupled EM-thermal-mechanical-CFD multi-objective optimisation
+  5. Export STEP files for the best design
+  6. Print full design report with validation checks
+
+Usage (as script):
+    python -m outrunner_motor_optimizer.main
+
+Usage (as library):
+    from outrunner_motor_optimizer.main import design_motor
+    result = design_motor(
+        voltage=24, rpm=5000, torque=0.5, current=20,
+        magnet_type="NdFeB", magnet_grade="N42SH",
+    )
+
+Validation approach:
+  - Torque constant cross-check:  Kt = T / I  should match  Kt_em = 3*E/ω
+  - Efficiency sanity: copper+iron+magnet+windage+bearing losses sum to (1-η)*P_in
+  - Thermal plausibility: winding temp > magnet temp > ambient (for outrunner)
+  - Weight plausibility: power-density 0.5-5 kW/kg for BLDC motors (Rouse et al. 2023)
+  - Structural: safety factors > 1.5 everywhere
+
+References:
+  [1] U.H. Lee et al., "How to Model Brushless Electric Motors for the
+      Design of Lightweight Robotic Systems," arXiv:2310.00080, 2023.
+      (Motor modelling, Kt cross-check methodology)
+  [2] J. Pyrhonen et al., "Design of Rotating Electrical Machines,"
+      Wiley, 2014. (Tangential stress 20-50 kPa for PM machines)
+"""
+
+from __future__ import annotations
+import json
+import time
+from pathlib import Path
+from typing import Optional, Dict, Any
+
+import numpy as np
+
+from .materials import (
+    MaterialDatabase, MagnetType, StructuralMaterial, MountingConfig,
+    STRUCTURAL_CATALOG,
+)
+from .electromagnetic import MotorSpecs, ElectromagneticModel, select_slot_pole
+from .thermal import ThermalModel
+from .mechanical import MechanicalModel
+from .cfd import CFDModel
+from .optimizer import run_optimisation, evaluate_design
+
+
+# ---------------------------------------------------------------------------
+# Validation tests
+# ---------------------------------------------------------------------------
+def validate_design(result) -> Dict[str, Any]:
+    """
+    Run sanity / physics checks on an evaluated design.
+
+    Returns dict of {check_name: {passed: bool, value: ..., expected: ..., note: ...}}
+    """
+    checks = {}
+    em = result.em
+    th = result.thermal
+    mech = result.mech
+
+    if em is None:
+        return {"no_em_results": {"passed": False, "note": "EM results missing"}}
+
+    # 1. Torque constant cross-check
+    omega = em.power_output / max(em.torque_avg, 1e-6) if em.torque_avg > 0 else 1
+    Kt_from_torque = em.torque_avg / max(em.phase_current_rms, 1e-6)
+    Kt_from_emf = 3 * em.back_emf_rms / max(omega, 1e-6)
+    ratio = Kt_from_torque / max(Kt_from_emf, 1e-9)
+    checks["torque_constant_consistency"] = {
+        "passed": 0.7 < ratio < 1.3,
+        "value": f"Kt(T/I)={Kt_from_torque:.4f}, Kt(3E/ω)={Kt_from_emf:.4f}, ratio={ratio:.2f}",
+        "expected": "ratio 0.7 – 1.3",
+    }
+
+    # 2. Energy balance
+    P_out = em.power_output
+    P_loss = em.total_loss
+    P_in = P_out + P_loss
+    eta = P_out / max(P_in, 1e-6)
+    checks["energy_balance"] = {
+        "passed": 0.50 < eta < 0.99,
+        "value": f"η={eta:.3f}, P_out={P_out:.1f}W, P_loss={P_loss:.1f}W",
+        "expected": "0.50 < η < 0.99",
+    }
+
+    # 3. Thermal plausibility
+    if th is not None:
+        T_wind = th.T_winding_slot
+        T_mag = th.T_magnets
+        T_amb = th.T_ambient
+        thermal_ok = T_wind > T_amb and T_mag > T_amb
+        checks["thermal_gradient"] = {
+            "passed": thermal_ok,
+            "value": f"T_wind={T_wind:.1f}°C, T_mag={T_mag:.1f}°C, T_amb={T_amb:.1f}°C",
+            "expected": "T_winding > T_magnet > T_ambient (generally)",
+        }
+
+    # 4. Current density
+    J = em.current_density
+    checks["current_density"] = {
+        "passed": 1.0 < J < 15.0,
+        "value": f"J={J:.1f} A/mm²",
+        "expected": "1 – 15 A/mm² (air-cooled: 3-8 typical)",
+    }
+
+    # 5. Airgap flux density
+    Bg = em.airgap_flux_density
+    checks["airgap_flux_density"] = {
+        "passed": 0.3 < Bg < 1.2,
+        "value": f"Bg1={Bg:.3f} T",
+        "expected": "0.3 – 1.2 T for surface-PM",
+    }
+
+    # 6. Mechanical safety
+    if mech is not None:
+        sf = mech.shaft.shaft_safety_factor
+        mr = mech.rotor_stress.magnet_retention_margin
+        checks["shaft_safety"] = {
+            "passed": sf > 1.5,
+            "value": f"SF={sf:.2f}",
+            "expected": "> 1.5",
+        }
+        checks["magnet_retention"] = {
+            "passed": mr > 1.5,
+            "value": f"margin={mr:.2f}",
+            "expected": "> 1.5",
+        }
+        checks["vibration_zone"] = {
+            "passed": mech.vibration.iso_10816_zone in ("A", "B"),
+            "value": mech.vibration.iso_10816_zone,
+            "expected": "A or B",
+        }
+
+    return checks
+
+
+# ---------------------------------------------------------------------------
+# High-level API
+# ---------------------------------------------------------------------------
+def design_motor(
+    voltage: float,
+    rpm: float,
+    torque: float,
+    current: float,
+    efficiency_target: float = 0.90,
+    magnet_type: str = "NdFeB",
+    magnet_grade: str = "N42SH",
+    structural_material: str = "6061-T6",
+    shaft_material: str = "AISI 4140",
+    mounting_style: str = "face_mount",
+    num_bolts: int = 4,
+    bolt_diameter: float = 0.003,
+    radial_load: float = 0.0,
+    axial_load: float = 0.0,
+    bending_moment: float = 0.0,
+    isolator_stiffness: float = 0.0,
+    T_ambient: float = 25.0,
+    pop_size: int = 40,
+    n_gen: int = 30,
+    export_step: bool = True,
+    output_dir: str = "motor_step_output",
+    custom_magnet: Optional[Dict[str, float]] = None,
+    custom_materials: Optional[Dict[str, Dict[str, float]]] = None,
+) -> Dict[str, Any]:
+    """
+    Full motor design pipeline.
+
+    Parameters
+    ----------
+    voltage, rpm, torque, current : float
+        Electrical specifications.
+    efficiency_target : float
+        Target efficiency (0-1).
+    magnet_type : str
+        "NdFeB", "SmCo", "Ferrite", or "Custom".
+    magnet_grade : str
+        Grade within family (e.g. "N42SH", "N52").
+    structural_material : str
+        Default for all structural parts ("6061-T6", "7075-T6", etc.).
+    shaft_material : str
+        Shaft material preset.
+    mounting_style : str
+        "face_mount", "foot_mount", "shaft_clamp", "custom".
+    num_bolts, bolt_diameter : int, float
+        Bolt pattern.
+    radial_load, axial_load, bending_moment : float
+        External loads on the motor [N] / [N·m].
+    isolator_stiffness : float
+        Vibration isolator stiffness [N/m], 0 = rigid.
+    T_ambient : float
+        Ambient temperature [°C].
+    pop_size, n_gen : int
+        Optimiser population size and generations.
+    export_step : bool
+        Whether to generate STEP files.
+    output_dir : str
+        Directory for STEP files.
+    custom_magnet : dict, optional
+        Overrides for custom magnet properties (Br_20, Hcj_20, density, ...).
+    custom_materials : dict, optional
+        Per-component material overrides. Keys: "rotor_housing",
+        "stator_housing", "end_bell_de", "end_bell_nde", "mounting_plate",
+        "shaft".  Values: dicts of StructuralMaterial field overrides.
+
+    Returns
+    -------
+    dict with keys:
+        specs, materials, optimisation, best_design, validation,
+        step_files, report
+    """
+    t0 = time.time()
+
+    # --- 1. Build specs ---
+    specs = MotorSpecs(
+        voltage=voltage,
+        target_rpm=rpm,
+        target_torque=torque,
+        max_current=current,
+        target_efficiency=efficiency_target,
+    )
+
+    # --- 2. Configure materials ---
+    mats = MaterialDatabase()
+
+    # Magnet
+    if magnet_type == "Custom" and custom_magnet:
+        mats.set_magnet("Custom", **custom_magnet)
+    else:
+        mats.set_magnet(magnet_type, grade=magnet_grade)
+
+    # Structural (all parts default to the same alloy)
+    for comp in ["rotor_housing", "stator_housing", "end_bell_de",
+                 "end_bell_nde", "mounting_plate"]:
+        mats.set_structural_material(comp, preset=structural_material)
+    mats.set_structural_material("shaft", preset=shaft_material)
+
+    # Custom per-component overrides
+    if custom_materials:
+        for comp, overrides in custom_materials.items():
+            mats.set_structural_material(comp, **overrides)
+
+    # --- 3. Configure mounting ---
+    mats.mounting = MountingConfig(
+        style=mounting_style,
+        num_bolts=num_bolts,
+        bolt_diameter=bolt_diameter,
+        radial_load=radial_load,
+        axial_load=axial_load,
+        bending_moment=bending_moment,
+        isolator_stiffness=isolator_stiffness,
+        material=mats.mounting_plate,
+    )
+
+    # --- 4. Run optimisation ---
+    opt_result = run_optimisation(
+        specs, mats,
+        T_ambient=T_ambient,
+        pop_size=pop_size,
+        n_gen=n_gen,
+    )
+
+    best_idx = opt_result["best_idx"]
+    best = opt_result["pareto_results"][best_idx] if opt_result["pareto_results"] else None
+
+    # --- 5. Validation ---
+    validation = validate_design(best) if best else {}
+    all_passed = all(v.get("passed", False) for v in validation.values())
+
+    # --- 6. STEP export ---
+    step_files = {}
+    if export_step and best is not None:
+        try:
+            from .cad_export import export_step_files
+            em_model = ElectromagneticModel(specs, mats)
+            # Reconstruct geometry from best design
+            em_model.geometry = _reconstruct_geometry(
+                best.design_vector, opt_result["slot_pole"], mats
+            )
+            em_model.winding = _reconstruct_winding(
+                best.design_vector, opt_result["slot_pole"], em_model.geometry, mats
+            )
+            step_files = export_step_files(
+                em_model.geometry, em_model.winding, mats, output_dir
+            )
+        except ImportError:
+            step_files = {"error": "CadQuery not installed — STEP export skipped"}
+        except Exception as e:
+            step_files = {"error": str(e)}
+
+    # --- 7. Build report ---
+    elapsed = time.time() - t0
+    report = _build_report(specs, mats, opt_result, best, validation,
+                           step_files, elapsed)
+
+    return {
+        "specs": specs,
+        "materials": mats,
+        "optimisation": opt_result,
+        "best_design": best,
+        "validation": validation,
+        "all_checks_passed": all_passed,
+        "step_files": step_files,
+        "report": report,
+        "elapsed_seconds": elapsed,
+    }
+
+
+# ---------------------------------------------------------------------------
+# Helpers
+# ---------------------------------------------------------------------------
+def _reconstruct_geometry(x, slot_pole, mats):
+    """Rebuild GeometryParams from a design vector."""
+    from .electromagnetic import GeometryParams
+    n_slots, n_poles = slot_pole
+    geo = GeometryParams()
+    geo.stator_outer_radius = x[0]
+    geo.stack_length = x[1]
+    geo.magnet_thickness = x[2]
+    geo.airgap = x[3]
+    tau_s = 2 * np.pi * x[0] / n_slots
+    geo.tooth_width = x[5] * tau_s
+    geo.slot_opening = max(tau_s * 0.25, 0.001)
+    geo.stator_yoke_thickness = max(0.002, (x[0] - geo.shaft_radius - 0.002) * 0.25)
+    avail = x[0] - geo.stator_yoke_thickness - geo.shaft_radius - 0.002
+    geo.slot_depth = max(x[4] * avail, 0.003)
+    geo.stator_inner_radius = geo.shaft_radius + 0.001
+    geo.rotor_inner_radius = x[0] + x[3]
+    geo.rotor_yoke_thickness = x[9]
+    geo.rotor_outer_radius = geo.rotor_inner_radius + x[2] + x[9]
+    return geo
+
+
+def _reconstruct_winding(x, slot_pole, geo, mats):
+    """Rebuild WindingConfig from a design vector."""
+    from .electromagnetic import WindingConfig, compute_winding_factor
+    n_slots, n_poles = slot_pole
+    wdg = WindingConfig()
+    wdg.num_poles = n_poles
+    wdg.num_slots = n_slots
+    wdg.turns_per_coil = max(1, int(round(x[6])))
+    wdg.wire_diameter = x[7] * 1e-3
+    wdg.num_layers = 2
+    wdg.coil_span = 1
+    wdg.winding_factor = compute_winding_factor(n_slots, n_poles)
+    wdg.end_turn_length = 1.5 * geo.tooth_width + 0.010
+    return wdg
+
+
+def _build_report(specs, mats, opt, best, validation, step_files, elapsed):
+    """Build a human-readable text report."""
+    lines = []
+    lines.append("=" * 70)
+    lines.append("  OUTRUNNER BLDC MOTOR DESIGN REPORT")
+    lines.append("=" * 70)
+    lines.append("")
+
+    lines.append("## Specifications")
+    lines.append(f"  Voltage:      {specs.voltage:.1f} V")
+    lines.append(f"  Target RPM:   {specs.target_rpm:.0f}")
+    lines.append(f"  Target Torque:{specs.target_torque:.3f} N·m")
+    lines.append(f"  Max Current:  {specs.max_current:.1f} A")
+    lines.append(f"  Target η:     {specs.target_efficiency*100:.0f}%")
+    lines.append("")
+
+    lines.append("## Materials")
+    lines.append(f"  Magnet:       {mats.magnet.magnet_type.value} / {mats.magnet.grade}")
+    lines.append(f"    Br(20°C):   {mats.magnet.Br_20:.3f} T")
+    lines.append(f"    Hcj(20°C):  {mats.magnet.Hcj_20/1e3:.0f} kA/m")
+    lines.append(f"    Max temp:   {mats.magnet.max_temp:.0f} °C")
+    lines.append(f"  Rotor housing:{mats.rotor_housing.name}")
+    lines.append(f"  Shaft:        {mats.shaft.name}")
+    lines.append(f"  Mounting:     {mats.mounting.style}, {mats.mounting.num_bolts}x M{mats.mounting.bolt_diameter*1e3:.0f}")
+    lines.append("")
+
+    lines.append(f"## Optimisation  ({opt['algorithm']}, "
+                 f"slot/pole = {opt['slot_pole'][0]}/{opt['slot_pole'][1]})")
+    n_pareto = len(opt["pareto_results"])
+    lines.append(f"  Pareto solutions found: {n_pareto}")
+    lines.append(f"  Best (knee) index:      {opt['best_idx']}")
+    lines.append("")
+
+    if best and best.em:
+        em = best.em
+        lines.append("## Electromagnetic Performance")
+        lines.append(f"  Back-EMF (peak):    {em.back_emf_peak:.2f} V")
+        lines.append(f"  Airgap Bg1:         {em.airgap_flux_density:.3f} T")
+        lines.append(f"  Torque (avg):       {em.torque_avg:.4f} N·m")
+        lines.append(f"  Torque ripple:      {em.torque_ripple:.1f}%")
+        lines.append(f"  Phase current RMS:  {em.phase_current_rms:.2f} A")
+        lines.append(f"  Current density:    {em.current_density:.1f} A/mm²")
+        lines.append(f"  Power output:       {em.power_output:.1f} W")
+        lines.append(f"  Copper loss:        {em.copper_loss:.1f} W")
+        lines.append(f"  Iron loss (stator): {em.iron_loss_stator:.1f} W")
+        lines.append(f"  Magnet loss:        {em.magnet_loss:.2f} W")
+        lines.append(f"  Efficiency:         {em.efficiency*100:.1f}%")
+        lines.append("")
+
+    if best and best.thermal:
+        th = best.thermal
+        lines.append("## Thermal")
+        lines.append(f"  Winding (slot):     {th.T_winding_slot:.1f} °C")
+        lines.append(f"  End winding:        {th.T_end_winding_de:.1f} / {th.T_end_winding_nde:.1f} °C")
+        lines.append(f"  Magnets:            {th.T_magnets:.1f} °C")
+        lines.append(f"  Rotor yoke:         {th.T_rotor_yoke:.1f} °C")
+        lines.append(f"  Hotspot margin:     {th.hotspot_margin:.1f} °C ({th.critical_component})")
+        lines.append(f"  Safe:               {'YES' if th.is_safe else 'NO'}")
+        lines.append("")
+
+    if best and best.mech:
+        m = best.mech
+        lines.append("## Mechanical")
+        lines.append(f"  Shaft SF:           {m.shaft.shaft_safety_factor:.1f}")
+        lines.append(f"  1st critical speed: {m.shaft.critical_speed_1st:.0f} RPM")
+        lines.append(f"  Magnet retention:   {m.rotor_stress.magnet_retention_margin:.1f}x")
+        lines.append(f"  Max safe RPM:       {m.rotor_stress.max_safe_rpm:.0f}")
+        lines.append(f"  Bearing L10 (sys):  {m.bearings.system_l10_hours:.0f} h")
+        lines.append(f"  Bearing friction:   {m.bearings.friction_loss_total:.2f} W")
+        lines.append(f"  Mount bolt SF:      {m.mounting.bolt_combined_safety_factor:.1f}")
+        lines.append(f"  Flange SF:          {m.mounting.flange_safety_factor:.1f}")
+        lines.append(f"  Vibration zone:     ISO 10816 Zone {m.vibration.iso_10816_zone}")
+        lines.append(f"  Forced amplitude:   {m.vibration.forced_amplitude_mm:.3f} mm")
+        lines.append(f"  Resonance margin:   {m.vibration.resonance_margin*100:.0f}%")
+        lines.append("")
+
+    if best and best.cfd:
+        c = best.cfd
+        lines.append("## CFD / Airflow")
+        lines.append(f"  Flow regime:        {c.flow_regime}")
+        lines.append(f"  Taylor number:      {c.taylor_number:.1f}")
+        lines.append(f"  h_airgap:           {c.h_airgap:.1f} W/(m²·K)")
+        lines.append(f"  h_external:         {c.h_rotor_external:.1f} W/(m²·K)")
+        lines.append(f"  Windage loss:       {c.windage_loss:.2f} W")
+        lines.append("")
+
+    lines.append("## Validation Checks")
+    for name, v in validation.items():
+        status = "PASS" if v.get("passed") else "FAIL"
+        lines.append(f"  [{status}] {name}: {v.get('value', '')}")
+    lines.append("")
+
+    if step_files:
+        lines.append("## STEP Files")
+        for name, path in step_files.items():
+            lines.append(f"  {name}: {path}")
+        lines.append("")
+
+    lines.append(f"Elapsed: {elapsed:.1f}s")
+    lines.append("=" * 70)
+
+    return "\n".join(lines)
+
+
+# ---------------------------------------------------------------------------
+# CLI entry point
+# ---------------------------------------------------------------------------
+if __name__ == "__main__":
+    # Example: small drone motor
+    result = design_motor(
+        voltage=24.0,
+        rpm=5000,
+        torque=0.5,
+        current=20.0,
+        efficiency_target=0.90,
+        magnet_type="NdFeB",
+        magnet_grade="N42SH",
+        structural_material="6061-T6",
+        shaft_material="AISI 4140",
+        mounting_style="face_mount",
+        num_bolts=4,
+        bolt_diameter=0.003,
+        radial_load=5.0,
+        axial_load=2.0,
+        pop_size=20,
+        n_gen=10,
+        export_step=False,  # Set True if cadquery installed
+    )
+    print(result["report"])
